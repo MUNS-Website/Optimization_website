@@ -1,43 +1,43 @@
 /* Modernized Department Style Sheet - MHPN Department */
 
-@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&display=swap');
 
 :root {
   /* Fonts */
   --font-heading: 'Mitr', sans-serif;
-  --font-body: 'Sarabun', sans-serif;
+  --font-body: 'Prompt', sans-serif;
 
-  /* Premium Palette (Mahidol Navy & Gold theme) */
+  /* Premium Palette (Mahidol Navy & Soft Tones) */
   --primary: hsl(215, 80%, 20%); /* Deep Royal Navy Blue */
   --primary-light: hsl(215, 80%, 28%);
-  --primary-glow: hsla(215, 80%, 20%, 0.1);
+  --primary-glow: hsla(215, 80%, 20%, 0.05); /* Softer glow */
   --secondary: hsl(42, 85%, 52%); /* Warm Gold Accent */
   --secondary-hover: hsl(42, 85%, 45%);
   
-  --background: hsl(220, 20%, 97%);
+  --background: hsl(210, 25%, 98%); /* Soft off-white blueish tint */
   --surface: #ffffff;
-  --surface-border: rgba(0, 0, 0, 0.08);
+  --surface-border: rgba(0, 0, 0, 0.04); /* Lighter border */
   
-  --text-main: hsl(215, 30%, 15%);
-  --text-muted: hsl(215, 10%, 45%);
+  --text-main: hsl(215, 30%, 25%); /* Softer dark text */
+  --text-muted: hsl(215, 15%, 50%); /* Softer muted text */
   --text-inverse: #ffffff;
 
   /* Spacing */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
 
-  /* Border Radius & Shadow */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-full: 9999px;
+  /* Border Radius & Soft Shadow */
+  --radius-sm: 12px; /* Icons and small badges */
+  --radius-md: 20px; /* Cards */
+  --radius-lg: 24px; /* Large containers */
+  --radius-full: 9999px; /* Buttons */
   
-  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.03); /* Soft, fuzzy shadow */
+  --shadow-md: 0 12px 35px rgba(0, 0, 0, 0.05); /* Larger, softer hover shadow */
 }
 
 /* Base resets */
@@ -283,10 +283,15 @@ main.site-main {
 #page-content {
   background: var(--surface);
   border: 1px solid var(--surface-border);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem;
+  margin-bottom: 3rem;
+  transition: box-shadow var(--transition);
+}
+
+#page-content:hover {
   box-shadow: var(--shadow-md);
-  border-radius: var(--radius-md);
-  padding: 2.5rem;
-  margin-bottom: 2rem;
 }
 
 #page-content h1 {
