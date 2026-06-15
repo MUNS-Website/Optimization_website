@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ภาควิชาการพยาบาลสาธารณสุขศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
-  
-  <link rel="stylesheet" href="../../components/style.css">
+  <link rel="stylesheet" href="style.css">
   <script src="../../components/layout.js" defer></script>
   
   <!-- Inline Script for homepage slideshow -->
@@ -15,7 +14,6 @@
       const slides = document.querySelectorAll('.slide');
       if (slides.length === 0) return;
       
-      // Show first slide
       slides[currentSlide].classList.add('active');
       
       setInterval(() => {
@@ -51,152 +49,115 @@
     .slide.active {
       opacity: 1;
     }
-
-    /* Soft UI Bento Grid */
-    .home-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-      margin-bottom: 4rem;
-    }
-    
-    .bento-card {
-      background: var(--surface);
-      border: 1px solid var(--surface-border);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-sm);
-      transition: transform var(--transition), box-shadow var(--transition);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-decoration: none !important;
-    }
-    
-    .bento-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-    }
-
-    /* Icon Badges */
-    .icon-badge {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-    
-    .icon-badge svg {
-      width: 28px;
-      height: 28px;
-    }
-
-    /* Card Themes */
-    .theme-blue .icon-badge {
-      background-color: #eef5ff;
-      color: #3b82f6;
-    }
-    .theme-blue .subtitle { color: #3b82f6; }
-
-    .theme-green .icon-badge {
-      background-color: #ecfdf5;
-      color: #10b981;
-    }
-    .theme-green .subtitle { color: #10b981; }
-
-    .theme-orange .icon-badge {
-      background-color: #fff7ed;
-      color: #f97316;
-    }
-    .theme-orange .subtitle { color: #f97316; }
-
-    /* Typography inside card */
-    .bento-card h3 {
-      color: var(--text-main);
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 1.3rem;
-      margin-bottom: 0.25rem;
-      margin-top: 0;
-    }
-    
-    .bento-card .subtitle {
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-      font-family: var(--font-body);
-    }
-    
-    .bento-card p {
-      color: var(--text-muted);
-      line-height: 1.7;
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
-
     @media (max-width: 768px) {
       .slider-container {
         height: 250px;
       }
-      .home-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
-<body data-dept-en="Public Health Nursing Department" data-dept-th="ภาควิชาการพยาบาลสาธารณสุขศาสตร์">
+<body data-dept-th="ภาควิชาการพยาบาลสาธารณสุขศาสตร์" data-dept-en="Department of Public Health Nursing">
   <main class="site-main container">
-    
-    <!-- Image Slider -->
-    <div class="slider-container">
-      <div class="slide" style="background-image: url('img/slide/slide1.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide2.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide3.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide4.jpg');"></div>
-    </div>
-    
-    <!-- Intro Content without white box background -->
-    <div style="margin-bottom: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <h1 style="font-family: var(--font-heading); color: var(--primary); font-size: 2.2rem; margin-bottom: 1rem;">ภาควิชาการพยาบาลสาธารณสุขศาสตร์</h1>
-      <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">ยินดีต้อนรับสู่ภาควิชาการพยาบาลสาธารณสุขศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ภาควิชาของเรามุ่งเน้นการผลิตบัณฑิตพยาบาลที่มีความเชี่ยวชาญด้านสุขภาพจิตและจิตเวช พร้อมทั้งบริการวิชาการแก่สังคมและวิจัยเพื่อพัฒนาองค์ความรู้ทางพยาบาลศาสตร์ในระดับสากล</p>
-    </div>
+    <div id="page-content">
       
-    <!-- Soft UI Bento Grid (Directly on background) -->
-    <div class="home-grid">
-      
-      <!-- Card 1: Teaching (Blue Theme) -->
-      <a href="teaching.html" class="bento-card theme-blue">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-        </div>
-        <h3>หลักสูตรการเรียนการสอน</h3>
-        <div class="subtitle">Academic Programs</div>
-        <p>เปิดสอนทั้งในระดับปริญญาตรีและระดับบัณฑิตศึกษา มุ่งเน้นการเรียนรู้แบบลงมือปฏิบัติจริงในคลินิกและชุมชนเพื่อเพิ่มสมรรถนะในการดูแลผู้รับบริการ</p>
-      </a>
+      <!-- Homepage Slideshow -->
+      <div class="slider-container">
+        <div class="slide" style="background-image: url('img/slide/01.jpg');"></div>
+        <div class="slide" style="background-image: url('img/slide/02.jpg');"></div>
+        <div class="slide" style="background-image: url('img/slide/03.jpg');"></div>
+      </div>
 
-      <!-- Card 2: Research (Green Theme) -->
-      <a href="research.html" class="bento-card theme-green">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+      <!-- News and PR Row Layout -->
+      <div class="phn-news-row">
+        <!-- สาระน่ารู้ -->
+        <div class="phn-news-col">
+          <h2 class="news-section-title">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            สาระน่ารู้
+          </h2>
+          <div class="quick-link-list">
+            <a href="doc/content/E-book-E Clinic แนวทางการปฏิบัติสำหรับพยาบาลฯ.pdf" target="_blank" class="quick-link-card">
+              <div class="quick-link-icon">PDF</div>
+              <div class="quick-link-text">แนวทางการปฏิบัติสำหรับพยาบาล ในการดูแลผู้ที่มีอาการหลงเหลือหลังติดเชื้อ COVID-19 (Long COVID)</div>
+            </a>
+            <a href="img/content/66/02/สาระหน้ารู้ PM.jpg" target="_blank" class="quick-link-card">
+              <div class="quick-link-icon">IMG</div>
+              <div class="quick-link-text">วิธีสังเกตอาการเบื้องต้นจากการได้รับสัมผัสฝุ่น PM2.5</div>
+            </a>
+            <a href="img/content/66/02/สาระหน้ารู้ บุหรี่.jpg" target="_blank" class="quick-link-card">
+              <div class="quick-link-icon">IMG</div>
+              <div class="quick-link-text">5 วิธีเลิกบุหรี่ อย่างมีประสิทธิภาพ</div>
+            </a>
+          </div>
         </div>
-        <h3>การวิจัยและนวัตกรรม</h3>
-        <div class="subtitle">Research & Innovation</div>
-        <p>ส่งเสริมการทำงานวิจัยและนวัตกรรมด้านสุขภาพจิต เพื่อสนับสนุนการสร้างนโยบายสาธารณะและการพัฒนาสุขภาพจิตของประชากรในทุกช่วงวัย</p>
-      </a>
+        
+        <!-- ประชาสัมพันธ์ -->
+        <div class="phn-news-col">
+          <h2 class="news-section-title">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            ประชาสัมพันธ์
+          </h2>
+          <div class="quick-link-list">
+            <a href="pr/66/02/pr_02_01_1.html" target="_parent" class="quick-link-card">
+              <div class="quick-link-icon">PR</div>
+              <div class="quick-link-text">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล เปิด “คลินิกการพยาบาลและการผดุงครรภ์”</div>
+            </a>
+            <a href="pr/66/02/pr_02_01_2.html" target="_parent" class="quick-link-card">
+              <div class="quick-link-icon">PR</div>
+              <div class="quick-link-text">เวลาทำการคลินิก คลินิกการพยาบาลและการผดุงครรภ์ ณ หอพักคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล บางขุนนนท์</div>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <!-- Card 3: Academic Services (Orange Theme) -->
-      <a href="academic.html" class="bento-card theme-orange">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+      <!-- Quick Links & Related Sites -->
+      <div class="phn-sitemap-section" style="margin-top: 4rem; margin-bottom: 2rem;">
+        <h2 class="news-section-title" style="margin-bottom: 2rem;">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+          ลิงก์ด่วนและเว็บไซต์ที่เกี่ยวข้อง
+        </h2>
+        <div class="sitemap-grid">
+          <div class="sitemap-col">
+            <h3>เมนูหลัก</h3>
+            <ul>
+              <li><a href="about.html">เกี่ยวกับภาควิชาฯ</a></li>
+              <li><a href="teaching.html">การศึกษา</a></li>
+              <li><a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" target="_blank">วิจัยและนวัตกรรม</a></li>
+              <li><a href="academic.html">บริการวิชาการ</a></li>
+              <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-col">
+            <h3>ข้อมูลภาควิชา</h3>
+            <ul>
+              <li><a href="#">รู้จักองค์กร</a></li>
+              <li><a href="http://www.lib.ns.mahidol.ac.th/ns-expert/main.nsp" target="_blank">ค้นหาอาจารย์และผู้บริหาร</a></li>
+              <li><a href="#">คลินิกการพยาบาลและการผดุงครรภ์</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-col">
+            <h3>สำหรับบุคลากร</h3>
+            <ul>
+              <li><a href="#">ประกาศ</a></li>
+              <li><a href="https://ns.mahidol.ac.th/nurse_th/download.html" target="_blank">ดาวน์โหลดเอกสาร</a></li>
+              <li><a href="http://nurseintranet.mahidol/doc_n/Phone_book_PDF.pdf" target="_blank">ค้นหาเบอร์ภายใน</a></li>
+              <li><a href="https://mail.mahidol.ac.th/" target="_blank">Mail Mahidol</a></li>
+              <li><a href="https://ns.mahidol.ac.th/nurse_th/logo_nursingmu.html" target="_blank">Download NS logo</a></li>
+              <li><a href="https://e-payroll.mahidol.ac.th/" target="_blank">MU e-payroll</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-col">
+            <h3>เว็บไซต์ภายนอก</h3>
+            <ul>
+              <li><a href="http://nurseintranet.mahidol/" target="_blank">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</a></li>
+              <li><a href="https://mahidol.ac.th/th/" target="_blank">มหาวิทยาลัยมหิดล</a></li>
+              <li><a href="https://www.tnmc.or.th/" target="_blank">สภาการพยาบาล</a></li>
+              <li><a href="https://www.thainurse.org/" target="_blank">สมาคมพยาบาลแห่งประเทศไทยฯ</a></li>
+              <li><a href="https://www.si.mahidol.ac.th/th/" target="_blank">คณะแพทยศาสตร์ศิริราชพยาบาล</a></li>
+            </ul>
+          </div>
         </div>
-        <h3>การบริการวิชาการ</h3>
-        <div class="subtitle">Academic Services</div>
-        <p>มีศูนย์ความเป็นเลิศทางวิชาการและจัดอบรมหลักสูตรระยะสั้นเพื่อเพิ่มพูนความรู้แก่พยาบาลวิชาชีพและบุคลากรทางการแพทย์ทั่วประเทศ</p>
-      </a>
+      </div>
 
     </div>
   </main>
