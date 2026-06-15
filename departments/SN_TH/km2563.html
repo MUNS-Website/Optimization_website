@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การจัดการความรู้ ประจำปี 2563: ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo/favicon.png" type="image/png">
+  
+  <style>
+    .bg_grey { background-color: #f1f5f9; padding: 12px; border-radius: 8px; font-weight: 600; color: var(--mu-blue-dark); text-align: center; }
+    .bg_blue { background: var(--mu-blue); color: white; }
+    .txt_white { color: white; }
+  </style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">เมนูหลัก</span>
+      <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link active">หน้าหลัก</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span></div>
+        <div class="mobile-dropdown">
+            <a href="about.html">ความเป็นมา</a>
+            <a href="head.html">ทำเนียบหัวหน้าภาควิชา</a>
+            <a href="vision.html">ปณิธาน/วิสัยทัศน์/พันธกิจ</a>
+            <a href="plan.html">ยุทธศาสตร์ภาควิชา</a>
+            <a href="staff.html">รายนามบุคลากร</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">การศึกษา</a></div>
+      <div class="mobile-nav-item"><a href="https://sites.google.com/view/nsresearchpaper" target="_blank" class="mobile-nav-link">การวิจัย</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">บริการวิชาการ <span>▾</span></div>
+        <div class="mobile-dropdown">
+            <a href="academic.html">บริการวิชาการ</a>
+            <a href="treatise.html">หนังสือภาควิชา</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="http://www.ns.mahidol.ac.th/english/th/departments/SN/annual.html" target="_blank" class="mobile-nav-link">ภาพกิจกรรม</a></div>
+      <div class="mobile-nav-item"><a href="km.html" class="mobile-nav-link">การจัดการความรู้</a></div>
+      <div class="mobile-nav-item"><a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="mobile-nav-link">ศูนย์จัดการการฟื้นตัว</a></div>
+      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">ติดต่อเรา</a></div>
+    </nav>
+  </div>
+</div>
+
+<div class="mn-wrapper">
+
+  <div class="topbar">
+    <div class="topbar-links">
+      <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+      <span class="sep">|</span>
+      <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+    </div>
+    <div class="topbar-social">
+      <a href="#" title="Facebook"><img src="img/template/fb.png" alt="Facebook"></a>
+      <a href="#" title="Twitter / X"><img src="img/template/twitter.png" alt="Twitter"></a>
+      <a href="#" title="Instagram"><img src="img/template/ig.png" alt="Instagram"></a>
+    </div>
+    <div class="topbar-lang">
+      <a href="https://ns.mahidol.ac.th/Department/SN_dept_en" target="_blank" title="English version">
+        <img src="img/template/en.png" alt="EN"> EN
+      </a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-logo">
+      <img src="img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
+    </div>
+    <div class="header-text">
+      <div class="header-dept-name">ภาควิชาการพยาบาลศัลยศาสตร์</div>
+      <div class="header-faculty-name">คณะพยาบาลศาสตร์</div>
+      <div class="header-univ-name">มหาวิทยาลัยมหิดล &nbsp;·&nbsp; Mahidol University</div>
+    </div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+    <div class="navbar-inner">
+      <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลศัลยศาสตร์</span>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link ">หน้าหลัก</a></li>
+        <li class="nav-item">
+          <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="about.html" class="dropdown-item">ความเป็นมา</a></li>
+            <li><a href="head.html" class="dropdown-item">ทำเนียบหัวหน้าภาควิชา</a></li>
+            <li><a href="vision.html" class="dropdown-item">ปณิธาน/วิสัยทัศน์/พันธกิจ</a></li>
+            <li><a href="plan.html" class="dropdown-item">ยุทธศาสตร์ภาควิชา</a></li>
+            <li><a href="staff.html" class="dropdown-item">รายนามบุคลากร</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="teaching.html" class="nav-link">การศึกษา</a></li>
+        <li class="nav-item"><a href="https://sites.google.com/view/nsresearchpaper" target="_blank" class="nav-link">การวิจัย</a></li>
+        <li class="nav-item">
+          <span class="nav-link">บริการวิชาการ <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="academic.html" class="dropdown-item">บริการวิชาการ</a></li>
+            <li><a href="treatise.html" class="dropdown-item">หนังสือภาควิชา</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="http://www.ns.mahidol.ac.th/english/th/departments/SN/annual.html" target="_blank" class="nav-link">ภาพกิจกรรม</a></li>
+        <li class="nav-item"><a href="km.html" class="nav-link active">การจัดการความรู้</a></li>
+        <li class="nav-item"><a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="nav-link">ศูนย์จัดการการฟื้นตัว</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">ติดต่อเรา</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="33" valign="top" class="txt_head">การจัดการความรู้</td>
+              </tr>
+              <tr>
+                <td height="363" align="left" valign="top"><p class="bg_grey"><strong>ตารางการจัดกิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2563</strong></p>
+                  <table width="100%" border="0" align="center" cellpadding="10" cellspacing="0" style="border: 1px solid var(--gray-100); border-radius: 8px; overflow: hidden; margin-top: 15px;">
+                    <tr class="bg_blue">
+                      <td colspan="2" align="center" valign="middle" class="txt_white">หัวเรื่อง</td>
+                      <td width="30%" align="center" valign="middle" class="txt_white">วันที่</td>
+                    </tr>
+                    
+                    <tr class="line_body">
+                      <td width="5%" align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td width="65%" valign="top" class="line_body">
+                        <a href="doc/km/63/KM1.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การพัฒนาตำราภาคปฏิบัติการพยาบาล&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: รศ.ดร.ปรางทิพย์ ฉายพุทธ<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">21 กุมภาพันธ์ 2563</td>
+                    </tr>
+
+                    <tr class="line_body" style="background-color: var(--gray-50);">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM2.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การพิจารณาภาพประกอบตำรา&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: รศ.ดร.ปรางทิพย์ ฉายพุทธ<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">8 พฤษภาคม 2563</td>
+                    </tr>
+
+                    <tr class="line_body">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM3.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การพิจารณาภาพที่มีลิขสิทธิ์&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: รศ.ดร.ปรางทิพย์ ฉายพุทธ<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">8 พฤษภาคม 2563</td>
+                    </tr>
+
+                    <tr class="line_body" style="background-color: var(--gray-50);">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM4.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การพิจารณาการลำดับภาพและการเลือกภาพ ในการทำตำราที่ขอตำแหน่งทางวิชาการได้&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: รศ.ดร.ปรางทิพย์ ฉายพุทธ<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">8 พฤษภาคม 2563</td>
+                    </tr>
+
+                    <tr class="line_body">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM5.pdf" target="_blank" class="hyperlink"><strong>เรื่อง "Integrative Reviews"</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: อ.ดร.ฐิติพงษ์ ตันคำปวน<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">29 พฤษภาคม 2563</td>
+                    </tr>
+
+                    <tr class="line_body" style="background-color: var(--gray-50);">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM6.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การทำรูบิคตาม OBE ที่สอดคล้องกับ PLOs และ CLOs ที่กำหนด&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: รศ.ดร.ปรางทิพย์ ฉายพุทธ<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">1 มิถุนายน 2563</td>
+                    </tr>
+
+                    <tr class="line_body">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM7.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การทำรูบิคเพื่อวัด Psychomotor skills&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: รศ.ดร.ปรางทิพย์ ฉายพุทธ<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">1 มิถุนายน 2563</td>
+                    </tr>
+
+                    <tr class="line_body" style="background-color: var(--gray-50);">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM8.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การทำรูบิคเพื่อวัดทักษะทั่วไปทางการพยาบาลศัลยกรรม&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: รศ.ดร.ปรางทิพย์ ฉายพุทธ<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">1 มิถุนายน 2563</td>
+                    </tr>
+
+                    <tr class="line_body">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM9.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การทำรูบิคเพื่อวัดทักษะเฉพาะทาง การพยาบาลผู้ใหญ่ทางศัลยกรรม&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: รศ.ดร.ปรางทิพย์ ฉายพุทธ<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">1 มิถุนายน 2563</td>
+                    </tr>
+
+                    <tr class="line_body" style="background-color: var(--gray-50);">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM10.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;Emergency Nurse Practitioner: ENP&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: ผศ.ช่อผกา สุทธิพงศ์<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">19 สิงหาคม 2563</td>
+                    </tr>
+
+                    <tr class="line_body">
+                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                      <td valign="top" class="line_body">
+                        <a href="doc/km/63/KM11.pdf" target="_blank" class="hyperlink"><strong>เรื่อง &ldquo;การพัฒนาข้อสอบปรนัยเพื่อประเมินความรู้ทางการแพทย์&rdquo;</strong></a>
+                        <p style="margin-top: 8px; color: var(--gray-600); font-size: 14px;">วิทยากร: อาจารย์คัทลียา คงเพ็ชร<br>ผู้ลิขิต: ผู้ช่วยอาจารย์ยุทธพิชัย โพธิ์ศรี</p>
+                      </td>
+                      <td valign="top" class="line_body" style="text-align: center; color: var(--gray-700);">16 กันยายน 2563</td>
+                    </tr>
+                  </table>
+                  <p>&nbsp;</p>
+                  <div align="right">
+                    <a href="km_all.html" target="_blank" style="display:inline-block; padding:8px 20px; background:#EF6B0A; color:white; border-radius:30px; font-weight:500; text-decoration:none;">Other &raquo;</a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3>ภาควิชาการพยาบาลศัลยศาสตร์</h3>
+        <p>
+          <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+          <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+        </p>
+        <p class="footer-copy">
+          Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+          Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+        <div style="display:flex;gap:10px;">
+          <a href="#" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/fb.png" alt="Facebook" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+          <a href="#" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/twitter.png" alt="Twitter" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+          <a href="#" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/ig.png" alt="Instagram" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+        </div>
+        <a href="https://ns.mahidol.ac.th/Department/SN_dept_en" target="_blank"
+           style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+          <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;"> English
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<button id="back-to-top" title="กลับขึ้นด้านบน" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if(hamburger) hamburger.addEventListener('click', openMobileMenu);
+if(mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+
+if(mobileMenu) {
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobileMenu();
+  });
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+function toggleMobileDropdown(el) {
+  const dropdown = el.nextElementSibling;
+  if (dropdown) {
+    dropdown.classList.toggle('open');
+    el.classList.toggle('active');
+  }
+}
+
+const navBrand = document.getElementById('navBrand');
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const headerBottom = header.getBoundingClientRect().bottom;
+    if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+  }
+
+  const backTop = document.getElementById('back-to-top');
+  if (backTop) {
+    backTop.classList.toggle('visible', window.scrollY > 300);
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>

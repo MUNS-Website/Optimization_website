@@ -1,204 +1,276 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
-  
-  <link rel="stylesheet" href="../../components/style.css">
-  <script src="../../components/layout.js" defer></script>
-  
-  <!-- Inline Script for homepage slideshow -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.slide');
-      if (slides.length === 0) return;
-      
-      // Show first slide
-      slides[currentSlide].classList.add('active');
-      
-      setInterval(() => {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-      }, 6000);
-    });
-  </script>
+  <title>ภาควิชาการพยาบาลศัลยศาสตร์ : คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo/favicon.png" type="image/png">
   <style>
-    /* Hero Slider */
-    .slider-container {
-      position: relative;
-      width: 100%;
-      height: 450px;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 2.5rem;
-      border: 1px solid var(--surface-border);
-    }
-    .slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-      background-size: cover;
-      background-position: center;
-    }
-    .slide.active {
-      opacity: 1;
-    }
-
-    /* Soft UI Bento Grid */
-    .home-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-      margin-bottom: 4rem;
-    }
-    
-    .bento-card {
-      background: var(--surface);
-      border: 1px solid var(--surface-border);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-sm);
-      transition: transform var(--transition), box-shadow var(--transition);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-decoration: none !important;
-    }
-    
-    .bento-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-    }
-
-    /* Icon Badges */
-    .icon-badge {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-    
-    .icon-badge svg {
-      width: 28px;
-      height: 28px;
-    }
-
-    /* Card Themes */
-    .theme-blue .icon-badge {
-      background-color: #eef5ff;
-      color: #3b82f6;
-    }
-    .theme-blue .subtitle { color: #3b82f6; }
-
-    .theme-green .icon-badge {
-      background-color: #ecfdf5;
-      color: #10b981;
-    }
-    .theme-green .subtitle { color: #10b981; }
-
-    .theme-orange .icon-badge {
-      background-color: #fff7ed;
-      color: #f97316;
-    }
-    .theme-orange .subtitle { color: #f97316; }
-
-    /* Typography inside card */
-    .bento-card h3 {
-      color: var(--text-main);
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 1.3rem;
-      margin-bottom: 0.25rem;
-      margin-top: 0;
-    }
-    
-    .bento-card .subtitle {
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-      font-family: var(--font-body);
-    }
-    
-    .bento-card p {
-      color: var(--text-muted);
-      line-height: 1.7;
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 768px) {
-      .slider-container {
-        height: 250px;
-      }
-      .home-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    .slider-container { position:relative; width:100%; max-width:988px; height:325px; margin:0 auto; overflow:hidden; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.1); margin-bottom:40px; }
+    .slider-canvas { position:absolute; width:100%; height:100%; background-color:white; transition:opacity 1s ease-in-out; opacity:0; }
+    .slider-canvas.active { opacity:1; z-index:2; }
+    .slider-canvas img { width:100%; height:100%; object-fit:cover; }
+    .news-card { background:white; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.05); transition:transform 0.3s ease, box-shadow 0.3s ease; height:100%; display:flex; flex-direction:column; }
+    .news-card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+    .news-img { width:100%; height:180px; object-fit:cover; }
+    .news-content { padding:15px; flex-grow:1; }
+    .news-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:20px; }
   </style>
 </head>
-<body data-dept-en="Surgical Nursing Department" data-dept-th="ภาควิชาการพยาบาลศัลยศาสตร์">
-  <main class="site-main container">
-    
-    <!-- Image Slider -->
-    <div class="slider-container">
-      <div class="slide" style="background-image: url('img/slide/slide1.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide2.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide3.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide4.jpg');"></div>
-    </div>
-    
-    <!-- Intro Content without white box background -->
-    <div style="margin-bottom: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <h1 style="font-family: var(--font-heading); color: var(--primary); font-size: 2.2rem; margin-bottom: 1rem;">ภาควิชาการพยาบาลศัลยศาสตร์</h1>
-      <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">ยินดีต้อนรับสู่ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ภาควิชาของเรามุ่งเน้นการผลิตบัณฑิตพยาบาลที่มีความเชี่ยวชาญด้านสุขภาพจิตและจิตเวช พร้อมทั้งบริการวิชาการแก่สังคมและวิจัยเพื่อพัฒนาองค์ความรู้ทางพยาบาลศาสตร์ในระดับสากล</p>
-    </div>
-      
-    <!-- Soft UI Bento Grid (Directly on background) -->
-    <div class="home-grid">
-      
-      <!-- Card 1: Teaching (Blue Theme) -->
-      <a href="teaching.html" class="bento-card theme-blue">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-        </div>
-        <h3>หลักสูตรการเรียนการสอน</h3>
-        <div class="subtitle">Academic Programs</div>
-        <p>เปิดสอนทั้งในระดับปริญญาตรีและระดับบัณฑิตศึกษา มุ่งเน้นการเรียนรู้แบบลงมือปฏิบัติจริงในคลินิกและชุมชนเพื่อเพิ่มสมรรถนะในการดูแลผู้รับบริการ</p>
-      </a>
+<body>
 
-      <!-- Card 2: Research (Green Theme) -->
-      <a href="research.html" class="bento-card theme-green">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-        </div>
-        <h3>การวิจัยและนวัตกรรม</h3>
-        <div class="subtitle">Research & Innovation</div>
-        <p>ส่งเสริมการทำงานวิจัยและนวัตกรรมด้านสุขภาพจิต เพื่อสนับสนุนการสร้างนโยบายสาธารณะและการพัฒนาสุขภาพจิตของประชากรในทุกช่วงวัย</p>
-      </a>
-
-      <!-- Card 3: Academic Services (Orange Theme) -->
-      <a href="academic.html" class="bento-card theme-orange">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-        </div>
-        <h3>การบริการวิชาการ</h3>
-        <div class="subtitle">Academic Services</div>
-        <p>มีศูนย์ความเป็นเลิศทางวิชาการและจัดอบรมหลักสูตรระยะสั้นเพื่อเพิ่มพูนความรู้แก่พยาบาลวิชาชีพและบุคลากรทางการแพทย์ทั่วประเทศ</p>
-      </a>
-
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">เมนูหลัก</span>
+      <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
     </div>
+    <nav class="mobile-nav-list">
+      <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link active">หน้าหลัก</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span></div>
+        <div class="mobile-dropdown">
+            <a href="about.html">ความเป็นมา</a>
+            <a href="head.html">ทำเนียบหัวหน้าภาควิชา</a>
+            <a href="vision.html">ปณิธาน/วิสัยทัศน์/พันธกิจ</a>
+            <a href="plan.html">ยุทธศาสตร์ภาควิชา</a>
+            <a href="staff.html">รายนามบุคลากร</a>
+            <a href="staff_backup1.html">คณาจาร์ยประจำภาควิชาพยาบาลศาสตร์</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">การศึกษา</a></div>
+      <div class="mobile-nav-item"><a href="https://sites.google.com/view/nsresearchpaper" target="_blank" class="mobile-nav-link">การวิจัย</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">บริการวิชาการ <span>▾</span></div>
+        <div class="mobile-dropdown">
+            <a href="academic.html">บริการวิชาการ</a>
+            <a href="treatise.html">หนังสือภาควิชา</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="Activities_all.html" class="mobile-nav-link">ภาพกิจกรรม</a></div>
+      <div class="mobile-nav-item"><a href="km.html" class="mobile-nav-link">การจัดการความรู้</a></div>
+      <div class="mobile-nav-item"><a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="mobile-nav-link">ศูนย์จัดการการฟื้นตัว</a></div>
+      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">ติดต่อเรา</a></div>
+    </nav>
+  </div>
+</div>
+
+<div class="mn-wrapper">
+
+  <div class="topbar">
+    <div class="topbar-links">
+      <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+      <span class="sep">|</span>
+      <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+    </div>
+    <div class="topbar-social">
+      <a href="#" title="Facebook"><img src="img/template/fb.png" alt="Facebook"></a>
+      <a href="#" title="Twitter / X"><img src="img/template/twitter.png" alt="Twitter"></a>
+      <a href="#" title="Instagram"><img src="img/template/ig.png" alt="Instagram"></a>
+    </div>
+    <div class="topbar-lang">
+      <a href="https://ns.mahidol.ac.th/Department/SN_dept_en" target="_blank" title="English version">
+        <img src="img/template/en.png" alt="EN"> EN
+      </a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-logo">
+      <img src="img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
+    </div>
+    <div class="header-text">
+      <div class="header-dept-name">ภาควิชาการพยาบาลศัลยศาสตร์</div>
+      <div class="header-faculty-name">คณะพยาบาลศาสตร์</div>
+      <div class="header-univ-name">มหาวิทยาลัยมหิดล &nbsp;·&nbsp; Mahidol University</div>
+    </div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+    <div class="navbar-inner">
+      <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลศัลยศาสตร์</span>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link active">หน้าหลัก</a></li>
+        <li class="nav-item">
+          <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="about.html" class="dropdown-item">ความเป็นมา</a></li>
+            <li><a href="head.html" class="dropdown-item">ทำเนียบหัวหน้าภาควิชา</a></li>
+            <li><a href="vision.html" class="dropdown-item">ปณิธาน/วิสัยทัศน์/พันธกิจ</a></li>
+            <li><a href="plan.html" class="dropdown-item">ยุทธศาสตร์ภาควิชา</a></li>
+            <li><a href="staff.html" class="dropdown-item">รายนามบุคลากร</a></li>
+            <li><a href="staff_backup1.html" class="dropdown-item">คณาจาร์ยประจำภาควิชาพยาบาลศาสตร์</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="teaching.html" class="nav-link">การศึกษา</a></li>
+        <li class="nav-item"><a href="https://sites.google.com/view/nsresearchpaper" target="_blank" class="nav-link">การวิจัย</a></li>
+        <li class="nav-item">
+          <span class="nav-link">บริการวิชาการ <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="academic.html" class="dropdown-item">บริการวิชาการ</a></li>
+            <li><a href="treatise.html" class="dropdown-item">หนังสือภาควิชา</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="Activities_all.html" class="nav-link">ภาพกิจกรรม</a></li>
+        <li class="nav-item"><a href="km.html" class="nav-link">การจัดการความรู้</a></li>
+        <li class="nav-item"><a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="nav-link">ศูนย์จัดการการฟื้นตัว</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">ติดต่อเรา</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+            
+            <div class="slider-container" id="slideshow">
+               <div class="slider-canvas active"><img src="img/slide/slide5.jpg" alt="Slide"></div>
+               <div class="slider-canvas"><img src="img/slide/slide6.jpg" alt="Slide"></div>
+               <div class="slider-canvas"><img src="img/slide/slide7.jpg" alt="Slide"></div>
+               <div class="slider-canvas"><img src="img/slide/slide8.jpg" alt="Slide"></div>
+               <div class="slider-canvas"><img src="img/slide/s1.jpg" alt="Slide"></div>
+               <div class="slider-canvas"><img src="img/slide/slide1.jpg" alt="Slide"></div>
+            </div>
+
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('#slideshow .slider-canvas');
+                let currentSlide = 0;
+                
+                if (slides.length > 0) {
+                    setInterval(function() {
+                        slides[currentSlide].classList.remove('active');
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        slides[currentSlide].classList.add('active');
+                    }, 6000);
+                }
+            });
+            </script>
+              
+            <div style="margin-top: 40px;">
+                <h2 class="txt_head">ข่าวกิจกรรม</h2>
+                
+                <div class="news-grid">
+                    <a href="activities/2569/usavadee.html" target="_blank" class="news-card hyperlink">
+                        <img src="img/news/2569/usavadee/03.jpg" alt="News" class="news-img">
+                        <div class="news-content">
+                            <p>ภาควิชาการพยาบาลศัลยศาสตร์ ม.มหิดล ร่วมแสดงความยินดีแด่ความสำเร็จของอาจารย์ในภาควิชา</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2568/07/SN_SI.html" target="_blank" class="news-card hyperlink">
+                        <img src="img/news/2568/s1.png" alt="News" class="news-img">
+                        <div class="news-content">
+                            <p>ภาควิชาการพยาบาลศัลยศาสตร์ จับมือฝ่ายการพยาบาล รพ.ศิริราช ประสานความร่วมมือ ในการสอนหลักสูตรพยาบาลศาสตรบัณฑิต และหลักสูตรการพยาบาลเฉพาะทาง ประจำปีการศึกษา 2568</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div style="text-align: right; margin-top: 20px;">
+                    <a href="Activities.html" target="_blank" class="hyperlink" style="display:inline-block; padding:8px 20px; background:var(--mu-gold); color:white; border-radius:30px; font-weight:600;">ข่าวสารอื่นๆ &raquo;</a>
+                </div>
+            </div>
+            
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3>ภาควิชาการพยาบาลศัลยศาสตร์</h3>
+        <p>
+          <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+          <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+        </p>
+        <p class="footer-copy">
+          Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+          Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+        <div style="display:flex;gap:10px;">
+          <a href="#" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/fb.png" alt="Facebook" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+          <a href="#" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/twitter.png" alt="Twitter" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+          <a href="#" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/ig.png" alt="Instagram" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+        </div>
+        <a href="https://ns.mahidol.ac.th/Department/SN_dept_en" target="_blank"
+           style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+          <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;"> English
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<button id="back-to-top" title="กลับขึ้นด้านบน" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if(hamburger) hamburger.addEventListener('click', openMobileMenu);
+if(mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+
+if(mobileMenu) {
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobileMenu();
+  });
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+function toggleMobileDropdown(el) {
+  const dropdown = el.nextElementSibling;
+  if (dropdown) {
+    dropdown.classList.toggle('open');
+    el.classList.toggle('active');
+  }
+}
+
+const navBrand = document.getElementById('navBrand');
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const headerBottom = header.getBoundingClientRect().bottom;
+    if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+  }
+
+  const backTop = document.getElementById('back-to-top');
+  if (backTop) {
+    backTop.classList.toggle('visible', window.scrollY > 300);
+  }
+}, { passive: true });
+</script>
+
 </body>
 </html>
