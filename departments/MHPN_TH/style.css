@@ -8,9 +8,9 @@
   --font-body: 'Prompt', sans-serif;
 
   /* Premium Palette (Mint Green Theme) */
-  --primary: hsl(165, 65%, 30%); /* Deep Mint / Teal Green */
-  --primary-light: hsl(165, 65%, 40%);
-  --primary-glow: hsla(165, 65%, 30%, 0.08); /* Softer mint glow */
+  --primary: #10b981; /* Matches the emerald green from bento cards */
+  --primary-light: #34d399;
+  --primary-glow: rgba(16, 185, 129, 0.15); /* Softer mint glow */
   --secondary: hsl(42, 85%, 52%); /* Warm Gold Accent */
   --secondary-hover: hsl(42, 85%, 45%);
   
