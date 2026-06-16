@@ -76,8 +76,8 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 /* Liquid Glass Classes */
 .liquid-glass {
   background: var(--surface);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); removed for perf */
+  -webkit-/* backdrop-filter: blur(8px); removed for perf */
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-glass);
@@ -186,7 +186,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); removed for perf */
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .icon-badge svg { width: 32px; height: 32px; }
@@ -205,7 +205,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   font-size: 1.2rem;
   color: var(--text-main);
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: var(--radius-full);
@@ -219,3 +219,20 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 }
 .glass-btn svg { width: 24px; height: 24px; }
 
+
+/* Liquid Glass Header */
+.site-header, .navbar {
+  background: rgba(244, 246, 244, 0.75) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.site-header::after { display: none !important; }
+.header-dept-name { color: var(--text-main) !important; text-shadow: none !important; }
+.header-faculty-name, .header-univ-name { color: var(--text-muted) !important; }
+.nav-link { color: var(--text-main) !important; font-weight: 600 !important; }
+.nav-link:hover, .nav-link.active { color: var(--primary) !important; background: rgba(88, 129, 87, 0.1) !important; }
+.nav-link::after { background: var(--primary) !important; }
+.navbar-brand { color: var(--primary) !important; text-shadow: none !important; }
+.bento-card { background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--surface-border); box-shadow: var(--shadow-glass); }
+.slider-container { background: #ffffff; border: 1px solid var(--surface-border); box-shadow: var(--shadow-glass); }
