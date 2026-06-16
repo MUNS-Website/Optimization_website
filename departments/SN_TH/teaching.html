@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การศึกษา: ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo/favicon.png" type="image/png">
+
+  <style>
+    .edu-section {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 30px;
+      margin-bottom: 24px;
+    }
+    .edu-intro {
+      font-size: 16px;
+      color: var(--gray-700);
+      line-height: 1.8;
+      margin-bottom: 30px;
+      text-indent: 2em;
+    }
+    .edu-group {
+      margin-bottom: 30px;
+    }
+    .edu-group-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--mu-blue-pale);
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      color: var(--mu-blue-dark);
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    .edu-group-title .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--mu-blue);
+      color: white;
+      border-radius: 50%;
+      font-size: 14px;
+    }
+    .edu-list {
+      list-style: none;
+      padding-left: 10px;
+    }
+    .edu-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--gray-100);
+      transition: all 0.2s ease;
+    }
+    .edu-item:last-child {
+      border-bottom: none;
+    }
+    .edu-item:hover {
+      background: var(--gray-50);
+      border-radius: var(--radius-md);
+      transform: translateX(4px);
+    }
+    .edu-bullet {
+      color: var(--mu-gold);
+      font-size: 20px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .edu-link {
+      color: var(--mu-blue);
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 16px;
+      display: block;
+    }
+    .edu-link:hover {
+      color: var(--mu-gold-dark);
+    }
+    .edu-desc {
+      display: block;
+      color: var(--gray-500);
+      font-size: 14px;
+      margin-top: 4px;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">เมนูหลัก</span>
+      <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link active">หน้าหลัก</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span></div>
+        <div class="mobile-dropdown">
+            <a href="about.html">ความเป็นมา</a>
+            <a href="head.html">ทำเนียบหัวหน้าภาควิชา</a>
+            <a href="vision.html">ปณิธาน/วิสัยทัศน์/พันธกิจ</a>
+            <a href="plan.html">ยุทธศาสตร์ภาควิชา</a>
+            <a href="staff.html">รายนามบุคลากร</a>
+            <a href="staff_backup1.html">คณาจาร์ยประจำภาควิชาพยาบาลศาสตร์</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">การศึกษา</a></div>
+      <div class="mobile-nav-item"><a href="https://sites.google.com/view/nsresearchpaper" target="_blank" class="mobile-nav-link">การวิจัย</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">บริการวิชาการ <span>▾</span></div>
+        <div class="mobile-dropdown">
+            <a href="academic.html">บริการวิชาการ</a>
+            <a href="treatise.html">หนังสือภาควิชา</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="Activities_all.html" class="mobile-nav-link">ภาพกิจกรรม</a></div>
+      <div class="mobile-nav-item"><a href="km.html" class="mobile-nav-link">การจัดการความรู้</a></div>
+      <div class="mobile-nav-item"><a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="mobile-nav-link">ศูนย์จัดการการฟื้นตัว</a></div>
+      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">ติดต่อเรา</a></div>
+    </nav>
+  </div>
+</div>
+
+<div class="mn-wrapper">
+
+  <div class="topbar">
+    <div class="topbar-links">
+      <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+      <span class="sep">|</span>
+      <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+    </div>
+    <div class="topbar-social">
+      <a href="#" title="Facebook"><img src="img/template/fb.png" alt="Facebook"></a>
+      <a href="#" title="Twitter / X"><img src="img/template/twitter.png" alt="Twitter"></a>
+      <a href="#" title="Instagram"><img src="img/template/ig.png" alt="Instagram"></a>
+    </div>
+    <div class="topbar-lang">
+      <a href="https://ns.mahidol.ac.th/Department/SN_dept_en" target="_blank" title="English version">
+        <img src="img/template/en.png" alt="EN"> EN
+      </a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-logo">
+      <img src="img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
+    </div>
+    <div class="header-text">
+      <div class="header-dept-name">ภาควิชาการพยาบาลศัลยศาสตร์</div>
+      <div class="header-faculty-name">คณะพยาบาลศาสตร์</div>
+      <div class="header-univ-name">มหาวิทยาลัยมหิดล &nbsp;·&nbsp; Mahidol University</div>
+    </div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+    <div class="navbar-inner">
+      <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลศัลยศาสตร์</span>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">หน้าหลัก</a></li>
+        <li class="nav-item">
+          <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="about.html" class="dropdown-item">ความเป็นมา</a></li>
+            <li><a href="head.html" class="dropdown-item">ทำเนียบหัวหน้าภาควิชา</a></li>
+            <li><a href="vision.html" class="dropdown-item">ปณิธาน/วิสัยทัศน์/พันธกิจ</a></li>
+            <li><a href="plan.html" class="dropdown-item">ยุทธศาสตร์ภาควิชา</a></li>
+            <li><a href="staff.html" class="dropdown-item">รายนามบุคลากร</a></li>
+            <li><a href="staff_backup1.html" class="dropdown-item">คณาจาร์ยประจำภาควิชาพยาบาลศาสตร์</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="teaching.html" class="nav-link active">การศึกษา</a></li>
+        <li class="nav-item"><a href="https://sites.google.com/view/nsresearchpaper" target="_blank" class="nav-link">การวิจัย</a></li>
+        <li class="nav-item">
+          <span class="nav-link">บริการวิชาการ <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="academic.html" class="dropdown-item">บริการวิชาการ</a></li>
+            <li><a href="treatise.html" class="dropdown-item">หนังสือภาควิชา</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="Activities_all.html" class="nav-link">ภาพกิจกรรม</a></li>
+        <li class="nav-item"><a href="km.html" class="nav-link">การจัดการความรู้</a></li>
+        <li class="nav-item"><a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="nav-link">ศูนย์จัดการการฟื้นตัว</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">ติดต่อเรา</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <h1 class="txt_head">การศึกษา</h1>
+    
+    <div class="edu-section">
+      <p class="edu-intro">
+        ภาควิชาการพยาบาลศัลยศาสตร์ จัดการเรียนการสอนสาขาการพยาบาลศัลยศาสตร์ ในทุกหลักสูตรอย่างมีคุณภาพมาตรฐาน ให้ผู้เรียนมีความรู้ ความสามารถ และทักษะทางการพยาบาลศัลยศาสตร์ มีคุณธรรม จริยธรรม มีการคิดอย่างมีวิจารณญาณ มีความคิดสร้างสรรค์ สามารถทำงานเป็นทีม ยอมรับความคิดเห็นของวิชาชีพอื่น หลักสูตรที่ภาควิชาฯ มีส่วนร่วมในการจัดการเรียนการสอน ได้แก่
+      </p>
+
+      <!-- ปริญญาตรี -->
+      <div class="edu-group">
+        <div class="edu-group-title">
+          <span class="icon">1</span>
+          ระดับปริญญาตรี
+        </div>
+        <ul class="edu-list">
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/nurse_th/bns/bns2560.html" target="_blank" class="edu-link">พยาบาลศาสตรบัณฑิต</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ปริญญาโท -->
+      <div class="edu-group">
+        <div class="edu-group-title">
+          <span class="icon">2</span>
+          ระดับปริญญาโท
+        </div>
+        <ul class="edu-list">
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/nurse_th/mns/mns_adult.html" target="_blank" class="edu-link">หลักสูตรพยาบาลศาสตรมหาบัณฑิต (การพยาบาลผู้ใหญ่และผู้สูงอายุ)</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ปริญญาเอก -->
+      <div class="edu-group">
+        <div class="edu-group-title">
+          <span class="icon">3</span>
+          ระดับปริญญาเอก
+        </div>
+        <ul class="edu-list">
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/phdnursing/" target="_blank" class="edu-link">หลักสูตรปรัชญาดุษฎีบัณฑิต สาขาการพยาบาล (หลักสูตรนานาชาติ) โครงการร่วม คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี คณะพยาบาลศาสตร์</a>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/dns/" target="_blank" class="edu-link">หลักสูตรพยาบาลศาสตรดุษฎีบัณฑิต</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ประกาศนียบัตร -->
+      <div class="edu-group">
+        <div class="edu-group-title">
+          <span class="icon">4</span>
+          ประกาศนียบัตรการพยาบาลเฉพาะทาง
+        </div>
+        <ul class="edu-list">
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <span class="edu-link" style="color:var(--gray-700); cursor:default;">หลักสูตรการพยาบาลเฉพาะทาง สาขาการพยาบาลผู้จัดการรายกรณีบาดเจ็บ</span>
+              <span class="edu-desc">(Program of Nursing Specialty in Trauma Nurse Coordinator)</span>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/nurse_th/Specialty/specialty_perioperative.html" target="_blank" class="edu-link">หลักสูตรการพยาบาลเฉพาะทาง สาขาการพยาบาลผู้ป่วยระยะวิกฤต</a>
+              <span class="edu-desc">(Program of Nursing Specialty in Perioperative Nursing)</span>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/nurse_th/Specialty/specialty_oncology.html" target="_blank" class="edu-link">หลักสูตรการพยาบาลเฉพาะทาง สาขาการพยาบาลผู้ป่วยมะเร็ง</a>
+              <span class="edu-desc">(Program of Nursing Specialty in Oncology Nursing)</span>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/nurse_th/Specialty/specialty_orthopaedic.html" target="_blank" class="edu-link">หลักสูตรการพยาบาลเฉพาะทาง สาขาการพยาบาลออร์โธปิดิกส์</a>
+              <span class="edu-desc">(Program of Nursing Specialty in Orthopaedic Nursing)</span>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/nurse_th/Specialty/specialty_cardiovascular.html" target="_blank" class="edu-link">หลักสูตรการพยาบาลเฉพาะทาง สาขาการพยาบาลผู้ป่วยหลอดเลือดหัวใจ</a>
+              <span class="edu-desc">(Program of Nursing Specialty in Cardiovascular Nursing)</span>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/nurse_th/Specialty/specialty_infectious.html" target="_blank" class="edu-link">หลักสูตรการพยาบาลเฉพาะทาง สาขาการพยาบาลผู้ป่วยโรคติดเชื้อและการควบคุมการติดเชื้อ</a>
+              <span class="edu-desc">(Program of Nursing Specialty in Nursing care of Patients with infectious disease and Infection control)</span>
+            </div>
+          </li>
+          <li class="edu-item">
+            <span class="edu-bullet">•</span>
+            <div>
+              <a href="http://www.ns.mahidol.ac.th/nurse_th/Specialty/specialty_administration.html" target="_blank" class="edu-link">หลักสูตรการพยาบาลเฉพาะทาง สาขาการบริหารการพยาบาล (การจัดการ)</a>
+              <span class="edu-desc">(Program of Nursing Specialty in Nursing Administration)</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3>ภาควิชาการพยาบาลศัลยศาสตร์</h3>
+        <p>
+          <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+          <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+        </p>
+        <p class="footer-copy">
+          Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+          Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+        <div style="display:flex;gap:10px;">
+          <a href="#" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/fb.png" alt="Facebook" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+          <a href="#" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/twitter.png" alt="Twitter" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+          <a href="#" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/ig.png" alt="Instagram" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+        </div>
+        <a href="https://ns.mahidol.ac.th/Department/SN_dept_en" target="_blank"
+           style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+          <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;"> English
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<button id="back-to-top" title="กลับขึ้นด้านบน" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if(hamburger) hamburger.addEventListener('click', openMobileMenu);
+if(mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+
+if(mobileMenu) {
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobileMenu();
+  });
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+function toggleMobileDropdown(el) {
+  const dropdown = el.nextElementSibling;
+  if (dropdown) {
+    dropdown.classList.toggle('open');
+    el.classList.toggle('active');
+  }
+}
+
+const navBrand = document.getElementById('navBrand');
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const headerBottom = header.getBoundingClientRect().bottom;
+    if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+  }
+
+  const backTop = document.getElementById('back-to-top');
+  if (backTop) {
+    backTop.classList.toggle('visible', window.scrollY > 300);
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>

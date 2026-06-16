@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบตรวจสอบภาควิชา | คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --primary: #002d62; /* Mahidol Blue */
+      --secondary: #f1a400; /* Mahidol Gold */
+      --radius: 12px;
+      --transition: all 0.2s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Prompt', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 4rem 2rem 2.5rem;
+      text-align: center;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-container {
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-badge {
+      background: var(--primary);
+      color: #ffffff;
+      font-family: 'Mitr', sans-serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--secondary);
+    }
+
+    h1 {
+      font-family: 'Mitr', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+      flex-grow: 1;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-decoration: none;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 20px rgba(0, 45, 98, 0.05);
+    }
+
+    .dept-code {
+      font-family: 'Mitr', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      background: #f1f5f9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 6px;
+    }
+
+    .dept-title {
+      font-family: 'Mitr', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .dept-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <div class="logo-badge">NS</div>
+    </div>
+    <h1>ระบบตรวจสอบภาควิชา (Mockup)</h1>
+    <p class="subtitle">เลือกภาควิชาเพื่อตรวจสอบโครงสร้างความคืบหน้าของหน้าเว็บ</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      
+      <!-- FN_TH -->
+      <a href="departments/FN_TH/index.html" class="card">
+        <span class="dept-code">FN</span>
+        <h2 class="dept-title">การพยาบาลพื้นฐาน</h2>
+        <p class="dept-desc">Fundamentals of Nursing</p>
+      </a>
+
+      <!-- MHPN_TH -->
+      <a href="departments/MHPN_TH/index.html" class="card">
+        <span class="dept-code">MHPN</span>
+        <h2 class="dept-title">สุขภาพจิต & จิตเวชศาสตร์</h2>
+        <p class="dept-desc">Mental Health & Psychiatric Nursing</p>
+      </a>
+
+      <!-- MN_TH -->
+      <a href="departments/MN_TH/index.html" class="card">
+        <span class="dept-code">MN</span>
+        <h2 class="dept-title">การพยาบาลอายุรศาสตร์</h2>
+        <p class="dept-desc">Medical Nursing</p>
+      </a>
+
+      <!-- OGN_TH -->
+      <a href="departments/OGN_TH/index.html" class="card">
+        <span class="dept-code">OGN</span>
+        <h2 class="dept-title">สูติศาสตร์-นรีเวชวิทยา</h2>
+        <p class="dept-desc">Obstetric & Gynecological Nursing</p>
+      </a>
+
+      <!-- PHN_TH -->
+      <a href="departments/PHN_TH/index.html" class="card">
+        <span class="dept-code">PHN</span>
+        <h2 class="dept-title">การพยาบาลสาธารณสุขศาสตร์</h2>
+        <p class="dept-desc">Public Health Nursing</p>
+      </a>
+
+      <!-- PN_TH -->
+      <a href="departments/PN_TH/index.html" class="card">
+        <span class="dept-code">PN</span>
+        <h2 class="dept-title">การพยาบาลกุมารเวชศาสตร์</h2>
+        <p class="dept-desc">Pediatric Nursing</p>
+      </a>
+
+      <!-- SN_TH -->
+      <a href="departments/SN_TH/index.html" class="card">
+        <span class="dept-code">SN</span>
+        <h2 class="dept-title">การพยาบาลศัลยศาสตร์</h2>
+        <p class="dept-desc">Surgical Nursing</p>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล © 2026</p>
+  </footer>
+
+</body>
+</html>
