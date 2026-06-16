@@ -25,99 +25,160 @@
     <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
 
     <style>
-        /* --- Clean Header --- */
-        .clean-header {
-            text-align: center;
-            padding: 40px 20px 25px;
-            margin-bottom: 20px;
-        }
-        .clean-header h1 {
-            font-size: 32px;
-            color: var(--mu-blue-dark);
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-
-        /* --- Content Layout --- */
-        .academic-wrapper {
-            max-width: 900px;
-            margin: 0 auto 80px;
+        /* --- Premium List View (Compact Size) --- */
+        .page-header-left {
+            max-width: 1000px;
+            margin: 40px auto 25px;
             padding: 0 20px;
         }
-
-        .intro-text-elegant {
-            font-size: 17.5px;
-            color: var(--gray-700);
-            line-height: 1.8;
-            margin-bottom: 50px;
-            text-align: justify;
-        }
-        .intro-text-elegant p {
-            text-indent: 2.5em;
+        .page-header-left h1 {
+            font-size: 22px;
+            color: var(--mu-blue-dark, #002454);
+            font-weight: 700;
             margin: 0;
-        }
-
-        /* Elegant List */
-        .elegant-list {
-            display: flex;
-            flex-direction: column;
-            max-width: 850px;
-            margin: 0 auto 60px;
-        }
-        .elegant-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            padding: 25px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            transition: all 0.3s ease;
-        }
-        .elegant-item:first-child {
-            border-top: 1px solid rgba(0,0,0,0.06);
-        }
-        .elegant-item:hover {
-            background: linear-gradient(90deg, rgba(25,68,136,0.02) 0%, transparent 100%);
+            position: relative;
             padding-left: 15px;
         }
-        .elegant-number {
-            font-size: 38px;
-            font-weight: 300;
-            color: var(--mu-gold);
-            line-height: 1;
-            font-family: 'Inter', sans-serif;
-            flex: 0 0 50px;
-            text-align: right;
-            opacity: 0.8;
-        }
-        .elegant-text {
-            font-size: 17px;
-            color: var(--gray-700);
-            line-height: 1.6;
-            padding-top: 8px;
-            flex: 1;
+        .page-header-left h1::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background-color: var(--mu-gold, #c49a45);
+            border-radius: 4px;
         }
 
-        /* Elegant Image */
-        .image-elegant {
-            text-align: center;
+        .activity-list {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
         }
-        .image-elegant img {
-            max-width: 100%;
-            height: auto;
-            border-radius: var(--radius-lg);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.5s ease;
+
+        .activity-list-item {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 20px 10px;
+            border-bottom: 1px dashed rgba(0, 36, 84, 0.15);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 12px;
         }
-        .image-elegant img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+        .activity-list-item:last-child {
+            border-bottom: none;
         }
-        
+
+        .activity-list-item:hover {
+            background-color: rgba(25, 68, 136, 0.03);
+            transform: translateX(4px);
+            border-bottom-color: transparent;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+        }
+
+        .activity-thumbnail {
+            flex: 0 0 200px;
+            height: 135px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.04);
+            position: relative;
+        }
+
+        .activity-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .activity-list-item:hover .activity-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .activity-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .activity-meta {
+            margin-bottom: 8px;
+        }
+
+        .activity-date-badge {
+            display: inline-block;
+            background: rgba(196, 154, 69, 0.1);
+            color: var(--mu-gold, #c49a45);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .activity-title {
+            font-size: 15px;
+            color: var(--mu-blue-dark, #002454);
+            font-weight: 600;
+            line-height: 1.5;
+            margin: 0 0 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .activity-list-item:hover .activity-title {
+            color: var(--mu-blue, #194488);
+        }
+
+        .activity-readmore {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--mu-gold, #c49a45);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.3s ease;
+        }
+
+        .activity-readmore svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .activity-list-item:hover .activity-readmore {
+            gap: 10px;
+        }
+
         @media (max-width: 768px) {
-            .elegant-item { flex-direction: column; gap: 15px; padding-left: 15px; }
-            .elegant-number { text-align: left; }
-            .elegant-item:hover { padding-left: 20px; }
+            .activity-list-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                padding: 20px 10px;
+            }
+            .activity-list-item:hover {
+                transform: none;
+            }
+            .activity-thumbnail {
+                width: 100%;
+                flex: auto;
+                height: 180px;
+            }
+            .page-header-left h1 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -181,11 +242,9 @@
                 <span class="sep">|</span>
                 <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
             </div>
-            <div class="topbar-social">
-                <a href="#" title="Facebook"><img src="img/template/fb.png" alt="Facebook"></a>
-                <a href="#" title="Twitter / X"><img src="img/template/twitter.png" alt="Twitter"></a>
-                <a href="#" title="Instagram"><img src="img/template/ig.png" alt="Instagram"></a>
-            </div>
+            <div class="topbar-social" style="display:flex; gap:8px; align-items:center;">
+                <a href="facebook.html" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/facebook.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                </div>
             <div class="topbar-lang">
                 <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent"
                     title="English version">
@@ -253,39 +312,46 @@
         <div id="header-placeholder"></div>
 
         <main class="content-area">
-    <div class="clean-header">
-        <h1>ภาพกิจกรรมล่าสุด (ปี 2569)</h1>
-    </div>
-    <div class="academic-wrapper">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 35px; padding: 10px 0 40px;">
+            <div class="page-header-left">
+                <h1>ประมวลภาพกิจกรรม ประจำปี 2569</h1>
+            </div>
             
-            <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2569/02/older.html" target="_blank" style="text-decoration: none; display: flex; flex-direction: column; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)';">
-                <div style="height: 240px; overflow: hidden;">
-                    <img src="img/activities/activity_1.png" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 25px; flex: 1; display: flex; flex-direction: column;">
-                    <h3 style="font-size: 16px; color: var(--mu-blue-dark); line-height: 1.6; margin-bottom: 15px; font-weight: 500;">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดกิจกรรมสร้างเสริมสุขภาพ “ภูมิปัญญาไทยกันล้มในผู้สูงอายุ” มุ่งเน้นการบูรณาการความรู้สู่การปฏิบัติจริงในชุมชน</h3>
-                    <div style="margin-top: auto; display: flex; align-items: center; color: var(--mu-gold); font-weight: 600; font-size: 15px;">
-                        ดูภาพกิจกรรม <span style="margin-left: 5px;">→</span>
+            <div class="activity-list">
+                
+                <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2569/02/older.html" target="_blank" class="activity-list-item">
+                    <div class="activity-thumbnail">
+                        <img src="img/activities/activities1.jpg" alt="กิจกรรมสร้างเสริมสุขภาพ">
                     </div>
-                </div>
-            </a>
+                    <div class="activity-info">
+                        <div class="activity-meta">
+                            <span class="activity-date-badge">กุมภาพันธ์ 2569</span>
+                        </div>
+                        <h3 class="activity-title">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดกิจกรรมสร้างเสริมสุขภาพ “ภูมิปัญญาไทยกันล้มในผู้สูงอายุ” มุ่งเน้นการบูรณาการความรู้สู่การปฏิบัติจริงในชุมชน</h3>
+                        <div class="activity-readmore">
+                            อ่านรายละเอียด
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                    </div>
+                </a>
 
-            <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2569/01/older.html" target="_blank" style="text-decoration: none; display: flex; flex-direction: column; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)';">
-                <div style="height: 240px; overflow: hidden;">
-                    <img src="img/activities/activity_2.png" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 25px; flex: 1; display: flex; flex-direction: column;">
-                    <h3 style="font-size: 16px; color: var(--mu-blue-dark); line-height: 1.6; margin-bottom: 15px; font-weight: 500;">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดกิจกรรมดนตรีบำบัดและนันทนาการ เสริมสร้างสุขภาวะผู้สูงอายุ</h3>
-                    <div style="margin-top: auto; display: flex; align-items: center; color: var(--mu-gold); font-weight: 600; font-size: 15px;">
-                        ดูภาพกิจกรรม <span style="margin-left: 5px;">→</span>
+                <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2569/01/older.html" target="_blank" class="activity-list-item">
+                    <div class="activity-thumbnail">
+                        <img src="img/activities/activities2.jpg" alt="กิจกรรมดนตรีบำบัดและนันทนาการ">
                     </div>
-                </div>
-            </a>
-        </div>
-        
-    </div>
-</main>
+                    <div class="activity-info">
+                        <div class="activity-meta">
+                            <span class="activity-date-badge">มกราคม 2569</span>
+                        </div>
+                        <h3 class="activity-title">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดกิจกรรมดนตรีบำบัดและนันทนาการ เสริมสร้างสุขภาวะผู้สูงอายุ</h3>
+                        <div class="activity-readmore">
+                            อ่านรายละเอียด
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </main>
 
         <footer class="site-footer">
             <div class="footer-inner">
@@ -301,23 +367,12 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                    <div style="display:flex;gap:10px;">
-                        <a href="#" title="Facebook"
-                            style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
-                            <img src="img/template/fb.png" alt="Facebook"
-                                style="width:18px;height:18px;filter:brightness(0) invert(1);">
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="facebook.html" title="Facebook"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="img/template/facebook.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
                         </a>
-                        <a href="#" title="Twitter"
-                            style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
-                            <img src="img/template/twitter.png" alt="Twitter"
-                                style="width:18px;height:18px;filter:brightness(0) invert(1);">
-                        </a>
-                        <a href="#" title="Instagram"
-                            style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
-                            <img src="img/template/ig.png" alt="Instagram"
-                                style="width:18px;height:18px;filter:brightness(0) invert(1);">
-                        </a>
-                    </div>
+                        </div>
                     <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent"
                         style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
