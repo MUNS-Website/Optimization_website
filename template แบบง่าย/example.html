@@ -16,12 +16,9 @@
 <body>
 
   <!-- ===================================================
-       [TEMPLATE] ปุ่ม BACK TO TOP & MOBILE MENU OVERLAY
+       [TEMPLATE] MOBILE MENU OVERLAY
        (ส่วนนี้คงไว้สําหรับควบคุมเมนูเวลาเปิดบนมือถือ)
        =================================================== -->
-  <button id="back-to-top" title="กลับขึ้นด้านบน" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
-  </button>
 
   <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-nav-panel">
@@ -189,6 +186,11 @@
     </footer>
 
   </div><!-- /.mn-wrapper -->
+
+  <!-- ปุ่ม Back to top (จะปรากฏเมื่อเลื่อนลงไปมากๆ) -->
+  <button id="back-to-top" title="กลับขึ้นด้านบน" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+  </button>
 
 
   <!-- ===================================================

@@ -141,6 +141,18 @@ a {
 .footer-info a:hover { color: var(--mu-gold); }
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); }
 
+/* ================================================================================
+    BACK TO TOP BUTTON 
+================================================================================
+*/
+#back-to-top {
+  position: fixed; right: 24px; bottom: 32px; width: 44px; height: 44px; background: linear-gradient(135deg, var(--mu-blue), var(--mu-blue-light));
+  border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; cursor: pointer;
+  opacity: 0; pointer-events: none; transition: all var(--transition-base); box-shadow: var(--shadow-md); z-index: 999; border: none;
+}
+#back-to-top.visible { opacity: 1; pointer-events: all; }
+#back-to-top svg { width: 20px; height: 20px; fill: white; }
+
 
 /* ================================================================================
 📱📐 [โซน: ตั้งค่าหน้าจอมือถือ/แท็บเล็ตเฉพาะ Header, Navbar, Footer (MEDIA QUERIES)] 📐📱
