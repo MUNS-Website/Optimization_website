@@ -1,4 +1,4 @@
-/* ========================================================
+﻿/* ========================================================
    GLOBAL VARIABLES & BRAND DESIGN TOKENS (Mahidol Theme)
    ======================================================== */
 :root {
@@ -29,6 +29,16 @@
   --font-thai: 'Sarabun', sans-serif;
   --font-en: 'Inter', sans-serif;
   --font-base: var(--font-thai);
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
 
   /* Utilities & Grid Setup */
   --radius-sm: 6px;
@@ -107,51 +117,48 @@ ul { list-style: none; }
    3. NAVIGATION BAR (DESKTOP)
    ========================================= */
 .navbar { background: var(--mu-blue); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(25, 68, 136, 0.3); }
-.navbar-inner { display: flex; align-items: center; justify-content: space-between; height: var(--navbar-height); padding: 0 16px; }
+.navbar-inner { display: flex; align-items: center; justify-content: space-between; height: var(--navbar-height); padding: 0 var(--space-4); }
+.navbar-brand { color: var(--white); font-size: 16px; font-weight: 400; line-height: 1.2; margin-right: 20px; }
 .nav-menu { display: flex; align-items: center; height: 100%; }
 .nav-item { position: relative; height: 100%; display: flex; align-items: center; }
-.nav-link { display: flex; align-items: center; gap: 5px; padding: 0 16px; height: 100%; color: rgba(255,255,255,0.88); font-size: 15px; font-weight: 500; white-space: nowrap; cursor: pointer; }
-.nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 3px; background: var(--mu-gold); transition: width var(--transition-base); }
-.nav-link:hover, .nav-link.active { color: var(--white); background: rgba(255,255,255,0.08); }
+.nav-link { display: flex; align-items: center; gap: 5px; padding: 0 11px; height: 100%; color: rgba(255,255,255,0.88); font-size: 15px; font-weight: 500; white-space: nowrap; transition: all var(--transition-fast); cursor: pointer; border: none; background: none; }
+.nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 3px; background: var(--mu-gold); border-radius: var(--radius-full) var(--radius-full) 0 0; transition: width var(--transition-base); }
+.nav-link:hover, .nav-link.active { color: var(--white); background: rgba(255, 255, 255, 0.08); }
 .nav-link:hover::after, .nav-link.active::after { width: 60%; }
 .nav-arrow { font-size: 10px; opacity: 0.7; transition: transform var(--transition-fast); }
 .nav-item:hover .nav-arrow { transform: rotate(180deg); }
 
-/* Navigation Dropdowns */
-.dropdown {
-  position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; background: var(--white); border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg); overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(-8px);
-  transition: all var(--transition-base); border: 1px solid var(--gray-100); z-index: 1100;
-}
+/* Dropdown เมนูย่อย */
+.dropdown { position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; background: var(--white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all var(--transition-base); border: 1px solid var(--gray-100); z-index: 1100; }
 .nav-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-.dropdown-item { display: block; padding: 12px 20px; color: var(--gray-700); font-size: 14.5px; border-bottom: 1px solid var(--gray-50); transition: all var(--transition-fast); position: relative; }
+.dropdown-item { display: block; padding: var(--space-3) var(--space-5); color: var(--gray-700); font-size: 14.5px; border-bottom: 1px solid var(--gray-50); transition: all var(--transition-fast); position: relative; }
 .dropdown-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--mu-blue); transition: width var(--transition-fast); }
-.dropdown-item:hover { background: var(--mu-blue-pale); color: var(--mu-blue); padding-left: 28px; }
+.dropdown-item:hover { background: var(--mu-blue-pale); color: var(--mu-blue); padding-left: calc(var(--space-5) + 8px); }
 .dropdown-item:hover::before { width: 4px; }
 .dropdown-item:last-child { border-bottom: none; }
 
-/* Responsive Hamburger UI */
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
-.hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: var(--radius-full); transition: all var(--transition-base); }
+/* Hamburger ปุ่มเมนูมือถือ */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: var(--space-2); border-radius: var(--radius-sm); border: none; background: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: white; transition: all var(--transition-base); }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile Menu Overlay */
-.mobile-menu { display: none; position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0); backdrop-filter: blur(0px); transition: all var(--transition-slow); pointer-events: none; }
+/* Mobile Menu Panel */
+.mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 2000; background: rgba(0,0,0,0); backdrop-filter: blur(0px); transition: all var(--transition-slow); pointer-events: none; }
 .mobile-menu.open { display: block; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); pointer-events: all; }
-.mobile-nav-panel { position: fixed; top: 0; right: -100%; width: min(320px, 85vw); height: 100%; background: var(--mu-blue-dark); overflow-y: auto; transition: right var(--transition-slow); display: flex; flex-direction: column; }
+.mobile-nav-panel { position: fixed; top: 0; right: -100%; width: min(320px, 85vw); height: 100%; background: var(--mu-blue-dark); overflow-y: auto; transition: right var(--transition-slow) cubic-bezier(0.25, 0.46, 0.45, 0.94); display: flex; flex-direction: column; }
 .mobile-menu.open .mobile-nav-panel { right: 0; }
-.mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); background: var(--mu-blue); }
+.mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) var(--space-5); border-bottom: 1px solid rgba(255,255,255,0.1); background: var(--mu-blue); }
 .mobile-nav-title { color: white; font-size: 15px; font-weight: 600; }
-.mobile-close { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: var(--radius-full); border: none; background: rgba(255,255,255,0.1); color: white; font-size: 20px; }
-.mobile-nav-list { padding: 16px 0; flex: 1; }
+.mobile-close { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: var(--radius-full); border: none; background: rgba(255,255,255,0.1); color: white; font-size: 20px; cursor: pointer; }
+.mobile-nav-list { padding: var(--space-4) 0; flex: 1; }
 .mobile-nav-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
-.mobile-nav-link { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; color: rgba(255,255,255,0.85); font-size: 15px; cursor: pointer; }
+.mobile-nav-link { display: flex; align-items: center; justify-content: space-between; padding: var(--space-4) var(--space-5); color: rgba(255,255,255,0.85); font-size: 15px; cursor: pointer; }
 .mobile-dropdown { display: none; background: rgba(0,0,0,0.2); }
 .mobile-dropdown.open { display: block; }
-.mobile-dropdown a { display: block; padding: 12px 20px 12px 36px; color: rgba(255,255,255,0.65); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.04); }
-.mobile-dropdown a:hover { color: var(--mu-gold-light); background: rgba(255,255,255,0.05); }
+.mobile-dropdown a { display: block; padding: var(--space-3) var(--space-5) var(--space-3) calc(var(--space-5) + 16px); color: rgba(255,255,255,0.65); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.mobile-dropdown a::before { content: '– '; opacity: 0.5; }
 
 /* =========================================
    4. HERO SLIDESHOW SECTION
@@ -349,4 +356,102 @@ ul { list-style: none; }
     .modern-news-grid {
         grid-template-columns: 1fr; /* หน้าจอมือถือเล็ก ปรับเป็นแถวเดี่ยวแนวตั้งยาวลงไป */
     }
+}
+/* --- Legacy Content Beautification --- */
+.legacy-content {
+    font-size: 16.5px;
+    color: var(--gray-700);
+    line-height: 1.8;
+}
+
+
+.legacy-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+
+.legacy-content ul, .legacy-content ol {
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+.legacy-content li {
+    margin-bottom: 10px;
+}
+.legacy-content .txt_blue, .legacy-content .txt_blue_reg {
+    color: var(--mu-blue);
+    font-weight: 600;
+}
+.legacy-content .txt_name_bold {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--mu-blue-dark);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.legacy-content p.bg_grey, .legacy-content p.bg_blue, 
+.legacy-content span.bg_grey, .legacy-content span.bg_blue,
+.legacy-content div.bg_grey, .legacy-content div.bg_blue {
+    background: var(--mu-blue-pale);
+    color: var(--mu-blue-dark);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.legacy-content p.bg_blue, .legacy-content span.bg_blue, .legacy-content div.bg_blue {
+    background: var(--mu-blue);
+    color: var(--white);
+}
+
+.legacy-content table {
+    width: 100% !important;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+.legacy-content td {
+    padding: 15px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.legacy-content tr.bg_blue td, .legacy-content tr.bg_grey td {
+    background: var(--mu-blue);
+    color: var(--white);
+    font-weight: 600;
+    padding: 15px 20px;
+    border-bottom: none;
+}
+.legacy-content tr.bg_grey td {
+    background: var(--mu-blue-pale);
+    color: var(--mu-blue-dark);
+}
+.legacy-content .txt_white {
+    color: var(--white) !important;
+}
+/* --- Legacy Orange Buttons --- */
+.legacy-content td[bgcolor="#EF6B0A"] {
+    background: var(--mu-gold) !important;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.legacy-content td[bgcolor="#EF6B0A"]:hover {
+    filter: brightness(0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.legacy-content td[bgcolor="#EF6B0A"] span, 
+.legacy-content td[bgcolor="#EF6B0A"] a {
+    color: var(--white) !important;
+    text-decoration: none !important;
+    display: block;
+    font-weight: 600;
 }
