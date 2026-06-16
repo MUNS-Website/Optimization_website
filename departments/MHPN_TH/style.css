@@ -76,8 +76,8 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 /* Liquid Glass Classes */
 .liquid-glass {
   background: var(--surface);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-glass);
@@ -151,7 +151,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   flex-direction: column;
   align-items: flex-start;
   text-decoration: none;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; backface-visibility: hidden;
 }
 .bento-card:hover {
   transform: translateY(-8px);
@@ -205,8 +205,8 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   font-size: 1.2rem;
   color: var(--text-main);
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: var(--radius-full);
   box-shadow: 0 4px 15px rgba(52, 78, 65, 0.05);
@@ -218,3 +218,4 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   box-shadow: 0 8px 25px rgba(52, 78, 65, 0.15);
 }
 .glass-btn svg { width: 24px; height: 24px; }
+
