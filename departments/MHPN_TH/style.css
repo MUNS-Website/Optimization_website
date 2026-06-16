@@ -6,16 +6,16 @@
   --font-body: 'Prompt', sans-serif;
 
   /* Organic Sage/Mint Palette */
-  --primary: #588157; /* Deep sage */
-  --primary-light: #a3b18a; /* Soft sage */
+  --primary: #2d4a3e; /* Deep sage */
+  --primary-light: #678a76; /* Soft sage */
   --primary-glow: rgba(163, 177, 138, 0.3);
-  --secondary: hsl(42, 85%, 52%); /* Gold Accent */ /* Warm earthy accent */
+  --secondary: #b89d70; /* Warm Earthy Sand/Bronze */ /* Warm earthy accent */
   
-  --background: #f4f6f4; /* Very soft green-tinted white */
+  --background: #f2f3ee; /* Very soft green-tinted white */
   --surface: rgba(255, 255, 255, 0.6); /* Glass surface */
   --surface-border: rgba(255, 255, 255, 0.8);
   
-  --text-main: #344e41; /* Dark forest green */
+  --text-main: #1f362b; /* Dark forest green */
   --text-muted: #588157;
   --text-inverse: #ffffff;
 
@@ -34,7 +34,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 
 /* Override Centralized Header Color for MHPN */
 .site-header {
-  background: linear-gradient(135deg, #344e41 0%, #588157 100%) !important;
+  background: linear-gradient(135deg, #1f362b 0%, #2d4a3e 100%) !important;
 }
 .site-header::after {
   background: #a3b18a !important;
@@ -220,7 +220,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 
 /* Liquid Glass Header */
 .site-header, .navbar {
-  background: linear-gradient(135deg, #344e41 0%, #588157 100%) !important;
+  background: linear-gradient(135deg, #1f362b 0%, #2d4a3e 100%) !important;
   border-bottom: 1px solid rgba(0,0,0,0.1) !important;
 }
 .site-header::after { display: none !important; }
@@ -270,4 +270,6 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
   text-shadow: 0 1px 2px rgba(0,0,0,0.2) !important;
 }
+
+
 
