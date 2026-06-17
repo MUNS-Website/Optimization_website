@@ -9,15 +9,15 @@
    CSS Variables & Design Tokens
    ========================================= */
 :root {
-  /* Mahidol Brand Colors (Refined & Clean) */
-  --mu-blue: #194488;          /* Deep Royal Blue */
-  --mu-blue-dark: #102d5e;     /* Navy Blue */
-  --mu-blue-mid: #1d549c;      /* Mid Blue */
-  --mu-blue-light: #2a6fc4;    /* Light Royal Blue */
-  --mu-blue-pale: #f0f4fa;     /* Pale Blue tint */
-  --mu-gold: #f59e0b;          /* Gold (Amber) */
-  --mu-gold-light: #fcd34d;    /* Light Gold */
-  --mu-gold-dark: #d97706;     /* Golden Orange */
+  /* Mahidol Brand Colors (Refined & Clean) -> Customized for MN_TH Orange Theme */
+  --mu-blue: #f97316;          /* Vibrant Orange */
+  --mu-blue-dark: #0c2340;     /* Deep Mahidol Navy Blue for highly legible text (not brown) */
+  --mu-blue-mid: #ea580c;      /* Deep Orange */
+  --mu-blue-light: #ffb300;    /* Vibrant Yellow-ish Orange */
+  --mu-blue-pale: #fff7ed;     /* Soft orange-cream tint for card/badge backgrounds */
+  --mu-gold: #ffb300;          /* Yellow-ish Orange */
+  --mu-gold-light: #fde047;    /* Light Yellow */
+  --mu-gold-dark: #ea580c;     /* Deep Orange */
 
   /* Neutral Palette */
   --white: #ffffff;
@@ -63,9 +63,9 @@
 
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 16px rgba(25, 68, 136, 0.10), 0 2px 6px rgba(0,0,0,0.06);
-  --shadow-lg: 0 10px 40px rgba(25, 68, 136, 0.15), 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-xl: 0 20px 60px rgba(25, 68, 136, 0.2);
+  --shadow-md: 0 4px 16px rgba(217, 119, 6, 0.10), 0 2px 6px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 40px rgba(217, 119, 6, 0.15), 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-xl: 0 20px 60px rgba(217, 119, 6, 0.2);
 
   /* Transitions */
   --transition-fast: 0.15s ease;
@@ -234,7 +234,7 @@ ul { list-style: none; }
    HEADER / BRANDING
    ========================================= */
 .site-header {
-  background: linear-gradient(135deg, var(--mu-gold-dark) 0%, var(--mu-gold) 60%, var(--mu-gold-light) 100%);
+  background: var(--mu-blue);
   padding: var(--space-6) var(--space-6);
   display: flex;
   align-items: center;
@@ -250,7 +250,7 @@ ul { list-style: none; }
   right: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -261,7 +261,7 @@ ul { list-style: none; }
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--mu-gold-dark) 0%, var(--mu-gold) 50%, var(--mu-gold-dark) 100%);
+  background: var(--mu-gold);
 }
 
 .header-logo {
@@ -295,16 +295,15 @@ ul { list-style: none; }
 .header-dept-name {
   font-size: clamp(18px, 2.5vw, 26px);
   font-weight: 700;
-  color: var(--mu-blue-dark);
+  color: var(--white);
   line-height: 1.3;
   letter-spacing: 0.3px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
   text-align: end;
 }
 
 .header-faculty-name {
   font-size: clamp(13px, 1.8vw, 16px);
-  color: var(--mu-blue-mid);
+  color: var(--mu-blue-pale);
   margin-top: var(--space-1);
   font-weight: 500;
   text-align: end;
@@ -946,12 +945,12 @@ ul { list-style: none; }
    PAGE TITLE BANNER
    ========================================= */
 .page-title-banner {
-  background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+  background: linear-gradient(135deg, var(--mu-blue) 0%, var(--mu-blue-light) 100%);
   padding: var(--space-6) var(--space-6);
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  border-bottom: 3px solid var(--mu-gold);
+  border-bottom: 3px solid var(--mu-blue-mid);
   margin-bottom: var(--space-6);
   border-radius: var(--radius-md);
 }
@@ -1087,7 +1086,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   padding: var(--space-4) var(--space-5);
-  background: linear-gradient(135deg, var(--mu-blue-dark), var(--mu-blue));
+  background: var(--mu-blue-dark);
   color: white;
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
@@ -1101,7 +1100,7 @@ ul { list-style: none; }
 .archive-btn:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
-  background: linear-gradient(135deg, var(--mu-blue), var(--mu-gold-dark));
+  background: var(--mu-blue);
   color: white;
 }
 
@@ -1116,7 +1115,7 @@ ul { list-style: none; }
    FOOTER
    ========================================= */
 .site-footer {
-  background: linear-gradient(135deg, var(--mu-gold-dark) 0%, var(--mu-gold) 100%);
+  background: var(--mu-blue);
   padding: var(--space-10) var(--space-6);
   position: relative;
   overflow: hidden;
@@ -1129,7 +1128,7 @@ ul { list-style: none; }
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--mu-blue-dark), var(--mu-blue), var(--mu-blue-dark));
+  background: var(--mu-gold);
 }
 
 .footer-inner {
@@ -1144,37 +1143,36 @@ ul { list-style: none; }
 .footer-info h3 {
   font-size: 16px;
   font-weight: 700;
-  color: var(--mu-blue-dark);
+  color: var(--white);
   font-family: var(--font-base);
   margin-bottom: var(--space-2);
 }
 
 .footer-info p {
   font-size: 13px;
-  color: var(--mu-blue-dark);
+  color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-base);
   line-height: 1.6;
   margin-bottom: var(--space-1);
-  opacity: 0.9;
 }
 
 .footer-info a {
-  color: var(--mu-blue-mid);
+  color: var(--mu-gold-light);
   transition: color var(--transition-fast);
   font-weight: 600;
 }
 
 .footer-info a:hover {
-  color: var(--mu-blue-dark);
+  color: var(--white);
   text-decoration: underline;
 }
 
 .footer-copy {
   font-size: 12px;
-  color: rgba(16, 45, 94, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   margin-top: var(--space-4);
   padding-top: var(--space-4);
-  border-top: 1px solid rgba(16, 45, 94, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-family: var(--font-base);
 }
 
@@ -1622,5 +1620,54 @@ ul { list-style: none; }
   font-weight: 500;
   color: var(--gray-700);
   line-height: 1.5;
+}
+
+/* =========================================
+   Mobile Staff Card Layout Adjustments
+   ========================================= */
+@media (max-width: 600px) {
+  .staff-card {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0;
+  }
+  .staff-img-container {
+    width: 100px !important;
+    height: 125px !important;
+    padding-top: 0 !important;
+    flex-shrink: 0 !important;
+    margin: var(--space-3) !important;
+    border-radius: var(--radius-md) !important;
+  }
+  .staff-img {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .staff-info {
+    padding: var(--space-3) var(--space-3) var(--space-3) 0 !important;
+    gap: var(--space-1) !important;
+  }
+  .staff-name-link {
+    font-size: 14.5px !important;
+  }
+  .staff-position {
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+    margin-bottom: var(--space-2) !important;
+  }
+  .staff-contacts {
+    padding-top: var(--space-2) !important;
+    gap: var(--space-1) !important;
+  }
+  .staff-contact-item {
+    font-size: 11.5px !important;
+    word-break: break-all;
+  }
+  .staff-contact-item svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
 }
 
