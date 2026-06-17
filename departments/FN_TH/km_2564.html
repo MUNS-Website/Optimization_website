@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ข่าวสารและกิจกรรม : ภาควิชาการพยาบาลรากฐาน</title>
+    <title>เกี่ยวกับภาควิชา:  ภาควิชาการพยาบาลรากฐาน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
     <meta name="description" content="การบริการวิชาการ ภาควิชาการพยาบาลรากฐาน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล">
 
     <script>(function (w, d, s, l, i) {
@@ -25,160 +25,99 @@
     <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
 
     <style>
-        /* --- Premium List View (Compact Size) --- */
-        .page-header-left {
-            max-width: 1000px;
-            margin: 40px auto 25px;
-            padding: 0 20px;
+        /* --- Clean Header --- */
+        .clean-header {
+            text-align: center;
+            padding: 40px 20px 25px;
+            margin-bottom: 20px;
         }
-        .page-header-left h1 {
-            font-size: 22px;
-            color: var(--mu-blue-dark, #002454);
+        .clean-header h1 {
+            font-size: 32px;
+            color: var(--mu-blue-dark);
             font-weight: 700;
-            margin: 0;
-            position: relative;
-            padding-left: 15px;
-        }
-        .page-header-left h1::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 20px;
-            background-color: var(--mu-gold, #c49a45);
-            border-radius: 4px;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
         }
 
-        .activity-list {
-            max-width: 1000px;
+        /* --- Content Layout --- */
+        .academic-wrapper {
+            max-width: 900px;
             margin: 0 auto 80px;
             padding: 0 20px;
-            display: flex;
-            flex-direction: column;
         }
 
-        .activity-list-item {
+        .intro-text-elegant {
+            font-size: 17.5px;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 50px;
+            text-align: justify;
+        }
+        .intro-text-elegant p {
+            text-indent: 2.5em;
+            margin: 0;
+        }
+
+        /* Elegant List */
+        .elegant-list {
             display: flex;
-            align-items: center;
-            gap: 25px;
-            padding: 20px 10px;
-            border-bottom: 1px dashed rgba(0, 36, 84, 0.15);
-            text-decoration: none;
+            flex-direction: column;
+            max-width: 850px;
+            margin: 0 auto 60px;
+        }
+        .elegant-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
             transition: all 0.3s ease;
-            border-radius: 12px;
         }
-
-        .activity-list-item:last-child {
-            border-bottom: none;
+        .elegant-item:first-child {
+            border-top: 1px solid rgba(0,0,0,0.06);
         }
-
-        .activity-list-item:hover {
-            background-color: rgba(25, 68, 136, 0.03);
-            transform: translateX(4px);
-            border-bottom-color: transparent;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+        .elegant-item:hover {
+            background: linear-gradient(90deg, rgba(25,68,136,0.02) 0%, transparent 100%);
+            padding-left: 15px;
         }
-
-        .activity-thumbnail {
-            flex: 0 0 200px;
-            height: 135px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-            border: 1px solid rgba(0,0,0,0.04);
-            position: relative;
+        .elegant-number {
+            font-size: 38px;
+            font-weight: 300;
+            color: var(--mu-gold);
+            line-height: 1;
+            font-family: 'Inter', sans-serif;
+            flex: 0 0 50px;
+            text-align: right;
+            opacity: 0.8;
         }
-
-        .activity-thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .activity-list-item:hover .activity-thumbnail img {
-            transform: scale(1.05);
-        }
-
-        .activity-info {
+        .elegant-text {
+            font-size: 17px;
+            color: var(--gray-700);
+            line-height: 1.6;
+            padding-top: 8px;
             flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
-        .activity-meta {
-            margin-bottom: 8px;
+        /* Elegant Image */
+        .image-elegant {
+            text-align: center;
         }
-
-        .activity-date-badge {
-            display: inline-block;
-            background: rgba(196, 154, 69, 0.1);
-            color: var(--mu-gold, #c49a45);
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+        .image-elegant img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.5s ease;
         }
-
-        .activity-title {
-            font-size: 15px;
-            color: var(--mu-blue-dark, #002454);
-            font-weight: 600;
-            line-height: 1.5;
-            margin: 0 0 10px 0;
-            transition: color 0.3s ease;
+        .image-elegant img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
         }
-
-        .activity-list-item:hover .activity-title {
-            color: var(--mu-blue, #194488);
-        }
-
-        .activity-readmore {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--mu-gold, #c49a45);
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: gap 0.3s ease;
-        }
-
-        .activity-readmore svg {
-            width: 14px;
-            height: 14px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        .activity-list-item:hover .activity-readmore {
-            gap: 10px;
-        }
-
+        
         @media (max-width: 768px) {
-            .activity-list-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-                padding: 20px 10px;
-            }
-            .activity-list-item:hover {
-                transform: none;
-            }
-            .activity-thumbnail {
-                width: 100%;
-                flex: auto;
-                height: 180px;
-            }
-            .page-header-left h1 {
-                font-size: 20px;
-            }
+            .elegant-item { flex-direction: column; gap: 15px; padding-left: 15px; }
+            .elegant-number { text-align: left; }
+            .elegant-item:hover { padding-left: 20px; }
         }
     </style>
 </head>
@@ -213,7 +152,8 @@
                         target="_blank" rel="noopener noreferrer">การวิจัย</a>
                 </div>
                 <div class="mobile-nav-item">
-                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">การบริการวิชาการ <span>▾</span>
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+                        การบริการวิชาการ <span>▾</span>
                     </div>
                     <div class="mobile-dropdown">
                         <a href="academic.html">การบริการวิชาการ</a>
@@ -222,10 +162,10 @@
                     </div>
                 </div>
                 <div class="mobile-nav-item">
-                    <a href="km.html" class="mobile-nav-link">การจัดการความรู้</a>
+                    <a href="km.html" class="mobile-nav-link active">การจัดการความรู้</a>
                 </div>
                 <div class="mobile-nav-item">
-                    <a href="Activities.html" class="mobile-nav-link active">ข่าวสาร</a>
+                    <a href="Activities.html" class="mobile-nav-link">ข่าวสาร</a>
                 </div>
                 <div class="mobile-nav-item">
                     <a href="contact.html" class="mobile-nav-link">ติดต่อภาควิชา</a>
@@ -293,10 +233,10 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="km.html" class="nav-link">การจัดการความรู้</a>
+                        <a href="km.html" class="nav-link active">การจัดการความรู้</a>
                     </li>
                     <li class="nav-item">
-                        <a href="Activities.html" class="nav-link active">ข่าวสาร</a>
+                        <a href="Activities.html" class="nav-link">ข่าวสาร</a>
                     </li>
                     <li class="nav-item">
                         <a href="contact.html" class="nav-link">ติดต่อภาควิชา</a>
@@ -310,52 +250,47 @@
         <div id="header-placeholder"></div>
 
         <main class="content-area">
-            <div class="page-header-left">
-                <h1>ประมวลภาพกิจกรรม ประจำปี 2569</h1>
+    <div class="clean-header">
+        <h1>การจัดการความรู้</h1>
+    </div>
+            <div class="academic-wrapper">
+        <div class="km-modern-container" style="max-width: 850px; margin: 0 auto;">
+            <div style="background: var(--mu-blue-dark, #004c8f); border-radius: 8px 8px 0 0; padding: 16px 24px; display: flex; align-items: center; gap: 12px;">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <h2 style="color: white; font-size: 18px; font-weight: 500; margin: 0;">ตารางการจัดกิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปีงบประมาณ 2564</h2>
             </div>
             
-            <div class="activity-list">
-                
-                <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2569/02/older.html" target="_blank" class="activity-list-item">
-                    <div class="activity-thumbnail">
-                        <img src="img/activities/activities1.jpg" alt="กิจกรรมสร้างเสริมสุขภาพ">
-                    </div>
-                    <div class="activity-info">
-                        <div class="activity-meta">
-                            <span class="activity-date-badge">กุมภาพันธ์ 2569</span>
+            <div style="background: white; border-radius: 0 0 8px 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.06); border-top: none; overflow: hidden;">
+                <!-- Headers -->
+                <div style="display: flex; padding: 12px 24px; background: rgba(0,0,0,0.01); border-bottom: 1px solid rgba(0,0,0,0.06); color: var(--gray-500, #777); font-size: 13px;">
+                    <div style="flex: 1;">หัวเรื่อง</div>
+                    <div style="flex: 0 0 180px; text-align: right;">วันที่</div>
+                </div>                <!-- Item -->
+                <a href="https://ns.mahidol.ac.th/department/fn_dept/doc/km/64/km64_1.pdf" target="_blank" style="display: flex; align-items: center; padding: 16px 24px; border-bottom: 1px solid rgba(0,0,0,0.04); text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0, 139, 204, 0.03)';" onmouseout="this.style.backgroundColor='transparent';">
+                    <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1; padding-right: 20px;">
+                        <div style="color: var(--mu-gold, #c49a45); margin-top: 2px; flex-shrink: 0;">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                         </div>
-                        <h3 class="activity-title">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดกิจกรรมสร้างเสริมสุขภาพ “ภูมิปัญญาไทยกันล้มในผู้สูงอายุ” มุ่งเน้นการบูรณาการความรู้สู่การปฏิบัติจริงในชุมชน</h3>
-                        <div class="activity-readmore">
-                            อ่านรายละเอียด
-                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2569/01/older.html" target="_blank" class="activity-list-item">
-                    <div class="activity-thumbnail">
-                        <img src="img/activities/activities2.jpg" alt="กิจกรรมดนตรีบำบัดและนันทนาการ">
-                    </div>
-                    <div class="activity-info">
-                        <div class="activity-meta">
-                            <span class="activity-date-badge">มกราคม 2569</span>
-                        </div>
-                        <h3 class="activity-title">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดกิจกรรมดนตรีบำบัดและนันทนาการ เสริมสร้างสุขภาวะผู้สูงอายุ</h3>
-                        <div class="activity-readmore">
-                            อ่านรายละเอียด
-                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        <div style="color: var(--mu-blue-dark, #004c8f); font-size: 14.5px; font-weight: 400; line-height: 1.5;">
+                            เรื่อง การพัฒนาข้อสอบปรนัยเพื่อประเมินความรู้ทางการพยาบาล
                         </div>
                     </div>
-                </a>
-            </div>
-            
-            <div style="text-align: right; margin: 30px auto 40px; max-width: 1000px; padding: 0 20px;">
-                <a href="Activities_all.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 30px; background: var(--mu-blue); color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 15px; box-shadow: 0 4px 15px rgba(0, 139, 204, 0.3); transition: all 0.3s ease;" onmouseover="this.style.background='var(--mu-blue-dark)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--mu-blue)'; this.style.transform='translateY(0)';">
-                    ดูเพิ่มเติม
-                    <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-            </div>
-        </main>
+                    <div style="flex: 0 0 180px; text-align: right; color: var(--gray-500, #666); font-size: 13px; font-weight: 400; display: flex; align-items: center; justify-content: flex-end; gap: 6px;">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        วันพุธที่ 17 มีนาคม 2564
+                    </div>
+                </a>            </div>
+        </div>
+        
+        
+        
+    </div>
+                <div style="text-align: right; margin: 20px auto 40px; max-width: 850px; padding: 0 20px;">
+            <a href="km_all.html" style="display: inline-block; padding: 10px 24px; background: var(--mu-blue-light, #008bcc); color: white; text-decoration: none; border-radius: 20px; font-weight: 500; font-size: 14.5px; box-shadow: 0 2px 8px rgba(0, 139, 204, 0.2); transition: all 0.2s ease;" onmouseover="this.style.background='var(--mu-blue, #00569d)';" onmouseout="this.style.background='var(--mu-blue-light, #008bcc)';">
+                หน้ารวมกิจกรรมแลกเปลี่ยนเรียนรู้
+            </a>
+        </div>
+</main>
 
         <footer class="site-footer">
             <div class="footer-inner">
@@ -444,3 +379,11 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
