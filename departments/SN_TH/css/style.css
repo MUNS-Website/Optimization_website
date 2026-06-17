@@ -3,11 +3,11 @@
    ======================================================== */
 
 :root {
-  /* Mahidol Brand Colors Token -> Customized for SN_TH Navy & Sky Blue Theme */
-  --mu-blue: #194488;       /* Navy Blue */
-  --mu-blue-dark: #102d5e;  /* Deep Navy */
-  --mu-blue-mid: #1d549c;   /* Slate Blue */
-  --mu-blue-light: #2a6fc4; /* Medium Royal Blue */
+  /* Mahidol Brand Colors Token -> Customized for SN_TH Standard Royal Blue & Sky Blue Theme */
+  --mu-blue: #1d4ed8;       /* Standard Royal Blue */
+  --mu-blue-dark: #1e40af;  /* Solid Dark Blue */
+  --mu-blue-mid: #2563eb;   /* Vibrant Blue */
+  --mu-blue-light: #3b82f6; /* Medium Royal Blue */
   --mu-blue-pale: #e0f2fe;  /* Soft Ice Blue / Sky Blue Pale */
   --mu-gold: #0284c7;       /* Vibrant Sky Blue Accent */
   --mu-gold-light: #38bdf8; /* Light Sky Blue Accent */
