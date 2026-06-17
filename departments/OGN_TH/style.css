@@ -601,3 +601,20 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   border-color: var(--primary-glow);
 }
 
+
+/* Hero Image Fix */
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  object-fit: contain;
+}
