@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 
 <head>
@@ -53,15 +53,10 @@
             margin: 0 auto 80px;
             padding: 0 20px;
         }
-        .staff-leadership {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
+
         .staff-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
         .staff-card {
@@ -79,11 +74,15 @@
             box-shadow: 0 20px 40px rgba(25, 68, 136, 0.1);
         }
         .staff-img-wrapper {
-            width: 100%;
+            width: 170px;
             aspect-ratio: 3 / 4;
+            margin: 25px auto 0;
+            border-radius: 12px;
             overflow: hidden;
             background: #f0f4f8;
             position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 4px solid var(--white);
         }
         .staff-img-wrapper img {
             width: 100%;
@@ -93,39 +92,50 @@
             transition: transform 0.5s ease;
         }
         .staff-card:hover .staff-img-wrapper img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
         .staff-info {
-            padding: 25px 20px;
+            padding: 20px 15px 25px;
             text-align: center;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
         .staff-name {
-            font-size: 17px;
+            font-size: 13.5px;
+            letter-spacing: -0.4px;
             font-weight: 700;
             color: var(--mu-blue-dark);
             margin-bottom: 8px;
             line-height: 1.4;
             text-decoration: none;
             transition: color 0.2s;
+            white-space: nowrap;
+            display: block;
+            width: 100%;
         }
         .staff-name:hover {
             color: var(--mu-gold-dark);
         }
         .staff-position {
-            font-size: 14.5px;
-            color: var(--mu-blue);
+            font-size: 12.5px;
+            color: var(--mu-gold-dark);
+            background: rgba(200, 168, 75, 0.12);
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             line-height: 1.4;
+            letter-spacing: -0.2px;
         }
         .staff-contact {
             margin-top: auto;
-            font-size: 14px;
+            font-size: 12.5px;
             color: var(--gray-600);
             line-height: 1.6;
+            text-align: center;
         }
         .staff-contact a {
             color: var(--gray-600);
@@ -135,12 +145,15 @@
         .staff-contact a:hover {
             color: var(--mu-gold-dark);
         }
-        .leadership-card .staff-name { font-size: 19px; }
-        .leadership-card .staff-position { font-size: 15.5px; }
 
+        @media (max-width: 1024px) {
+            .staff-grid { grid-template-columns: repeat(3, 1fr); }
+        }
         @media (max-width: 768px) {
-            .staff-leadership { grid-template-columns: 1fr; gap: 30px; }
-            .staff-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+            .staff-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .staff-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -218,10 +231,8 @@
             <div class="header-logo">
                 <img src="img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
             </div>
-            <div class="header-text">
+            <div class="header-text" style="text-align: right;">
                 <div class="header-dept-name">ภาควิชาการพยาบาลรากฐาน</div>
-                <div class="header-faculty-name">คณะพยาบาลศาสตร์</div>
-                <div class="header-univ-name">มหาวิทยาลัยมหิดล &nbsp;·&nbsp; Mahidol University</div>
             </div>
         </header>
 
@@ -274,13 +285,14 @@
 
         <main class="content-area">
 
-            <div class="clean-header">
-                <h1>คณาจารย์ประจำภาควิชา</h1>
+            <div class="clean-header" style="padding-bottom: 10px;">
+                <h1 style="font-size: 36px;">คณาจารย์และบุคลากร</h1>
+                <div class="clean-divider" style="width: 150px; margin-top: 15px; margin-bottom: 30px;"></div>
             </div>
 
             <div class="staff-section">
-                <!-- ผู้บริหารภาควิชา -->
-                <div class="staff-leadership">
+                <!-- ผู้บริหารภาควิชาและคณาจารย์ -->
+                <div class="staff-grid">
                     <!-- 1 -->
                     <div class="staff-card leadership-card">
                         <div class="staff-img-wrapper">
@@ -309,10 +321,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- คณาจารย์ท่านอื่นๆ -->
-                <div class="staff-grid">
+                    <!-- คณาจารย์ประจำภาควิชาฯ -->
                     <!-- 3 -->
                     <div class="staff-card">
                         <div class="staff-img-wrapper">
@@ -521,6 +531,21 @@
                             <div class="staff-contact">
                                 📞 02-441-5333 ต่อ 2602<br>
                                 ✉️ <a href="mailto:jittima.pay@mahidol.ac.th">jittima.pay@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 18 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/rungnapa.jpg" alt="นางรุ่งนภา จีนประชา">
+                        </div>
+                        <div class="staff-info">
+                            <a href="#" class="staff-name">นางรุ่งนภา จีนประชา</a>
+                            <div class="staff-position">เจ้าหน้าที่บริหารงานทั่วไป</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2602<br>
+                                📠 0-2441-5442<br>
+                                ✉️ <a href="mailto:rungnapa.pro@mahidol.ac.th">rungnapa.pro@mahidol.ac.th</a>
                             </div>
                         </div>
                     </div>

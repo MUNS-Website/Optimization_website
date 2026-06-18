@@ -16,8 +16,8 @@
   <style>
     .project-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(25, 68, 136, 0.1) !important;
-      border-color: #1d549c !important;
+      box-shadow: 0 8px 20px rgba(217, 119, 6, 0.1) !important;
+      border-color: var(--mu-blue) !important;
     }
   </style>
 </head>
@@ -110,7 +110,7 @@
 
   <nav class="navbar" id="mainNav">
     <div class="navbar-inner">
-      <span id="navBrand" class="navbar-brand" style="display:none;color:white;font-size:15px;font-family:'Sarabun',sans-serif;font-weight:600;">ภาควิชาการพยาบาลอายุรศาสตร์</span>
+      <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลอายุรศาสตร์</span>
       <ul class="nav-menu">
         <li class="nav-item"><a href="index.html" class="nav-link">หน้าหลัก</a></li>
         <li class="nav-item">
@@ -177,8 +177,8 @@
     <!-- PAGE BODY CONTENT -->
     <div class="content-body animate-in" style="animation-delay:0.15s">
       <!-- Intro Block -->
-      <div style="background:linear-gradient(135deg, #f8f9fc, #e8f0fb); border:1px solid #d1d9ec; border-radius:16px; padding:28px; margin-bottom:32px;">
-        <h2 style="font-size:18px; font-weight:700; color:#194488; font-family:'Sarabun',sans-serif; margin-bottom:16px; display:flex; align-items:center; gap:8px; text-indent:0;">
+      <div style="background:linear-gradient(135deg, #f8f9fc, var(--mu-blue-pale)); border:1px solid var(--mu-gold-light); border-radius:16px; padding:28px; margin-bottom:32px;">
+        <h2 style="font-size:18px; font-weight:700; color:var(--mu-blue); font-family:'Sarabun',sans-serif; margin-bottom:16px; display:flex; align-items:center; gap:8px; text-indent:0;">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           นโยบายการบริการวิชาการ
         </h2>
@@ -187,19 +187,19 @@
         </p>
         <ul style="list-style:none; padding:0; margin:16px 0 0; display:flex; flex-direction:column; gap:10px;">
           <li style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:#4b5563; text-indent:0;">
-            <span style="color:#194488; font-weight:bold; margin-top:2px;">•</span> เป็นวิทยากรให้กับหน่วยงานอื่นๆ ทั้งในและนอกคณะฯ
+            <span style="color:var(--mu-blue); font-weight:bold; margin-top:2px;">•</span> เป็นวิทยากรให้กับหน่วยงานอื่นๆ ทั้งในและนอกคณะฯ
           </li>
           <li style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:#4b5563; text-indent:0;">
-            <span style="color:#194488; font-weight:bold; margin-top:2px;">•</span> ให้บริการทางวิชาการแก่ประชาชนทั่วไป
+            <span style="color:var(--mu-blue); font-weight:bold; margin-top:2px;">•</span> ให้บริการทางวิชาการแก่ประชาชนทั่วไป
           </li>
           <li style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:#4b5563; text-indent:0;">
-            <span style="color:#194488; font-weight:bold; margin-top:2px;">•</span> เป็นผู้ทรงคุณวุฒิตรวจสอบเครื่องมือวิจัยและประเมินประสิทธิภาพผลงานของพยาบาล
+            <span style="color:var(--mu-blue); font-weight:bold; margin-top:2px;">•</span> เป็นผู้ทรงคุณวุฒิตรวจสอบเครื่องมือวิจัยและประเมินประสิทธิภาพผลงานของพยาบาล
           </li>
           <li style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:#4b5563; text-indent:0;">
-            <span style="color:#194488; font-weight:bold; margin-top:2px;">•</span> ให้บริการทางวิชาการแก่ชุมชน
+            <span style="color:var(--mu-blue); font-weight:bold; margin-top:2px;">•</span> ให้บริการทางวิชาการแก่ชุมชน
           </li>
           <li style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:#4b5563; text-indent:0;">
-            <span style="color:#194488; font-weight:bold; margin-top:2px;">•</span> ร่วมกับสมาคมศิษย์เก่าพยาบาลศิริราชฯ ออกหน่วยเคลื่อนที่ในการให้บริการทางสุขภาพแก่ประชาชน
+            <span style="color:var(--mu-blue); font-weight:bold; margin-top:2px;">•</span> ร่วมกับสมาคมศิษย์เก่าพยาบาลศิริราชฯ ออกหน่วยเคลื่อนที่ในการให้บริการทางสุขภาพแก่ประชาชน
           </li>
         </ul>
       </div>
@@ -214,7 +214,7 @@
           </div>
           <div style="flex:1;">
             <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-specialized.html" target="_blank" style="color:#194488; text-decoration:none;">
+              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-specialized.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
                 หลักสูตรการพยาบาลเฉพาะทาง
               </a>
             </h3>
@@ -229,7 +229,7 @@
           </div>
           <div style="flex:1;">
             <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-facebook.html" target="_blank" style="color:#194488; text-decoration:none;">
+              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-facebook.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
                 โครงการให้ความรู้ด้านสุขภาพแก่ผู้ป่วยโรคเรื้อรังและประชาชนทั่วไป ผ่านสื่อออนไลน์ Facebook
               </a>
             </h3>
@@ -244,7 +244,7 @@
           </div>
           <div style="flex:1;">
             <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-watpaidam.html" target="_blank" style="color:#194488; text-decoration:none;">
+              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-watpaidam.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
                 จัดทำวิดิโอให้ความรู้ เรื่องการป้องกันการติดเชื้อระบบทางเดินหายใจ การใช้หน้ากากอนามัย และเฟสชิว แก่สามเณรวัดไผ่ดำ
               </a>
             </h3>
@@ -259,7 +259,7 @@
           </div>
           <div style="flex:1;">
             <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-police.html" target="_blank" style="color:#194488; text-decoration:none;">
+              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-police.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
                 โครงการตำรวจไทยใส่ใจสุขภาพ
               </a>
             </h3>
@@ -274,7 +274,7 @@
           </div>
           <div style="flex:1;">
             <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-buddha.html" target="_blank" style="color:#194488; text-decoration:none;">
+              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-buddha.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
                 โครงการพัฒนาจิตวิญญาณด้วยพุทธธรรม
               </a>
             </h3>
@@ -289,7 +289,7 @@
           </div>
           <div style="flex:1;">
             <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-ecg.html" target="_blank" style="color:#194488; text-decoration:none;">
+              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-ecg.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
                 โครงการอบรมพยาบาลวิชาชีพ เรื่อง ECG Interpretation and Nursing Care
               </a>
             </h3>
@@ -304,7 +304,7 @@
           </div>
           <div style="flex:1;">
             <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-other.html" target="_blank" style="color:#194488; text-decoration:none;">
+              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-other.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
                 โครงการอื่นๆ
               </a>
             </h3>
@@ -315,7 +315,7 @@
 
       <!-- Download Banner link -->
       <div style="text-align:center; margin-top:32px;">
-        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/med-download.html" target="_blank" style="display:inline-block; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-md); border:1px solid #d1d9ec; transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/med-download.html" target="_blank" style="display:inline-block; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--mu-gold-light); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
           <img src="img/other/download.gif" alt="ดาวน์โหลดแบบฟอร์ม" style="max-width:100%; display:block; height:auto;">
         </a>
       </div>
