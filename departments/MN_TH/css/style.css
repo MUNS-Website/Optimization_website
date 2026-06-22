@@ -137,7 +137,7 @@ ul { list-style: none; }
    TOP BAR
    ========================================= */
 .topbar {
-  background: var(--mu-gold);
+  background: var(--mu-blue);
   height: var(--topbar-height);
   display: flex;
   align-items: center;
@@ -153,7 +153,7 @@ ul { list-style: none; }
 }
 
 .topbar-links a {
-  color: var(--mu-blue-dark);
+  color: var(--white);
   font-size: 13px;
   font-family: var(--font-base);
   transition: color var(--transition-fast);
@@ -162,10 +162,10 @@ ul { list-style: none; }
   font-weight: 500;
 }
 
-.topbar-links a:hover { color: var(--mu-blue); }
+.topbar-links a:hover { color: var(--mu-gold); }
 
 .topbar-links .sep {
-  color: rgba(16, 45, 94, 0.3);
+  color: rgba(255, 255, 255, 0.4);
   font-size: 12px;
   margin: 0 var(--space-1);
 }
@@ -208,19 +208,19 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: var(--space-1);
-  color: var(--mu-blue-dark);
+  color: var(--white);
   font-size: 12px;
   padding: 3px 10px;
-  border: 1px solid rgba(16, 45, 94, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
   font-weight: 500;
 }
 
 .topbar-lang a:hover {
-  background: var(--mu-blue-dark);
-  border-color: var(--mu-blue-dark);
-  color: var(--white);
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--mu-blue);
 }
 
 .topbar-lang img {
@@ -234,7 +234,7 @@ ul { list-style: none; }
    HEADER / BRANDING
    ========================================= */
 .site-header {
-  background: var(--mu-blue);
+  background: var(--mu-gold);
   padding: var(--space-6) var(--space-6);
   display: flex;
   align-items: center;
@@ -261,7 +261,7 @@ ul { list-style: none; }
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--mu-gold);
+  background: var(--mu-blue);
 }
 
 .header-logo {
@@ -319,7 +319,7 @@ ul { list-style: none; }
    NAVIGATION BAR (ฉบับปรับปรุงตัวล็อกบั๊กแตกแถวและระยะห่างบรรทัด)
    ========================================= */
 .navbar {
-  background: var(--mu-gold);
+  background: var(--mu-blue);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -335,7 +335,7 @@ ul { list-style: none; }
 }
 
 .navbar-brand {
-  color: var(--mu-blue-dark); 
+  color: var(--white); 
   font-size: 14px;
   font-family: var(--font-base);
   font-weight: 600;               
@@ -365,10 +365,10 @@ ul { list-style: none; }
   gap: 5px;
   padding: 0 11px;
   height: 100%;
-  color: var(--mu-blue-dark);
+  color: var(--white);
   font-family: var(--font-base);
   font-size: 14.5px;
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
   transition: all var(--transition-fast);
   position: relative;
@@ -385,14 +385,14 @@ ul { list-style: none; }
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background: var(--mu-blue-dark);
+  background: var(--white);
   border-radius: var(--radius-full) var(--radius-full) 0 0;
   transition: width var(--transition-base);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--mu-blue-dark);
+  color: var(--white);
   background: rgba(255, 255, 255, 0.15);
 }
 
@@ -489,7 +489,7 @@ ul { list-style: none; }
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--mu-blue-dark);
+  background: var(--white);
   border-radius: var(--radius-full);
   transition: all var(--transition-base);
   transform-origin: center;
@@ -534,7 +534,7 @@ ul { list-style: none; }
   right: -100%;
   width: min(320px, 85vw);
   height: 100%;
-  background: var(--mu-blue-dark);
+  background: var(--mu-blue);
   overflow-y: auto;
   transition: right var(--transition-slow) cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
@@ -551,7 +551,7 @@ ul { list-style: none; }
   justify-content: space-between;
   padding: var(--space-5) var(--space-5);
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  background: var(--mu-blue-dark);
+  background: var(--mu-blue);
 }
 
 .mobile-nav-title {
@@ -1251,6 +1251,9 @@ ul { list-style: none; }
    RESPONSIVE — Tablet
    ========================================= */
 @media (max-width: 960px) {
+  .header-dept-name{
+    color:white;
+  }
   .nav-menu {
     display: none;
   }
@@ -1265,7 +1268,7 @@ ul { list-style: none; }
 
   /* Show dept name in nav on tablet+ */
   .navbar-brand {
-    color: rgb(37, 57, 136);
+    color: var(--white);
     font-size: 16px;
     font-family: var(--font-base);
     font-weight: 600;
@@ -1302,7 +1305,7 @@ ul { list-style: none; }
     justify-content: center;
   }
 
-  .header-dept-name { font-size: 16px; color: rgb(37, 57, 136);}
+  .header-dept-name { font-size: 16px; color: rgb(255, 255, 255);}
   .header-faculty-name { font-size: 12px; }
 
   .main-content {
@@ -1676,4 +1679,71 @@ ul { list-style: none; }
     height: 13px !important;
   }
 }
+
+/* =========================================
+   Research & Link Cards
+   ========================================= */
+.link-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--mu-blue-pale), var(--white));
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.12);
+  border-color: var(--mu-blue);
+}
+
+.link-card-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--mu-blue), var(--mu-blue-light));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.link-card-content {
+  flex: 1;
+}
+
+.link-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--mu-blue-dark);
+  font-family: 'Sarabun', sans-serif;
+  line-height: 1.4;
+}
+
+.link-card-desc {
+  font-size: 13px;
+  color: var(--gray-500);
+  font-family: 'Sarabun', sans-serif;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.link-card-arrow {
+  color: var(--mu-blue);
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+}
+
 
