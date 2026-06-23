@@ -363,11 +363,11 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 0 11px;
+  padding: 0 10px;
   height: 100%;
   color: var(--white);
   font-family: var(--font-base);
-  font-size: 14.5px;
+  font-size: 13.5px;
   font-weight: 500;
   white-space: nowrap;
   transition: all var(--transition-fast);
