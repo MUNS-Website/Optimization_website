@@ -113,11 +113,34 @@
             transform: scale(1.02);
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
         }
+
+        /* 3 Images Gallery */
+        .image-gallery-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-top: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+        .image-gallery-3:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+        .image-gallery-3 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
         
         @media (max-width: 768px) {
             .elegant-item { flex-direction: column; gap: 15px; padding-left: 15px; }
             .elegant-number { text-align: left; }
             .elegant-item:hover { padding-left: 20px; }
+            .image-gallery-3 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -185,7 +208,7 @@
                 <a href="facebook.html" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/facebook.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
                 </div>
             <div class="topbar-lang">
-                <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent"
+                <a href="https://ns.mahidol.ac.th/Department/FN_dept_en/index.html" target="_parent"
                     title="English version">
                     <img src="img/template/en.png" alt="EN"> EN
                 </a>
@@ -287,8 +310,10 @@
                     </div>
                 </div>
 
-                <div class="image-elegant">
-                    <img src="img/other/academic1.png" alt="การบริการวิชาการ ภาควิชาการพยาบาลรากฐาน">
+                <div class="image-gallery-3">
+                    <img src="img/other/academic1.png" alt="การบริการวิชาการ 1">
+                    <img src="img/other/academic2.jpg" alt="การบริการวิชาการ 2">
+                    <img src="img/other/academic3.jpg" alt="การบริการวิชาการ 3">
                 </div>
             </div>
 
@@ -314,7 +339,7 @@
                             <img src="img/template/facebook.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
                         </a>
                         </div>
-                    <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent"
+                    <a href="https://ns.mahidol.ac.th/Department/FN_dept_en/index.html" target="_parent"
                         style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
                         English
