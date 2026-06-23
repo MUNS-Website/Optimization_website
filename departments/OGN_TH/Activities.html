@@ -44,10 +44,13 @@
     }
     .news-img {
       width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: contain;
+      height: 200px;
+      object-fit: cover;
       border-bottom: 1px solid var(--surface-border);
-      background-color: var(--surface);
+    }
+    .pr-card .news-img {
+      height: auto;
+      aspect-ratio: 16 / 9;
     }
     .news-content {
       padding: 1.5rem;
@@ -198,9 +201,10 @@
       <div class="news-section">
         <h2 class="section-title">ข่าวประชาสัมพันธ์ ประจำปี 2569</h2>
         
+        <!-- 1. ชุดครอบครัวสุขสันต์ (16 พ.ค. 69) -->
         <div class="news-grid">
           <!-- 1. ชุดครอบครัวสุขสันต์ (16 พ.ค. 69) -->
-          <a href="activities/69/Activities_9.html" target="_blank" class="news-card">
+          <a href="activities/69/Activities_9.html" target="_blank" class="news-card pr-card">
             <img src="img/PR/2569/04.jpg" alt="ชุดครอบครัวสุขสันต์" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
             <div class="news-content">
               <h3 class="news-title">คณะพยาบาลศาสตร์ ร่วมขับเคลื่อน การพัฒนาสื่อซีรีส์ออนไลน์ "ชุดครอบครัวสุขสันต์"</h3>
@@ -209,7 +213,7 @@
           </a>
 
           <!-- 2. ข่าวเดิม -->
-          <a href="activities/69/Activities_11.html" target="_blank" class="news-card">
+          <a href="activities/69/Activities_11.html" target="_blank" class="news-card pr-card">
             <img src="img/PR/2565/01/cover_highres.png" alt="PR" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
             <div class="news-content">
               <h3 class="news-title">การให้คำปรึกษาการเลี้ยงลูกด้วยนมแม่ทางโทรศัพท์</h3>
