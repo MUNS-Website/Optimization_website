@@ -474,7 +474,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 .header-dept-name {
   white-space: normal !important;
   word-wrap: break-word !important;
-  word-break: break-word !important;
+  line-height: 1.4 !important;
   max-width: 100%;
 }
 

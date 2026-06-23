@@ -286,11 +286,16 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   background: rgba(0,0,0,0.1) !important;
 }
 
-.header-dept-name {
-  white-space: normal !important;
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-  max-width: 100%;
+@media (max-width: 768px) {
+  .header-dept-name {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.3 !important;
+    max-width: 100%;
+    font-size: 13px !important;
+    padding: 6px 14px !important;
+    border-radius: 12px !important;
+  }
 }
 
 
