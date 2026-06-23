@@ -529,7 +529,11 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 /* Specific aspect ratio for PR news */
 .pr-card .news-card-img-wrapper {
   height: auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+}
+.pr-card .news-card-img {
+  object-fit: contain;
 }
 
 .news-card:hover .news-card-img {
