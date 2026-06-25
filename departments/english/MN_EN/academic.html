@@ -92,14 +92,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="mobile-nav-item">
         <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
-          Academic Services <span>▾</span>
+          Academic <span>▾</span>
         </div>
         <div class="mobile-dropdown">
+          <a href="academic.html" class="active">Academic Services</a>
           <a href="book.html">Department Book</a>
         </div>
       </div>
       <div class="mobile-nav-item">
         <a href="km.html" class="mobile-nav-link">Knowledge Management</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="NoUse/Activities_all.html" class="mobile-nav-link">News</a>
       </div>
       <div class="mobile-nav-item">
         <a href="excellence.html" class="mobile-nav-link">Center of Excellence</a>
@@ -185,13 +189,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="research.html" class="nav-link">Research</a>
         </li>
         <li class="nav-item">
-          <span class="nav-link active">Academic Services <span class="nav-arrow">▾</span></span>
+          <span class="nav-link active">Academic <span class="nav-arrow">▾</span></span>
           <ul class="dropdown">
+            <li><a href="academic.html" class="dropdown-item active">Academic Services</a></li>
             <li><a href="book.html" class="dropdown-item">Department Book</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a href="km.html" class="nav-link">Knowledge Management</a>
+        </li>
+        <li class="nav-item">
+          <a href="NoUse/Activities_all.html" class="nav-link">News</a>
         </li>
         <li class="nav-item">
           <a href="excellence.html" class="nav-link">Center of Excellence</a>
@@ -272,64 +280,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="academic-grid" style="display:grid; grid-template-columns:1fr; gap:20px; margin-bottom:32px;">
         <!-- Card 1 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon_police.gif" alt="Thai Policeman Healthy Project" style="width:100%; height:100%; object-fit:cover;">
+        <a href="academic/academic_Police.html" target="_parent" class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04); text-decoration:none; color:inherit;" onmouseover="this.style.borderColor='var(--mu-blue)'; this.style.transform='translateY(-2px)'; this.querySelector('.chevron-icon').style.transform='translateX(4px)'" onmouseout="this.style.borderColor='#e8eaed'; this.style.transform=''; this.querySelector('.chevron-icon').style.transform=''">
+          <div style="flex-shrink:0; width:50px; height:50px; border-radius:50%; background:rgba(249,115,22,0.1); color:var(--mu-blue); display:grid; place-items:center;">
+            <i class="fas fa-user-shield" style="font-size:20px;"></i>
           </div>
           <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Inter',sans-serif; text-indent:0;">
-              <a href="academic/academic_Police.html" target="_parent" style="color:var(--mu-blue); text-decoration:none;">
-                Thai Policeman Healthy Project
-              </a>
+            <h3 style="font-size:16px; font-weight:600; margin:0 0 4px; font-family:'Inter',sans-serif; color:var(--mu-blue); text-indent:0;">
+              Thai Policeman Healthy Project
             </h3>
             <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0; font-family:'Inter',sans-serif;">Health promotion program for Thai police officers</p>
           </div>
-        </div>
+          <div style="color:var(--mu-blue); margin-left:auto; display:flex; align-items:center;">
+            <i class="fas fa-chevron-right chevron-icon" style="transition: transform 0.2s; font-size:14px;"></i>
+          </div>
+        </a>
 
         <!-- Card 2 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon_lotus.gif" alt="The Soul Improvement Project" style="width:100%; height:100%; object-fit:cover;">
+        <a href="academic/academic_Soul.html" target="_parent" class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04); text-decoration:none; color:inherit;" onmouseover="this.style.borderColor='var(--mu-blue)'; this.style.transform='translateY(-2px)'; this.querySelector('.chevron-icon').style.transform='translateX(4px)'" onmouseout="this.style.borderColor='#e8eaed'; this.style.transform=''; this.querySelector('.chevron-icon').style.transform=''">
+          <div style="flex-shrink:0; width:50px; height:50px; border-radius:50%; background:rgba(249,115,22,0.1); color:var(--mu-blue); display:grid; place-items:center;">
+            <i class="fas fa-spa" style="font-size:20px;"></i>
           </div>
           <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Inter',sans-serif; text-indent:0;">
-              <a href="academic/academic_Soul.html" target="_parent" style="color:var(--mu-blue); text-decoration:none;">
-                The Soul Improvement Project
-              </a>
+            <h3 style="font-size:16px; font-weight:600; margin:0 0 4px; font-family:'Inter',sans-serif; color:var(--mu-blue); text-indent:0;">
+              The Soul Improvement Project
             </h3>
             <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0; font-family:'Inter',sans-serif;">Holistic spiritual care and development program</p>
           </div>
-        </div>
+          <div style="color:var(--mu-blue); margin-left:auto; display:flex; align-items:center;">
+            <i class="fas fa-chevron-right chevron-icon" style="transition: transform 0.2s; font-size:14px;"></i>
+          </div>
+        </a>
 
         <!-- Card 3 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon_ecg.png" alt="ECG" style="width:100%; height:100%; object-fit:cover;">
+        <a href="academic/academic_ECG.html" target="_parent" class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04); text-decoration:none; color:inherit;" onmouseover="this.style.borderColor='var(--mu-blue)'; this.style.transform='translateY(-2px)'; this.querySelector('.chevron-icon').style.transform='translateX(4px)'" onmouseout="this.style.borderColor='#e8eaed'; this.style.transform=''; this.querySelector('.chevron-icon').style.transform=''">
+          <div style="flex-shrink:0; width:50px; height:50px; border-radius:50%; background:rgba(249,115,22,0.1); color:var(--mu-blue); display:grid; place-items:center;">
+            <i class="fas fa-heartbeat" style="font-size:20px;"></i>
           </div>
           <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Inter',sans-serif; text-indent:0;">
-              <a href="academic/academic_ECG.html" target="_parent" style="color:var(--mu-blue); text-decoration:none;">
-                ECG
-              </a>
+            <h3 style="font-size:16px; font-weight:600; margin:0 0 4px; font-family:'Inter',sans-serif; color:var(--mu-blue); text-indent:0;">
+              ECG
             </h3>
             <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0; font-family:'Inter',sans-serif;">Electrocardiography courses and academic resources</p>
           </div>
-        </div>
+          <div style="color:var(--mu-blue); margin-left:auto; display:flex; align-items:center;">
+            <i class="fas fa-chevron-right chevron-icon" style="transition: transform 0.2s; font-size:14px;"></i>
+          </div>
+        </a>
 
         <!-- Card 4 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon_project.png" alt="Others" style="width:100%; height:100%; object-fit:cover;">
+        <a href="academic/academic_Other.html" target="_parent" class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04); text-decoration:none; color:inherit;" onmouseover="this.style.borderColor='var(--mu-blue)'; this.style.transform='translateY(-2px)'; this.querySelector('.chevron-icon').style.transform='translateX(4px)'" onmouseout="this.style.borderColor='#e8eaed'; this.style.transform=''; this.querySelector('.chevron-icon').style.transform=''">
+          <div style="flex-shrink:0; width:50px; height:50px; border-radius:50%; background:rgba(249,115,22,0.1); color:var(--mu-blue); display:grid; place-items:center;">
+            <i class="fas fa-cubes" style="font-size:20px;"></i>
           </div>
           <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Inter',sans-serif; text-indent:0;">
-              <a href="academic/academic_Other.html" target="_parent" style="color:var(--mu-blue); text-decoration:none;">
-                Others
-              </a>
+            <h3 style="font-size:16px; font-weight:600; margin:0 0 4px; font-family:'Inter',sans-serif; color:var(--mu-blue); text-indent:0;">
+              Others
             </h3>
             <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0; font-family:'Inter',sans-serif;">Other health projects and educational initiatives</p>
           </div>
-        </div>
+          <div style="color:var(--mu-blue); margin-left:auto; display:flex; align-items:center;">
+            <i class="fas fa-chevron-right chevron-icon" style="transition: transform 0.2s; font-size:14px;"></i>
+          </div>
+        </a>
       </div>
     </div>
 
