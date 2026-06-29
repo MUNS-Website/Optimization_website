@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us : Department of Fundamental Nursing, Faculty of Nursing, Mahidol University</title>
+    <meta name="description"
+        content="History and Background of the Department of Fundamental Nursing, Faculty of Nursing, Mahidol University">
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KNBKGNVR');</script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
+
+    <style>
+        /* --- Clean Header --- */
+        .clean-header {
+            text-align: center;
+            padding: 40px 20px 25px;
+            margin-bottom: 20px;
+        }
+        .clean-header h1 {
+            font-size: 32px;
+            color: var(--mu-blue-dark);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .clean-divider {
+            width: 40px;
+            height: 4px;
+            background: var(--mu-gold);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+        .breadcrumb-clean {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14.5px;
+            color: var(--gray-500);
+        }
+        .breadcrumb-clean a {
+            color: var(--mu-blue);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .breadcrumb-clean a:hover { opacity: 0.7; }
+        .breadcrumb-clean .current { color: var(--gray-800); font-weight: 500; }
+
+        /* --- History Article Layout --- */
+        .history-article-container {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            margin-bottom: 70px;
+            border: 1px solid rgba(0,0,0,0.02);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .history-image-wrapper {
+            margin-bottom: 40px;
+            position: relative;
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+        }
+        .history-image-wrapper img.article-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+        .history-image-wrapper:hover img.article-image {
+            transform: scale(1.05);
+        }
+        
+        .history-content {
+            padding: 0 70px 60px 70px;
+        }
+        .history-content p {
+            font-size: 16.5px;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 24px;
+            text-indent: 3em;
+            text-align: justify;
+        }
+        .history-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .history-article-container { border-radius: 16px; margin-bottom: 40px; }
+            .history-image-wrapper { height: 250px; margin-bottom: 30px; }
+            .history-content { padding: 0 20px 30px 20px; }
+            .history-content p { font-size: 15.5px; text-indent: 2em; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="mobile-nav-title">Main Menu</span>
+                <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+            </div>
+            <nav class="mobile-nav-list">
+                <div class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link active" onclick="toggleMobileDropdown(this)">
+                        About Us <span>▾</span>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <a href="about.html">History & Background</a>
+                        <a href="staff.html">Staff</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="teaching.html" class="mobile-nav-link">Teaching</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" class="mobile-nav-link"
+                        target="_blank" rel="noopener noreferrer">Research</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+                        Academic Service <span>▾</span>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <a href="academic.html">Academic Services</a>
+                        <a href="https://ns.mahidol.ac.th/department/fn_dept/textbook.html" target="_blank">Department Book</a>
+                        <a href="COE.html">Center of Excellence</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="mn-wrapper">
+
+        <div class="topbar">
+            <div class="topbar-links">
+                <a href="https://ns.mahidol.ac.th/" target="_blank">Faculty of Nursing</a>
+                <span class="sep">|</span>
+                <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
+            </div>
+            <div class="topbar-social" style="display:flex; gap:8px; align-items:center;">
+                <a href="facebook.html" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/other/facebook.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+            </div>
+            <div class="topbar-lang">
+                <a href="https://ns.mahidol.ac.th/Department/FN_dept/index.html" target="_parent"
+                    title="Thai version">
+                    <img src="img/template/th.jpg" alt="TH"> TH
+                </a>
+            </div>
+        </div>
+
+        <header class="site-header">
+            <div class="header-logo">
+                <img src="img/other/ns_02_large.png" alt="Faculty of Nursing Logo" style="max-height: 80px; width: auto;">
+            </div>
+            <div class="header-text" style="text-align: right;">
+                <div class="header-dept-name">Department of Fundamental Nursing</div>
+            </div>
+        </header>
+
+        <nav class="navbar" id="mainNav">
+            <div class="navbar-inner">
+                <span class="navbar-brand" style="display:none" id="navBrand">Dept. of Fundamental Nursing</span>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link active">About Us <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="about.html" class="dropdown-item">History & Background</a></li>
+                            <li><a href="staff.html" class="dropdown-item">Staff</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="teaching.html" class="nav-link">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" class="nav-link"
+                            target="_blank" rel="noopener noreferrer">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">Academic Service <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="academic.html" class="dropdown-item">Academic Services</a></li>
+                            <li><a href="https://ns.mahidol.ac.th/department/fn_dept/textbook.html" target="_blank" class="dropdown-item">Department Book</a></li>
+                            <li><a href="COE.html" class="dropdown-item">Center of Excellence</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+        <div id="header-placeholder"></div>
+
+        <main class="content-area">
+
+            <div class="clean-header">
+                <h1>History & Background</h1>
+            </div>
+
+            <div class="history-article-container">
+                <div class="history-image-wrapper">
+                    <img src="img/other/ns_building.png" alt="Faculty of Nursing Building" class="article-image">
+                </div>
+                
+                <div class="history-content">
+                    <p>
+                        The Department of Fundamental Nursing consists of 19 qualify faculty members and a department clerk. There are 12 associate professors, 4 assistant professors, and 3 lecturers. Six of them are doctoral prepared and thirteen master prepared (updated July 1, 2008).
+                    </p>
+                    
+                    <h3 style="color: var(--mu-blue); margin-top: 30px; margin-bottom: 15px; font-size: 22px;">Vision:</h3>
+                    <p>
+                        The Fundamental Nursing Department is one of national and international leading in fundamental nursing, gerontological nursing and nursing management and with an emphasis on promoting health for the elderly.
+                    </p>
+                    
+                    <h3 style="color: var(--mu-blue); margin-top: 30px; margin-bottom: 15px; font-size: 22px;">Mission:</h3>
+                    <ol style="color: var(--gray-700); font-size: 16.5px; line-height: 1.8; margin-left: 20px; margin-bottom: 24px;">
+                        <li style="margin-bottom: 10px;">Provide education in bachelor, master, and nursing special programs in gerontological nursing and nursing management.</li>
+                        <li style="margin-bottom: 10px;">Promote and support teaching and research in fundamental nursing, gerontological nursing and nursing management in order to build up knowledge based.</li>
+                        <li style="margin-bottom: 10px;">Provide academic services for professional nurses and community emphasizing continuous life-long learning and promoting health for society.</li>
+                        <li style="margin-bottom: 10px;">Provide academic services emphasizing continuous life-long learning for elder population</li>
+                        <li style="margin-bottom: 10px;">Establish networking for education, research and other academic activities of gerontological nursing and nursing management at the national and international levels.</li>
+                        <li style="margin-bottom: 10px;">Promote and support activities including preserve Thai arts and culture, religion, sport and environment.</li>
+                    </ol>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <h3>Department of Fundamental Nursing</h3>
+                    <p>
+                        <a href="https://ns.mahidol.ac.th/" target="_blank">Faculty of Nursing</a> &nbsp;·&nbsp;
+                        <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
+                    </p>
+                    <p class="footer-copy">
+                        Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+                        Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+                    </p>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="facebook.html" title="Facebook"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="img/other/facebook.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                        </a>
+                    </div>
+                    <a href="https://ns.mahidol.ac.th/Department/FN_dept/index.html" target="_parent"
+                        style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+                        <img src="img/template/th.jpg" alt="TH" style="width:22px;height:15px;border-radius:2px;">
+                        Thai
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script async type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"></script>
+    <script type="text/plain" data-cookiecategory="analytics">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C0VND84NRS');
+    </script>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        mobileClose.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.addEventListener('click', function (e) {
+            if (e.target === mobileMenu) closeMobileMenu();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        function toggleMobileDropdown(el) {
+            const dropdown = el.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+                el.classList.toggle('active');
+            }
+        }
+
+        const navBrand = document.getElementById('navBrand');
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (header) {
+                const headerBottom = header.getBoundingClientRect().bottom;
+                if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+            }
+        }, { passive: true });
+    </script>
+
+</body>
+</html>
+

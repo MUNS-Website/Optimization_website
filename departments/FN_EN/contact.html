@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us : Department of Fundamental Nursing, Faculty of Nursing, Mahidol University</title>
+    <meta name="description" content="Contact the Department of Fundamental Nursing, Faculty of Nursing, Mahidol University">
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KNBKGNVR');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
+
+    <style>
+        /* --- Clean Header --- */
+        .clean-header {
+            text-align: center;
+            padding: 40px 20px 25px;
+            margin-bottom: 20px;
+        }
+
+        .clean-header h1 {
+            font-size: 32px;
+            color: var(--mu-blue-dark);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- Contact Styles --- */
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-card h2 {
+            font-size: 24px;
+            color: var(--mu-blue-dark);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-card h2 svg {
+            width: 28px;
+            height: 28px;
+            color: var(--mu-gold);
+        }
+
+        .contact-info-block {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-block svg {
+            width: 24px;
+            height: 24px;
+            color: var(--mu-blue);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .contact-info-text {
+            font-size: 16px;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        .contact-person {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .contact-person img {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-person-details h3 {
+            font-size: 19px;
+            color: var(--mu-blue-dark);
+            margin-bottom: 5px;
+        }
+
+        .contact-person-details .position {
+            font-size: 15px;
+            color: var(--mu-gold-dark);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .contact-person-details p {
+            font-size: 14.5px;
+            color: var(--gray-600);
+            margin-bottom: 5px;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .contact-card {
+                padding: 30px 20px;
+            }
+
+            .contact-person {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .map-container {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="mobile-nav-title">Main Menu</span>
+                <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+            </div>
+            <nav class="mobile-nav-list">
+                <div class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link">Home</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+                        About Us <span>▾</span>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <a href="about.html">History & Background</a>
+                        <a href="staff.html">Staff</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="teaching.html" class="mobile-nav-link">Teaching</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" class="mobile-nav-link"
+                        target="_blank" rel="noopener noreferrer">Research</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+                        Academic Service <span>▾</span>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <a href="academic.html">Academic Services</a>
+                        <a href="https://ns.mahidol.ac.th/department/fn_dept/textbook.html" target="_blank">Department Book</a>
+                        <a href="COE.html">Center of Excellence</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="contact.html" class="mobile-nav-link active">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="mn-wrapper">
+
+        <div class="topbar">
+            <div class="topbar-links">
+                <a href="https://ns.mahidol.ac.th/" target="_blank">Faculty of Nursing</a>
+                <span class="sep">|</span>
+                <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
+            </div>
+            <div class="topbar-social" style="display:flex; gap:8px; align-items:center;">
+                <a href="facebook.html" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/other/facebook.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+            </div>
+            <div class="topbar-lang">
+                <a href="https://ns.mahidol.ac.th/Department/FN_dept/index.html" target="_parent"
+                    title="Thai version">
+                    <img src="img/template/th.jpg" alt="TH"> TH
+                </a>
+            </div>
+        </div>
+
+        <header class="site-header">
+            <div class="header-logo">
+                <img src="img/other/ns_02_large.png" alt="Faculty of Nursing Logo" style="max-height: 80px; width: auto;">
+            </div>
+            <div class="header-text" style="text-align: right;">
+                <div class="header-dept-name">Department of Fundamental Nursing</div>
+            </div>
+        </header>
+
+        <nav class="navbar" id="mainNav">
+            <div class="navbar-inner">
+                <span class="navbar-brand" style="display:none" id="navBrand">Dept. of Fundamental Nursing</span>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">About Us <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="about.html" class="dropdown-item">History & Background</a></li>
+                            <li><a href="staff.html" class="dropdown-item">Staff</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="teaching.html" class="nav-link">Teaching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" class="nav-link"
+                            target="_blank" rel="noopener noreferrer">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">Academic Service <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="academic.html" class="dropdown-item">Academic Services</a></li>
+                            <li><a href="https://ns.mahidol.ac.th/department/fn_dept/textbook.html" target="_blank" class="dropdown-item">Department Book</a></li>
+                            <li><a href="COE.html" class="dropdown-item">Center of Excellence</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact Us</a>
+                    </li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+        <div id="header-placeholder"></div>
+
+        <main class="content-area">
+
+            <div class="clean-header">
+                <h1>Contact Us</h1>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Details -->
+                <div class="contact-card">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Location
+                    </h2>
+
+                    <div class="contact-info-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <div class="contact-info-text">
+                            <strong>Department of Fundamental Nursing, Faculty of Nursing, Mahidol University</strong><br>
+                            Mahidol Adulyadej-Prasrinakarin Building<br>
+                            999 Phuttamonthon 4 Road, Salaya,<br>
+                            Nakhon Pathom 73170 Thailand.
+                        </div>
+                    </div>
+
+                    <div class="contact-person">
+                        <img src="img/staff/2567/rungnapa.jpg" alt="Mrs.Rungnapa Promdee">
+                        <div class="contact-person-details">
+                            <h3>Mrs. Rungnapa Promdee</h3>
+                            <div class="position">General Administration Officer</div>
+                            <p>📞 <strong>Tel:</strong> 0-2441-5333 Ext. 2602</p>
+                            <p>📠 <strong>Fax:</strong> 0-2441-5442</p>
+                            <p>✉️ <strong>E-mail:</strong> <a href="mailto:rungnapa.pro@mahidol.ac.th"
+                                    style="color:var(--mu-blue);">rungnapa.pro@mahidol.ac.th</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7749.507658721262!2d100.31971604432793!3d13.793708080540487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e294755efb731f%3A0x4c5f68ed8fa44ea!2sFaculty+of+Nursing%2C+Mahidol+University!5e0!3m2!1sen!2sth!4v1459239622191"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <h3>Department of Fundamental Nursing</h3>
+                    <p>
+                        <a href="https://ns.mahidol.ac.th/" target="_blank">Faculty of Nursing</a> &nbsp;·&nbsp;
+                        <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
+                    </p>
+                    <p class="footer-copy">
+                        Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+                        Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+                    </p>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="facebook.html" title="Facebook"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="img/other/facebook.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                        </a>
+                    </div>
+                    <a href="https://ns.mahidol.ac.th/Department/FN_dept/index.html" target="_parent"
+                        style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+                        <img src="img/template/th.jpg" alt="TH" style="width:22px;height:15px;border-radius:2px;">
+                        Thai
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script async type="text/plain" data-cookiecategory="analytics"
+        src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"></script>
+    <script type="text/plain" data-cookiecategory="analytics">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C0VND84NRS');
+    </script>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        mobileClose.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.addEventListener('click', function (e) {
+            if (e.target === mobileMenu) closeMobileMenu();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        function toggleMobileDropdown(el) {
+            const dropdown = el.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+                el.classList.toggle('active');
+            }
+        }
+
+        const navBrand = document.getElementById('navBrand');
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (header) {
+                const headerBottom = header.getBoundingClientRect().bottom;
+                if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+            }
+        }, { passive: true });
+    </script>
+
+</body>
+
+</html>
+
