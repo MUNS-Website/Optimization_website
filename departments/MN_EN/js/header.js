@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li class="nav-item">
           <span class="nav-link ${isElearningActive ? 'active' : ''}">E-Learning <span class="nav-arrow">▾</span></span>
           <ul class="dropdown">
-            <li><a href="http://www.elearning.ns.mahidol.ac.th/moodle3/" target="_blank" class="dropdown-item">E-Learning Nursing</a></li>
+            <li><a href="http://www.elearning.ns.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning Nursing</a></li>
             <li><a href="https://mux.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning Mahidol</a></li>
           </ul>
         </li>

@@ -51,7 +51,7 @@
   --transition-fast: 0.15s ease;
   --transition-base: 0.25s ease;
   --transition-slow: 0.4s ease;
-  --container-max: 100%;
+  --container-max: 1200px;
   --navbar-height: 68px;
   --topbar-height: 40px;
 }
