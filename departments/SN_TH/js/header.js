@@ -4,15 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Calculate relative path prefix dynamically based on directory depth
   const getPrefix = () => {
     const currentPath = window.location.pathname.replace(/\\/g, '/');
-    const marker1 = 'departments/SN_TH/';
-    const idx1 = currentPath.indexOf(marker1);
+    const currentPathLower = currentPath.toLowerCase();
+    const marker1 = 'departments/sn_th/';
+    const idx1 = currentPathLower.indexOf(marker1);
     if (idx1 !== -1) {
       const sub = currentPath.substring(idx1 + marker1.length);
       const depth = (sub.match(/\//g) || []).length;
       return '../'.repeat(depth);
     }
-    const marker2 = 'SN_TH/';
-    const idx2 = currentPath.indexOf(marker2);
+    const marker2 = 'sn_th/';
+    const idx2 = currentPathLower.indexOf(marker2);
     if (idx2 !== -1) {
       const sub = currentPath.substring(idx2 + marker2.length);
       const depth = (sub.match(/\//g) || []).length;
@@ -157,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="nav-link">ศูนย์จัดการการฟื้นตัว</a>
         </li>
         <li class="nav-item">
-          <a href="${prefix}contact.html" class="nav-link ${isActive('contact.html') ? 'active' : ''}">ติดต่อ</a>
+          <a href="${prefix}contact.html" class="nav-link ${isActive('contact.html') ? 'active' : ''}">ติดต่อเรา</a>
         </li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
