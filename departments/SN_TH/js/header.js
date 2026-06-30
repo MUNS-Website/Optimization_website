@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="nav-link">ศูนย์จัดการการฟื้นตัว</a>
         </li>
         <li class="nav-item">
-          <a href="${prefix}contact.html" class="nav-link ${isActive('contact.html') ? 'active' : ''}">ติดต่อเรา</a>
+          <a href="${prefix}contact.html" class="nav-link ${isActive('contact.html') ? 'active' : ''}">ติดต่อ</a>
         </li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
