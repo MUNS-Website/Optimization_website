@@ -206,122 +206,12 @@
     </style>
 </head>
 <body>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-nav-panel">
-            <div class="mobile-nav-header">
-                <span class="mobile-nav-title">เมนูหลัก</span>
-                <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
-            </div>
-            <nav class="mobile-nav-list">
-                <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">หน้าหลัก</a></div>
-                <div class="mobile-nav-item">
-                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span></div>
-                    <div class="mobile-dropdown">
-                        <a href="about.html">ประวัติและความเป็นมา</a>
-                        <a href="vision.html">วิสัยทัศน์ / พันธกิจ</a>
-                        <a href="head_dept.html">ทำเนียบหัวหน้าภาค</a>
-                        <a href="staff.html">บุคลากร</a>
-                        <a href="contact.html">ติดต่อเรา</a>
-                    </div>
-                </div>
-                <div class="mobile-nav-item">
-                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">การศึกษา <span>▾</span></div>
-                    <div class="mobile-dropdown">
-                        <a href="degree_bns.html">หลักสูตรปริญญาตรี</a>
-                        <a href="degree_mns.html">หลักสูตรปริญญาโท</a>
-                        <a href="degree_phd.html">หลักสูตรปริญญาเอก</a>
-                        <a href="https://ns.mahidol.ac.th/nurse_th/Specialty/specialty_program.html" target="_blank">หลักสูตรการพยาบาลเฉพาะทาง</a>
-                        <a href="scholarship.html">ทุนการศึกษา</a>
-                    </div>
-                </div>
-                <div class="mobile-nav-item"><a href="research.html" class="mobile-nav-link">วิจัยและนวัตกรรม</a></div>
-                <div class="mobile-nav-item"><a href="academic.html" class="mobile-nav-link">บริการวิชาการ</a></div>
-                <div class="mobile-nav-item">
-                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">การจัดการความรู้ <span>▾</span></div>
-                    <div class="mobile-dropdown">
-                        <a href="km/km_PN.html">การจัดการความรู้ของภาควิชาฯ</a>
-                        <a href="km.html">วัตถุประสงค์ / กระบวนการ</a>
-                    </div>
-                </div>
-                <div class="mobile-nav-item"><a href="activities.html" class="mobile-nav-link">ภาพกิจกรรม</a></div>
-            </nav>
-        </div>
-    </div>
+    <div id="mobile-menu-container"></div>
 
     <div class="mn-wrapper">
 
-        <div class="topbar">
-            <div class="topbar-links">
-                <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
-                <span class="sep">|</span>
-                <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
-            </div>
-            <div class="topbar-social" style="display:flex; gap:8px; align-items:center;">
-                <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
-                <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
-                <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
-                <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
-                <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
-            </div>
-            <div class="topbar-lang">
-                <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" title="English version">
-                    <img src="img/template/en.png" alt="EN"> EN
-                </a>
-            </div>
-        </div>
-
-        <header class="site-header">
-            <div class="header-logo">
-                <img src="../FN_TH/img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
-            </div>
-            <div class="header-text" style="text-align: right;">
-                <div class="header-dept-name">ภาควิชาการพยาบาลกุมารเวชศาสตร์</div>
-            </div>
-        </header>
-
-        <nav class="navbar" id="mainNav">
-            <div class="navbar-inner">
-                <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลกุมารเวชศาสตร์</span>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">หน้าหลัก</a></li>
-                    <li class="nav-item">
-                        <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
-                        <ul class="dropdown">
-                            <li><a href="about.html" class="dropdown-item">ประวัติและความเป็นมา</a></li>
-                            <li><a href="vision.html" class="dropdown-item">วิสัยทัศน์ / พันธกิจ</a></li>
-                            <li><a href="head_dept.html" class="dropdown-item">ทำเนียบหัวหน้าภาค</a></li>
-                            <li><a href="staff.html" class="dropdown-item">บุคลากร</a></li>
-                            <li><a href="contact.html" class="dropdown-item">ติดต่อเรา</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link">การศึกษา <span class="nav-arrow">▾</span></span>
-                        <ul class="dropdown">
-                            <li><a href="degree_bns.html" class="dropdown-item">หลักสูตรปริญญาตรี</a></li>
-                            <li><a href="degree_mns.html" class="dropdown-item">หลักสูตรปริญญาโท</a></li>
-                            <li><a href="degree_phd.html" class="dropdown-item">หลักสูตรปริญญาเอก</a></li>
-                            <li><a href="https://ns.mahidol.ac.th/nurse_th/Specialty/specialty_program.html" target="_blank" class="dropdown-item">หลักสูตรการพยาบาลเฉพาะทาง</a></li>
-                            <li><a href="scholarship.html" class="dropdown-item">ทุนการศึกษา</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="research.html" class="nav-link">วิจัยและนวัตกรรม</a></li>
-                    <li class="nav-item"><a href="academic.html" class="nav-link">บริการวิชาการ</a></li>
-                    <li class="nav-item">
-                        <span class="nav-link">การจัดการความรู้ <span class="nav-arrow">▾</span></span>
-                        <ul class="dropdown">
-                            <li><a href="km/km_PN.html" class="dropdown-item">การจัดการความรู้ของภาควิชาฯ</a></li>
-                            <li><a href="km.html" class="dropdown-item">วัตถุประสงค์ / กระบวนการ</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="activities.html" class="nav-link">ภาพกิจกรรม</a></li>
-                </ul>
-                <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </nav>
-        <div id="header-placeholder"></div>
+        <div id="header-container"></div>
+        <script src="js/navbar.js"></script>
 
                 <main class="content-area">
             <div style="text-align: center; padding: 40px 20px 30px;">
@@ -331,6 +221,20 @@
             
             <div style="max-width: 800px; margin: 0 auto 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; padding: 0 20px;">
                 <a href="research.html" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 30px; border-radius: 20px; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 40px rgba(25, 68, 136, 0.12)'; this.style.borderColor='var(--mu-blue-light)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'; this.style.borderColor='rgba(0,0,0,0.03)';">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(0, 139, 204, 0.1); display: flex; align-items: center; justify-content: center; color: var(--mu-blue);">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        </div>
+                        <div>
+                            <div style="color: var(--gray-500); font-size: 13.5px; font-weight: 600; text-transform: uppercase;">ผลงานวิจัยและนวัตกรรม</div>
+                            <div style="color: var(--mu-blue-dark); font-size: 24px; font-weight: 700; margin-top: 2px;">ประจำปี 2569</div>
+                        </div>
+                    </div>
+                    <div style="color: var(--mu-gold); display: flex; align-items: center;">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </a>
+                <a href="research68.html" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 30px; border-radius: 20px; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 40px rgba(25, 68, 136, 0.12)'; this.style.borderColor='var(--mu-blue-light)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.05)'; this.style.borderColor='rgba(0,0,0,0.03)';">
                     <div style="display: flex; align-items: center; gap: 20px;">
                         <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(0, 139, 204, 0.1); display: flex; align-items: center; justify-content: center; color: var(--mu-blue);">
                             <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -537,6 +441,7 @@
     </script>
 </body>
 </html>
+
 
 
 
