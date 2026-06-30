@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="academic.page_title">Academic Services | Department of Obstetric and Gynaecological Nursing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  <style>
+    .academic-intro {
+      text-indent: 2.5em;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+    .academic-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .academic-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--background);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      text-decoration: none !important;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .academic-item:hover {
+      transform: translateX(8px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(147, 19, 58, 0.2);
+    }
+    .academic-item-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--primary-glow);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .academic-item-text {
+      font-weight: 500;
+      color: var(--primary);
+      font-size: 1.05rem;
+      font-family: var(--font-heading);
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Obstetric and Gynecological Nursing" data-dept-en="Department of Obstetric-Gynecological Nursing">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="academic.title">Academic Services</h1>
+      
+      <p class="academic-intro" data-i18n="academic.intro">The Department of Obstetric and Gynaecological Nursing has a policy to support faculty members in providing academic services concerning the health promotion of women, pregnant women, intrapartum and postpartum mothers, and newborns, to healthcare professionals and the general public. The department currently manages the following academic service projects:</p>
+      
+      <div class="academic-list">
+        <a href="https://www.facebook.com/obgynnursingmahidol/" target="_blank" class="academic-item">
+          <div class="academic-item-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </div>
+          <div class="academic-item-text" data-i18n="academic.project_ladystalk">Lady's Talk Project</div>
+        </a>
+        
+        <a href="academic/academic1.html" target="_blank" class="academic-item">
+          <div class="academic-item-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </div>
+          <div class="academic-item-text" data-i18n="academic.project_family">Happy Family, Quality Pregnancy Project</div>
+        </a>
+        
+        <a href="academic/academic2.html" target="_blank" class="academic-item">
+          <div class="academic-item-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </div>
+          <div class="academic-item-text" data-i18n="academic.project_laos">Capacity Building Project for Nurses in Caring for Pregnant, Intrapartum, and Postpartum Women (Lao PDR)</div>
+        </a>
+        
+        <a href="academic/academic3.html" target="_blank" class="academic-item">
+          <div class="academic-item-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </div>
+          <div class="academic-item-text" data-i18n="academic.project_teenager">Continuous Care System Development Project for Pregnant Adolescents by Primary Midwives</div>
+        </a>
+        
+        <a href="academic/academic4.html" target="_blank" class="academic-item">
+          <div class="academic-item-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </div>
+          <div class="academic-item-text" data-i18n="academic.project_sex_education">Sexual Health and Sex Education Awareness Project for Female Adolescents and Students</div>
+        </a>
+        
+        <a href="academic/academic5.html" target="_blank" class="academic-item">
+          <div class="academic-item-icon">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </div>
+          <div class="academic-item-text" data-i18n="academic.project_diabetes">"Health Promotion for Women with Gestational Diabetes Integrated with Instruction" Project</div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

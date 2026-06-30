@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="gallery.title">Gallery | Department of Mental Health and Psychiatric Nursing, Faculty of Nursing, Mahidol University</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    /* Year Filter Tabs */
+    .year-tabs {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .year-tab {
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius-full);
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      color: var(--text-main);
+      font-family: var(--font-heading);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .year-tab:hover, .year-tab.active {
+      background: var(--primary);
+      color: var(--text-inverse);
+      border-color: var(--primary);
+    }
+
+    /* Gallery Cards Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .gallery-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-glass);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-glass-hover);
+      border-color: var(--primary);
+    }
+    .gallery-card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--surface-border);
+    }
+    .gallery-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .gallery-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--text-main);
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+    .gallery-card:hover .gallery-card-title {
+      color: var(--primary);
+    }
+    .gallery-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--surface-border);
+    }
+    .gallery-card-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .gallery-card-date svg {
+      width: 14px;
+      height: 14px;
+    }
+    .gallery-card-count {
+      font-size: 0.8rem;
+      background: var(--primary-glow);
+      color: var(--primary);
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+    }
+    .gallery-card-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--secondary);
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-top: 0.75rem;
+    }
+    .gallery-card-arrow svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-card:hover .gallery-card-arrow svg {
+      transform: translateX(4px);
+    }
+
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-muted);
+    }
+    .empty-state svg {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Mental Health and Psychiatric Nursing" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="gallery.header">Gallery</h1>
+
+      <!-- Year Filter -->
+      <div class="year-tabs">
+        <span class="year-tab active" data-filter="all" data-i18n="gallery.tab_all">All</span>
+        <span class="year-tab" data-filter="2569" data-i18n="gallery.tab_2569">2026</span>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- ข่าว 1: PsyMed BG - Nursing Education Quality Fair 2026 -->
+        <a href="activities/69/psymed_bg/index.html" class="gallery-card" data-year="2569">
+          <img src="activities/69/psymed_bg/img/01.jpg" alt="PsyMed BG" class="gallery-card-img">
+          <div class="gallery-card-body">
+            <div class="gallery-card-title" data-i18n="gallery.card1_title">MHPN Faculty Members win Honorable Mention Award for "PsyMed BG" at Nursing Education Quality Fair 2026</div>
+            <div class="gallery-card-footer">
+              <span class="gallery-card-date">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span data-i18n="gallery.card1_date">June 19, 2026</span>
+              </span>
+              <span class="gallery-card-count">9 <span data-i18n="gallery.photo_suffix">photos</span></span>
+            </div>
+            <div class="gallery-card-arrow">
+              <span data-i18n="gallery.view_btn">View Activity</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Year filter functionality
+    document.querySelectorAll('.year-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.year-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.getAttribute('data-filter');
+        document.querySelectorAll('.gallery-card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-year') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

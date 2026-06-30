@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="teaching.title">Teaching & Learning | Department of Mental Health and Psychiatric Nursing, Faculty of Nursing, Mahidol University</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .teaching-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .teaching-intro {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary-glow);
+      color: var(--primary);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      margin-top: 1rem;
+      border: 1px dashed var(--primary);
+      transition: var(--transition);
+    }
+    .pdf-link:hover {
+      background: var(--primary);
+      color: var(--text-inverse);
+      border-style: solid;
+    }
+    .course-section-title {
+      font-family: var(--font-heading);
+      background: var(--background);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      color: var(--primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      border-left: 5px solid var(--secondary);
+    }
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Mental Health and Psychiatric Nursing" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="teaching.header">Teaching & Learning</h1>
+      
+      <section class="teaching-intro">
+        <div>
+          <img src="img/other/teaching.jpg" alt="การเรียนการสอน ภาควิชาสุขภาพจิตฯ" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--surface-border); padding: 5px;">
+        </div>
+        <div>
+          <p style="text-indent: 2.5em; font-size: 1.05rem; line-height: 1.8;" data-i18n="teaching.intro">The Department offers courses for undergraduate and graduate students in Mental Health and Psychiatric Nursing. We emphasize student-centered learning, developing up-to-date knowledge and practical skills that align with the context of Thai society for continuous personal growth and well-being.</p>
+          <a href="doc/other/แผ่นพับ ภาควิชาจิตเวช_5.pdf" target="_blank" class="pdf-link" data-i18n="teaching.pdf_btn">Curriculum Brochure (Normal & Special Program) (PDF)</a>
+        </div>
+      </section>
+      
+      <section class="courses-list">
+        <h2 data-i18n="teaching.courses_title">Courses Offered</h2>
+        
+        <!-- 1. ปริญญาตรี -->
+        <h3 class="course-section-title" data-i18n="teaching.ug_title">Undergraduate Level (Bachelor of Science in Nursing)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="teaching.table_course_header">Course</th>
+              <th style="width: 120px;" class="text-center" data-i18n="teaching.table_credits_header">Credits</th>
+              <th style="width: 120px;" class="text-center" data-i18n="teaching.table_type_header">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Responsible -->
+            <tr class="table-section-header">
+              <td colspan="3" data-i18n="teaching.ug_main_header">Main Courses Responsible by the Department</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c401">NSPS 401 Psychiatric and Mental Health Nursing</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c481">NSPS 481 Psychiatric and Mental Health Nursing Practicum</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c202">NSPS 202 Human Growth, Development and Behavior</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c101">NSPS 101 Communication and Health Counseling</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <!-- Co-teaching -->
+            <tr class="table-section-header">
+              <td colspan="3" data-i18n="teaching.ug_co_header">Co-taught Courses</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c215">NSID 215 Nursing Care of Individuals and Families in Health Promotion</td>
+              <td class="text-center">4</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c101_co">NSID 101 Self-Development based on Religious Principles</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c206">NSID 206 Nursing Process and Health Assessment</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c210">NSID 210 Fundamental Concepts and Process of Nursing</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c313">NSID 313 Seminar in Nursing Issues and Trends</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- 2. ปริญญาโท -->
+        <h3 class="course-section-title" data-i18n="teaching.g_title">Graduate Level (Master of Science in Nursing)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="teaching.table_course_header">Course</th>
+              <th style="width: 120px;" class="text-center" data-i18n="teaching.table_credits_header">Credits</th>
+              <th style="width: 120px;" class="text-center" data-i18n="teaching.table_type_header">Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Responsible -->
+            <tr class="table-section-header">
+              <td colspan="3" data-i18n="teaching.g_main_header">Main Courses Responsible by the Department</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c621">NSPS 621 Neurobiological Basis of Human Behavior and Psychopharmacology</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c630">NSPS 630 Mental Health Promotion and Psychiatric Nursing in Communities</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c631">NSPS 631 Practicum in Mental Health Promotion and Prevention of Mental Illnesses</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c632">NSPS 632 Practicum in Community Psychiatric Nursing</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c633">NSPS 633 Psychiatric Nursing Therapy and Rehabilitation</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c634">NSPS 634 Practicum in Psychiatric Nursing Therapy and Rehabilitation</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c628">NSPS 628 Research Seminar in Psychiatric and Mental Health Nursing</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c698">NSID 698 Thesis</td>
+              <td class="text-center">6</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <!-- Co-teaching -->
+            <tr class="table-section-header">
+              <td colspan="3" data-i18n="teaching.g_co_header">Co-taught Courses</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c610_co">NSID 610 Theories and Concepts in Nursing</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c613_co">NSID 613 Statistics and Research in Nursing</td>
+              <td class="text-center">3</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c620_co">NSID 620 Evidence-based Nursing</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.c627_co">NSID 627 Health Policy and Leadership</td>
+              <td class="text-center">2</td>
+              <td class="text-center" data-i18n="teaching.table_credits_val">credits</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- 3. คณะผู้รับผิดชอบหลักสูตร -->
+        <h3 class="course-section-title" data-i18n="teaching.comm_title">Program Committee</h3>
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="teaching.table_name_header">Name</th>
+              <th data-i18n="teaching.table_role_header">Position in Curriculum</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="staff.name_nopporn">Associate Professor Dr. Nopporn Vongsirimas</td>
+              <td style="font-weight: 500; color: var(--primary);" data-i18n="teaching.comm_head_label">Program Directors</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_wareerat">Associate Professor Dr. Wareerat Thanoi</td>
+              <td style="font-weight: 500; color: var(--primary);" data-i18n="teaching.comm_head_label">Program Directors</td>
+            </tr>
+            <tr class="table-section-header">
+              <td colspan="2" data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_yajai">Associate Professor Dr. Yajai Sitthimongkol</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_achara">Professor Dr. Acharaporn Seeherunwong</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_phuangphet">Associate Professor Dr. Phuangphet Kaesornsamut</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_atittaya">Associate Professor Dr. Atittaya Pornchaikate Au-Yeong</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="teaching.name_wimonwan">Assistant Professor Dr. Wimonwan Puthiwanitphong</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_supapak">Assistant Professor Dr. Supapak Phetrasuwan</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_walailak">Associate Professor Dr. Walailak Pumpuang</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_sudarat">Assistant Professor Dr. Sudarat Pianchob</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+            <tr>
+              <td data-i18n="staff.name_sirada">Assistant Professor Dr. Sirada Kesornsri</td>
+              <td data-i18n="teaching.comm_member_label">Program Faculty Members</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
