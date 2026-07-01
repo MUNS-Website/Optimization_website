@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="coe.page_title">Academic Center of Excellence - Department of Obstetric-Gynecological Nursing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  <style>
+    .coe-hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .coe-title {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .coe-intro-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-soft);
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      border-top: 4px solid var(--primary);
+      position: relative;
+    }
+    .coe-intro-card p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      text-indent: 2.5em;
+    }
+    .coe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .coe-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+    }
+    .coe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(112, 41, 150, 0.2);
+    }
+    .coe-card-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--primary-glow);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+    .coe-card:hover .coe-card-icon {
+      background: var(--primary);
+      color: var(--text-inverse);
+    }
+    .coe-card-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+    .coe-card h3 {
+      font-family: var(--font-heading);
+      color: var(--text-main);
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+    .coe-card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      margin-top: auto;
+    }
+    .coe-card:hover .coe-card-btn {
+      color: var(--secondary);
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Obstetric and Gynecological Nursing" data-dept-en="Department of Obstetric-Gynecological Nursing">
+  <main class="site-main container">
+    <div id="page-content">
+      <div class="coe-hero fade-in-up delay-1">
+        <h1 class="coe-title" data-i18n="coe.title">Academic Center of Excellence</h1>
+      </div>
+      
+      <div class="coe-intro-card fade-in-up delay-1">
+        <p data-i18n="coe.intro">The Department of Obstetric and Gynaecological Nursing is dedicated to establishing the Center of Excellence for Women's Health Promotion and the Center of Excellence for Teenage Mother Development.</p>
+      </div>
+      
+      <div class="coe-grid fade-in-up delay-2">
+        <a href="COE - 1.html" target="_blank" class="coe-card">
+          <div>
+            <div class="coe-card-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="coe.center1">Academic Center of Excellence for Women's Health Promotion</h3>
+          </div>
+          <span class="coe-card-btn">
+            <span data-i18n="coe.visit">View Details</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+        </a>
+        
+        <a href="COE - 2.html" target="_blank" class="coe-card">
+          <div>
+            <div class="coe-card-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+            </div>
+            <h3 data-i18n="coe.center2">Center for Teenage Mother Development</h3>
+          </div>
+          <span class="coe-card-btn">
+            <span data-i18n="coe.visit">View Details</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

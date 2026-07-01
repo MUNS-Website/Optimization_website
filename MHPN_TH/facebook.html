@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook ในการดูแลของภาควิชาฯ | ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .fb-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      max-width: 800px;
+    }
+    .fb-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--surface);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--surface-border);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+      text-decoration: none;
+    }
+    .fb-item:hover {
+      transform: translateX(10px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--secondary);
+    }
+    .fb-icon {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+    }
+    .fb-name {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+    .fb-link-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body data-dept-th="ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>Facebook ในการดูแลของภาควิชา</h1>
+      <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2rem;">ลิงก์กลุ่มเครือข่ายและแฟนเพจที่ดูแลโดยคณาจารย์ในภาควิชา</p>
+      
+      <div class="fb-list">
+        <a href="https://www.facebook.com/groups/909941442475444/?ref=bookmarks" target="_blank" class="fb-item">
+          <img src="../../assets/facebook.png" alt="Facebook" class="fb-icon" onerror="this.src='../../assets/facebook.png'">
+          <div>
+            <div class="fb-name">เครือข่ายการดูแลผู้สูงอายุไทย</div>
+            <div class="fb-link-text">คลิกเพื่อเข้าสู่กลุ่ม Facebook</div>
+          </div>
+        </a>
+        
+        <a href="https://www.facebook.com/groups/849677405232373/?ref=bookmarks" target="_blank" class="fb-item">
+          <img src="../../assets/facebook.png" alt="Facebook" class="fb-icon" onerror="this.src='../../assets/facebook.png'">
+          <div>
+            <div class="fb-name">Gero Nurse Society</div>
+            <div class="fb-link-text">คลิกเพื่อเข้าสู่กลุ่ม Facebook</div>
+          </div>
+        </a>
+        
+        <a href="https://www.facebook.com/%E0%B8%AA%E0%B8%B9%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%A2Strong-894164730769764/" target="_blank" class="fb-item">
+          <img src="../../assets/facebook.png" alt="Facebook" class="fb-icon" onerror="this.src='../../assets/facebook.png'">
+          <div>
+            <div class="fb-name">สูงวัย สาย strong</div>
+            <div class="fb-link-text">คลิกเพื่อเข้าสู่แฟนเพจ</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="news.page_title">Department News & Activities | Obstetric and Gynaecological Nursing Department</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .news-section {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    .section-title {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--secondary);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .news-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary);
+    }
+    .news-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--surface-border);
+    }
+    .news-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .news-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--text-main);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .news-card:hover .news-title {
+      color: var(--primary);
+    }
+    .news-read-more {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--secondary);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .news-read-more svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    .news-card:hover .news-read-more svg {
+      transform: translateX(4px);
+    }
+    .more-btn-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--secondary);
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-family: var(--font-heading);
+      transition: transform var(--transition);
+    }
+    .more-btn:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Obstetric and Gynecological Nursing" data-dept-en="OGN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      
+      <div class="news-section">
+        <h2 class="section-title">ข่าวกิจกรรม ประจำปี 2554 - 2564</h2>
+        <div class="news-grid">
+          <a href="activities/64/11/Activities_1106.html" target="_blank" class="news-card">
+            <img src="img/news/2564/11/06/2-2.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more"><span data-i18n="news.read_more">Read Details</span></span> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/10/Activities_1030.html" target="_blank" class="news-card">
+            <img src="img/news/2564/10/30/1636531262663.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more"><span data-i18n="news.read_more">Read Details</span></span> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/09/Activities_0927.html" target="_blank" class="news-card">
+            <img src="img/news/2564/09/27/Untitled-1.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more"><span data-i18n="news.read_more">Read Details</span></span> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/09/Activities_0918.html" target="_blank" class="news-card">
+            <img src="img/news/2564/09/18/07.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more"><span data-i18n="news.read_more">Read Details</span></span> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/09/Activities_0905.html" target="_blank" class="news-card">
+            <img src="img/news/2564/09/05/05 - 2.png" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more"><span data-i18n="news.read_more">Read Details</span></span> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/09/Activities_0903.html" target="_blank" class="news-card">
+            <img src="img/news/2564/09/03/03 - 1.png" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more"><span data-i18n="news.read_more">Read Details</span></span> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/08/Activities_0831.html" target="_blank" class="news-card">
+            <img src="img/news/2564/08/31/31 - 2.png" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more"><span data-i18n="news.read_more">Read Details</span></span> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/08/Activities_0831.html" target="_blank" class="news-card">
+            <img src="img/news/2564/ex_news.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more"><span data-i18n="news.read_more">Read Details</span></span> <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+
+
+      <div class="more-btn-container">
+        <a href="Activities_all.html" class="more-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
+          ย้อนกลับ
+        </a>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
