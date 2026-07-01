@@ -121,7 +121,9 @@ async function buildFooter() {
 
     // Customize links based on current department
     const path = window.location.pathname.replace(/\\/g, '/');
-    const deptMatch = path.match(/\/(?:departments|department)\/([^\/]+)/i);
+    // Match both /departments/XXX/ and root-level /OGN_TH/, /PHN_EN/, etc.
+    const deptMatch = path.match(/\/(?:departments|department)\/([^\/]+)/i)
+      || path.match(/\/(OGN|PHN|MHPN)_(TH|EN)\//i);
     const deptFolder = deptMatch ? deptMatch[1].toUpperCase() : '';
 
     const fbLink = footerContainer.querySelector('a[title="Facebook"]');
@@ -129,24 +131,50 @@ async function buildFooter() {
     const igLink = footerContainer.querySelector('a[title="Instagram"]');
     const langBtn = footerContainer.querySelector('.footer-lang-btn');
 
+    // Detect if current page is English version
+    const isEnglish = path.includes('_EN/') || path.toLowerCase().includes('eng');
+
     // 1. Language Button Customization
     if (langBtn) {
       if (deptFolder.includes('OGN')) {
-        langBtn.href = 'https://ns.mahidol.ac.th/department/ogn - eng/index.html';
+        if (isEnglish) {
+          langBtn.href = '../OGN_TH/index.html';
+          langBtn.innerHTML = '<img src="' + relativePrefix + 'assets/th.svg" alt="TH"> ไทย';
+        } else {
+          langBtn.href = '../OGN_EN/index.html';
+        }
       } else if (deptFolder.includes('PHN')) {
-        langBtn.href = 'https://ns.mahidol.ac.th/department/PHN - eng/index.html';
+        if (isEnglish) {
+          langBtn.href = '../PHN_TH/index.html';
+          langBtn.innerHTML = '<img src="' + relativePrefix + 'assets/th.svg" alt="TH"> ไทย';
+        } else {
+          langBtn.href = '../PHN_EN/index.html';
+        }
+      } else if (deptFolder.includes('MHPN')) {
+        if (isEnglish) {
+          langBtn.href = '../MHPN_TH/index.html';
+          langBtn.innerHTML = '<img src="' + relativePrefix + 'assets/th.svg" alt="TH"> ไทย';
+        } else {
+          langBtn.href = '../MHPN_EN/index.html';
+        }
       }
     }
 
-    // 2. Social Links Customization (Hide if not linked / PHN Facebook)
+    // 2. Social Links Customization per department
+    // OGN: has Facebook
+    // PHN: no Facebook, no social
+    // MHPN: has Facebook
     if (fbLink) {
       if (deptFolder.includes('OGN')) {
         fbLink.href = 'https://www.facebook.com/obgynnursingmahidol/';
+      } else if (deptFolder.includes('MHPN')) {
+        fbLink.href = 'https://www.facebook.com/mhpnmahidol/';
       } else if (deptFolder.includes('PHN')) {
         fbLink.remove();
       }
     }
 
+    // Remove social links that have placeholder '#' href
     if (twitterLink && twitterLink.getAttribute('href') === '#') {
       twitterLink.remove();
     }
