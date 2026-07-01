@@ -147,14 +147,14 @@ th, td {
   text-align: left;
 }
 th {
-  background: var(--mu-blue-pale);
-  color: var(--mu-blue-dark);
+  background: var(--primary-glow, var(--mu-blue-pale));
+  color: var(--primary, var(--mu-blue-dark));
   font-weight: 600;
 }
 .table-section-header td {
-  background: var(--gray-50);
+  background: rgba(0,0,0,0.03);
   font-weight: 600;
-  color: var(--mu-blue);
+  color: var(--primary, var(--mu-blue));
 }
 .text-center {
   text-align: center !important;
