@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="academic.title">Academic Services | Department of Mental Health and Psychiatric Nursing, Faculty of Nursing, Mahidol University</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .academic-header {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .academic-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .service-box {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      border-top: 4px solid var(--primary);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .service-box:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .service-box h3 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .service-box ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .service-box ul li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+    .service-box ul li::before {
+      content: "•";
+      color: var(--secondary);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* Timeline styles */
+    .timeline {
+      position: relative;
+      margin: 2rem auto;
+      padding: 1rem 0;
+      list-style: none;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 40px;
+      width: 2px;
+      background: var(--primary-glow);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 70px;
+    }
+    .timeline-badge {
+      position: absolute;
+      left: 20px;
+      top: 4px;
+      width: 42px;
+      height: 24px;
+      background: var(--secondary);
+      color: #ffffff;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      z-index: 2;
+    }
+    .timeline-content {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .timeline-content:hover {
+      transform: translateX(3px);
+      box-shadow: var(--shadow-md);
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Mental Health and Psychiatric Nursing" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="academic.header">Academic Services</h1>
+      
+      <section class="academic-header">
+        <div>
+          <img src="img/other/pic_academic.jpg" alt="การบริการวิชาการ คณะพยาบาลศาสตร์" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--surface-border); padding: 5px;">
+        </div>
+        <div>
+          <p style="text-indent: 2.5em; font-size: 1.05rem; line-height: 1.8;" data-i18n="academic.intro">The Department of Mental Health and Psychiatric Nursing is dedicated to translating our expertise and specialized knowledge into practical academic services for society, supporting mental health care and well-being of the public across all lifespans while building solid professional networks at both national and international levels.</p>
+        </div>
+      </section>
+      
+      <!-- Service Pillars -->
+      <h2 style="margin-bottom: 1.5rem;" data-i18n="academic.pillars_title">Academic Service Pillars</h2>
+      <div class="services-grid">
+        <!-- Pillar 1 -->
+        <div class="service-box">
+          <h3 data-i18n="academic.p1_title">1. Public Mental Health Promotion</h3>
+          <ul>
+            <li data-i18n="academic.p1_desc_1">Offer counseling programs to staff, students, and the general public.</li>
+            <li data-i18n="academic.p1_desc_2">Provide online consultation via Line Official Account "NS พลังใจ"</li>
+            <li data-i18n="academic.p1_desc_3">Contact via tel. 089-6861316 or the Department's Facebook page.</li>
+          </ul>
+        </div>
+        
+        <!-- Pillar 2 -->
+        <div class="service-box">
+          <h3 data-i18n="academic.p2_title">2. Research & Academic Consultant</h3>
+          <ul>
+            <li data-i18n="academic.p2_desc_1">Act as consultants for research and academic projects for external organizations.</li>
+            <li data-i18n="academic.p2_desc_2">Co-develop nursing practice guidelines for various hospitals.</li>
+          </ul>
+        </div>
+        
+        <!-- Pillar 3 -->
+        <div class="service-box">
+          <h3 data-i18n="academic.p3_title">3. Curriculum Development Network</h3>
+          <ul>
+            <li data-i18n="academic.p3_desc_1">Collaborate with Department of Mental Health (Galya Rajanagarindra, Somdet Chaopraya, Srithanya) to organize specialized training programs.</li>
+            <li data-i18n="academic.p3_desc_2">Collaborate with Yuwaprasart Waithayopathum Child Psychiatric Hospital to develop child and adolescent training curricula.</li>
+          </ul>
+        </div>
+        
+        <!-- Pillar 4 -->
+        <div class="service-box">
+          <h3 data-i18n="academic.p4_title">4. Specialized Short Courses</h3>
+          <ul>
+            <li data-i18n="academic.p4_desc_1">Organize psychology and psychiatric practical training for professional nurses.</li>
+            <li data-i18n="academic.p4_desc_2">Offer courses on mental health support for chronic illnesses and community psychiatry.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Past Services Timeline -->
+      <h2 data-i18n="academic.timeline_title">Past Academic Projects for Society (2020 - 2022)</h2>
+      <ul class="timeline">
+        
+        <!-- 2565 -->
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2565">2022</div>
+          <div class="timeline-content" data-i18n="academic.item_2565_1">Educational session for students and public: “Major depressive disorder what to know & how to cope”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2565">2022</div>
+          <div class="timeline-content" data-i18n="academic.item_2565_2">Webinar presentation hosted by National University of Singapore: "Prototype development and pilot testing of the "MU My Mind" programme"</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2565">2022</div>
+          <div class="timeline-content" data-i18n="academic.item_2565_3">Workshop for Mahidol University Faculty of Nursing instructors: “Developing Empathic Listening Competency in Educators”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2565">2022</div>
+          <div class="timeline-content" data-i18n="academic.item_2565_4">Workshop for nursing instructors at the Royal Thai Army Nursing College: “Seeking Understanding through Empathic Listening”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2565">2022</div>
+          <div class="timeline-content" data-i18n="academic.item_2565_5">Educational session for Sripathum University staff and students: “Healthy Mind, Healthy Life: How to Adjust in the Covid-19 Era”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2565">2022</div>
+          <div class="timeline-content" data-i18n="academic.item_2565_6">Storytelling and sharing session for instructors and general public: “Handling Gen Z Students: Empowering Narratives from Nursing Educators”</div>
+        </li>
+        
+        <!-- 2564 -->
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2564">2021</div>
+          <div class="timeline-content" data-i18n="academic.item_2564_1">Mental health counseling services for students, staff, and general public via Line Official Account “NS พลังใจ”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2564">2021</div>
+          <div class="timeline-content" data-i18n="academic.item_2564_2">Counseling services: “Empowering Covid-19 Patients in Home Isolation” via Line Official Account “NS พลังใจ”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2564">2021</div>
+          <div class="timeline-content" data-i18n="academic.item_2564_3">Covid-19 mental support Hotline for Thai citizens</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2564">2021</div>
+          <div class="timeline-content" data-i18n="academic.item_2564_4">Screening and vaccination services in the project “NS Volunteers: Stop the Virus for the Nation”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2564">2021</div>
+          <div class="timeline-content" data-i18n="academic.item_2564_5">Facebook Live sessions on “Mahidol Nurses Unite: Protecting Thai People from Covid-19” covering mental care for elderly in crisis</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2564">2021</div>
+          <div class="timeline-content" data-i18n="academic.item_2564_6">Invited speaker sessions for graduate students: “Mindful Adjustments in Studies and Work during Covid-19” and “Empower your Mental health during Covid-19 pandemic”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2564">2021</div>
+          <div class="timeline-content" data-i18n="academic.item_2564_7">Workshop for Mahidol University staff: “Caring for and Supporting Students with Mental Health Problems”</div>
+        </li>
+        
+        <!-- 2563 -->
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2563">2020</div>
+          <div class="timeline-content" data-i18n="academic.item_2563_1">Counseling skills workshop for teachers at Bangkok Christian College</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2563">2020</div>
+          <div class="timeline-content" data-i18n="academic.item_2563_2">Counseling skills training for student leaders at Dipangkorn Wittayapat School and Kanchanapisekwittayalai School</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2563">2020</div>
+          <div class="timeline-content" data-i18n="academic.item_2563_3">Training session for sexual health counseling in the program “New Generation Sex Education Teachers for Adolescents”</div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge" data-i18n="academic.badge_2563">2020</div>
+          <div class="timeline-content" data-i18n="academic.item_2563_4">Educational session for coaches and referees of the Sports Association for the Intellectually Disabled of Thailand: “Intellectual Disabilities: Recognize, Understand, and Develop”</div>
+        </li>
+        
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

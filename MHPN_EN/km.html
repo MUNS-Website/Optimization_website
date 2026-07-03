@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="km.title">Knowledge Management | Department of Mental Health and Psychiatric Nursing, Faculty of Nursing, Mahidol University</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .km-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .km-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .km-item:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .km-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .km-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--primary);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .km-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .km-download {
+      background: var(--primary-glow);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background var(--transition);
+    }
+    .km-download:hover {
+      background: var(--primary);
+      color: var(--text-inverse);
+    }
+    .km-download svg {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Mental Health and Psychiatric Nursing" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="km.header">Knowledge Management</h1>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;" data-i18n="km.intro">Collecting knowledge, skills, and best practices from the operations of instructors and staff within the Department of Mental Health and Psychiatric Nursing to exchange and develop further.</p>
+      
+      <h2 style="font-family: var(--font-heading); color: var(--primary); margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.5rem; display: inline-block;" data-i18n="km.list_title">Knowledge Management (KM) Documents</h2>
+      
+      <div class="km-list">
+        <!-- Item 1 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item1_title">Applying Satir Model for Supporting Students' Mental Health</span>
+            <span class="km-date" data-i18n="km.item1_author">Written by: Department of Mental Health and Psychiatric Nursing</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/418-satir.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item2_title">Development of Teaching and Learning in Psychiatric Nursing Practice (2019)</span>
+            <span class="km-date" data-i18n="km.item2_author">Written by: Nopporn Vongsirimas and Sirada Kesornsri</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/417-2562.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item3_title">Applying Satir Model for Supporting Students' Mental Health (2023)</span>
+            <span class="km-date" data-i18n="km.item3_author">Written by: Assoc. Prof. Dr. Acharaporn Seeherunwong and faculty</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/416-satir-2566.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item4_title">Managing "Bossy" and "Socially Withdrawn" Behaviors in Psychiatric Patients (2016)</span>
+            <span class="km-date" data-i18n="km.item4_author">Written by: Dr. Atittaya Pornchaikate Au-Yeong / Asst. Prof. Dr. Atirat Wattanapailin</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/415-2559.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item5_title">Elderly Counseling in Mental Health Context (2018)</span>
+            <span class="km-date" data-i18n="km.item5_author">Written by: Assoc. Prof. Dr. Acharaporn Seeherunwong / Asst. Prof. Dr. Phuangphet Kaesornsamut / Dr. Pasitta Ondee</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/414-2561.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item6_title">Counseling for Individuals with Depression (Depression Counseling)</span>
+            <span class="km-date" data-i18n="km.item6_author">Written by: Department of Mental Health and Psychiatric Nursing</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/413-depression-counseling.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item7_title">Counseling for Individuals with Anxiety (Anxiety Counseling) (2022)</span>
+            <span class="km-date" data-i18n="km.item7_author">Written by: Asst. Prof. Dr. Supapak Phetrasuwan</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/412-anxiety-counseling-2565.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item8_title">Using Motivational Interviewing and Motivational Enhancement Therapy in Substance Abuse Treatment (2017)</span>
+            <span class="km-date" data-i18n="km.item8_author">Written by: Asst. Prof. Dr. Wimonwan Puthiwanitphong</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/411-motivational-interviewing-motivational-enhancement-therapy-2560.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title" data-i18n="km.item9_title">Counseling for Individuals with Anxiety (2022)</span>
+            <span class="km-date" data-i18n="km.item9_author">Written by: Assistant Professor Dr. Supapak Phetrasuwan</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์/410-anxiety-2565.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span data-i18n="km.read_btn">Read Details</span>
+          </a>
+        </div>
+      </div>
+      
+      <div style="margin-top: 3rem; text-align: center;">
+        <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%A7%E0%B8%8A%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.html" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--primary); color: var(--text-inverse); text-decoration: none; border-radius: var(--radius-sm); font-weight: 500; font-family: var(--font-heading); transition: background var(--transition);">
+          <span data-i18n="km.more_btn">View other KM Documents in Archives</span>
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

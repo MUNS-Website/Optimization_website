@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="vision.title">Missions | Department of Mental Health and Psychiatric Nursing, Faculty of Nursing, Mahidol University</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .mission-intro {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 2.5rem;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .mission-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .mission-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .mission-card h3 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .mission-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-align: center !important;
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Mental Health and Psychiatric Nursing" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="vision.header">Core Missions</h1>
+      
+      <p class="mission-intro" data-i18n="vision.intro">The Department of Mental Health and Psychiatric Nursing focuses on 4 main missions to drive the organization toward international excellence in nursing education and practice.</p>
+      
+      <div class="mission-grid">
+        <!-- Mission 1 -->
+        <div class="mission-card">
+          <h3 data-i18n="vision.m1_title">1. Education & Teaching</h3>
+          <p data-i18n="vision.m1_desc">Provide mental health and psychiatric nursing courses for undergraduate and graduate students, cultivating academic excellence, moral integrity, and professional ethics.</p>
+        </div>
+        
+        <!-- Mission 2 -->
+        <div class="mission-card">
+          <h3 data-i18n="vision.m2_title">2. Research & Innovation</h3>
+          <p data-i18n="vision.m2_desc">Produce high-quality national and international research and academic work in mental health and psychiatric nursing.</p>
+        </div>
+        
+        <!-- Mission 3 -->
+        <div class="mission-card">
+          <h3 data-i18n="vision.m3_title">3. Academic Services</h3>
+          <p data-i18n="vision.m3_desc">Offer academic services to promote mental health for students, staff, and the public, collaborating with specialized institutes to train nurse specialists.</p>
+        </div>
+        
+        <!-- Mission 4 -->
+        <div class="mission-card">
+          <h3 data-i18n="vision.m4_title">4. Arts and Culture Preservation</h3>
+          <p data-i18n="vision.m4_desc">Preserve arts, culture, and the environment, promoting the integration of cultural dimensions in nursing practice and daily life to support well-being.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
