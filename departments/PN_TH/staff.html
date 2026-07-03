@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
@@ -21,6 +24,7 @@
             padding: 40px 20px 25px;
             margin-bottom: 20px;
         }
+
         .clean-header h1 {
             font-size: 32px;
             color: var(--mu-blue-dark);
@@ -28,6 +32,7 @@
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
+
         .clean-divider {
             width: 40px;
             height: 4px;
@@ -48,20 +53,23 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
+
         .staff-card {
             background: var(--white);
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.03);
+            border: 1px solid rgba(0, 0, 0, 0.03);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
         }
+
         .staff-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(25, 68, 136, 0.1);
         }
+
         .staff-img-wrapper {
             width: 210px;
             aspect-ratio: 3 / 4;
@@ -70,9 +78,10 @@
             overflow: hidden;
             background: #f0f4f8;
             position: relative;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
             border: 4px solid var(--white);
         }
+
         .staff-img-wrapper img {
             width: 100%;
             height: 100%;
@@ -80,35 +89,46 @@
             object-position: top;
             transition: transform 0.5s ease;
         }
+
         .staff-card:hover .staff-img-wrapper img {
             transform: scale(1.1);
         }
+
         .staff-info {
-            padding: 20px 15px 25px;
+            padding: 20px 8px 25px;
             text-align: center;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         .staff-name {
-            font-size: 13.5px;
+            font-size: 12.5px;
             letter-spacing: -0.4px;
             font-weight: 700;
             color: var(--mu-blue-dark);
             margin-bottom: 8px;
-            line-height: 1.4;
+            line-height: 1.5;
             text-decoration: none;
             transition: color 0.2s;
-            white-space: nowrap;
-            display: block;
+            white-space: pre-wrap;
+            word-break: keep-all;
+            overflow-wrap: normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 40px;
             width: 100%;
         }
+
         .staff-name:hover {
             color: var(--mu-gold-dark);
         }
+
         .staff-position {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--mu-gold-dark);
             background: rgba(200, 168, 75, 0.12);
             padding: 4px 10px;
@@ -119,6 +139,7 @@
             line-height: 1.4;
             letter-spacing: -0.2px;
         }
+
         .staff-contact {
             margin-top: 15px;
             font-size: 12.5px;
@@ -126,30 +147,42 @@
             line-height: 1.6;
             text-align: center;
         }
+
         .staff-contact a {
             color: var(--gray-600);
             text-decoration: none;
             transition: color 0.2s;
         }
+
         .staff-contact a:hover {
             color: var(--mu-gold-dark);
         }
 
         @media (max-width: 1024px) {
-            .staff-grid { grid-template-columns: repeat(3, 1fr); }
+            .staff-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
+
         @media (max-width: 768px) {
-            .staff-grid { grid-template-columns: repeat(2, 1fr); }
+            .staff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
+
         @media (max-width: 480px) {
-            .staff-grid { grid-template-columns: 1fr; }
+            .staff-grid {
+                grid-template-columns: 1fr;
+            }
         }
+
         .staff-expertise {
             margin-top: 15px;
             text-align: left;
             width: 100%;
             font-size: 13px;
         }
+
         .staff-expertise summary {
             cursor: pointer;
             color: var(--mu-blue);
@@ -163,30 +196,36 @@
             align-items: center;
             justify-content: space-between;
         }
+
         .staff-expertise summary::-webkit-details-marker {
             display: none;
         }
+
         .staff-expertise summary::after {
             content: '▼';
             font-size: 10px;
             transition: transform 0.3s;
         }
+
         .staff-expertise[open] summary::after {
             transform: rotate(180deg);
         }
+
         .staff-expertise summary:hover {
             background: rgba(25, 68, 136, 0.1);
         }
+
         .expertise-content {
             padding: 12px 10px;
             color: var(--gray-700);
             background: #fff;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             border-top: none;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
             margin-top: -4px;
         }
+
         .expertise-title {
             color: var(--mu-gold-dark);
             font-weight: 600;
@@ -194,19 +233,23 @@
             margin-bottom: 5px;
             display: block;
         }
+
         .expertise-title:first-child {
             margin-top: 0;
         }
+
         .expertise-content ul {
             padding-left: 20px;
             margin: 0 0 10px 0;
         }
+
         .expertise-content li {
             margin-bottom: 4px;
             line-height: 1.4;
         }
     </style>
 </head>
+
 <body>
     <div id="mobile-menu-container"></div>
 
@@ -215,7 +258,7 @@
         <div id="header-container"></div>
         <script src="js/navbar.js"></script>
 
-                <main class="content-area">
+        <main class="content-area">
 
             <div class="clean-header" style="padding-bottom: 10px;">
                 <h1 style="font-size: 36px;">คณาจารย์และบุคลากร</h1>
@@ -229,10 +272,12 @@
                             <img src="img/staff/2024/arunrat.jpg" alt="รองศาสตราจารย์ ดร.อรุณรัตน์ ศรีจันทรนิตย์">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630300" target="_blank" class="staff-name">รองศาสตราจารย์ ดร.อรุณรัตน์ ศรีจันทรนิตย์</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630300"
+                                target="_blank" class="staff-name">รองศาสตราจารย์ ดร.อรุณรัตน์ ศรีจันทรนิตย์</a>
                             <div class="staff-position">หัวหน้าภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1852</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1852</span><br>
                                 ✉️ <a href="mailto:headnspi@mahidol.ac.th">headnspi@mahidol.ac.th</a><br>
                                 ✉️ <a href="mailto:arunrat.sri@mahidol.ac.th">arunrat.sri@mahidol.ac.th</a>
                             </div>
@@ -240,16 +285,16 @@
                                 <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Children with congenital heart disease (CHD) and families </li>
-                          <li >Psychosocial care for children with chronic illness and families</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Children with CHD, before and after cardiac surgery, and families</li>
-                          <li >Pediatric palliative care </li>
-                          <li >Qualitative Research </li>
-                      </ul>
+                                    <ul>
+                                        <li>Children with congenital heart disease (CHD) and families </li>
+                                        <li>Psychosocial care for children with chronic illness and families</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Children with CHD, before and after cardiac surgery, and families</li>
+                                        <li>Pediatric palliative care </li>
+                                        <li>Qualitative Research </li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -259,59 +304,65 @@
                             <img src="img/staff/2024/pattaranuch.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.ภัทรนุช วิทูรสกุล">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630164" target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.ภัทรนุช วิทูรสกุล</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630164"
+                                target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.ภัทรนุช วิทูรสกุล</a>
                             <div class="staff-position">รองหัวหน้าภาควิชา</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1864, 1865</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1864, 1865</span><br>
                                 ✉️ <a href="mailto:pattaranuch.poo@mahidol.ac.th">pattaranuch.poo@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
                                 <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Critical care </li>
-                          <li >Infectious diseases and  infection control </li>
-                          <li >Palliative and End-of-life care</li>
-                          <li >Respiratory care</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Critical care </li>
-                          <li >Infection control</li>
-                          <li >End-of-life  care for children and family</li>
-                          <li >Nursing care for patients with respiratory problem</li>
-                          <li >Qualitative research</li>
-                        </ul>
+                                    <ul>
+                                        <li>Critical care </li>
+                                        <li>Infectious diseases and infection control </li>
+                                        <li>Palliative and End-of-life care</li>
+                                        <li>Respiratory care</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Critical care </li>
+                                        <li>Infection control</li>
+                                        <li>End-of-life care for children and family</li>
+                                        <li>Nursing care for patients with respiratory problem</li>
+                                        <li>Qualitative research</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
                     </div>
                     <div class="staff-card">
                         <div class="staff-img-wrapper">
-                            <img src="https://ns.mahidol.ac.th/nurse_th/images/administrator/67/weeraya.jpg" alt="รองศาสตราจารย์วีรยา จึงสมเจตไพศาล">
+                            <img src="https://ns.mahidol.ac.th/nurse_th/images/administrator/67/weeraya.jpg"
+                                alt="รองศาสตราจารย์วีรยา จึงสมเจตไพศาล">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630222" target="_blank" class="staff-name">รองศาสตราจารย์วีรยา จึงสมเจตไพศาล</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630222"
+                                target="_blank" class="staff-name">รองศาสตราจารย์วีรยา จึงสมเจตไพศาล</a>
                             <div class="staff-position">รองคณบดีฝ่ายบริหาร</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1206</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1206</span><br>
                                 ✉️ <a href="mailto:weeraya.jug@mahidol.ac.th">weeraya.jug@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
                                 <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li > Diabetic Child Care </li>
-                          <li >Child Play</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li > Health Promotion in Chronically-ill  Children and Families: Diabetes Mellitus and Cerebral  Palsy </li>
-                          <li >Development and Psychosocial Care in Children  and Families </li>
-                          <li >Play &amp; Development </li>
-                        </ul>
+                                    <ul>
+                                        <li> Diabetic Child Care </li>
+                                        <li>Child Play</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li> Health Promotion in Chronically-ill Children and Families: Diabetes
+                                            Mellitus and Cerebral Palsy </li>
+                                        <li>Development and Psychosocial Care in Children and Families </li>
+                                        <li>Play &amp; Development </li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -321,52 +372,57 @@
                             <img src="img/staff/2024/somsiri.jpg" alt="รองศาสตราจารย์ ดร.สมสิริ รุ่งอมรรัตน์">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630248" target="_blank" class="staff-name">รองศาสตราจารย์ ดร.สมสิริ รุ่งอมรรัตน์</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630248"
+                                target="_blank" class="staff-name">รองศาสตราจารย์ ดร.สมสิริ รุ่งอมรรัตน์</a>
                             <div class="staff-position">รองคณบดีฝ่ายพัฒนาคุณภาพ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1216, 1857</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1216, 1857</span><br>
                                 ✉️ <a href="mailto:somsiri.run@mahidol.ac.th">somsiri.run@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
                                 <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li > High risk newborn </li>
-                          <li >Health promotion in  early childhood</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li > Nursing care in high-risk newborn </li>
-                          <li >Health promotion in  early childhood</li>
-                        </ul>
+                                    <ul>
+                                        <li> High risk newborn </li>
+                                        <li>Health promotion in early childhood</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li> Nursing care in high-risk newborn </li>
+                                        <li>Health promotion in early childhood</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
                     </div>
                     <div class="staff-card">
                         <div class="staff-img-wrapper">
-                            <img src="https://ns.mahidol.ac.th/nurse_th/images/administrator/67/yuwadee.jpg" alt="รองศาสตราจารย์ยุวดี พงษ์สาระนันทกุล">
+                            <img src="https://ns.mahidol.ac.th/nurse_th/images/administrator/67/yuwadee.jpg"
+                                alt="รองศาสตราจารย์ยุวดี พงษ์สาระนันทกุล">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630178" target="_blank" class="staff-name">รองศาสตราจารย์ยุวดี พงษ์สาระนันทกุล</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630178"
+                                target="_blank" class="staff-name">รองศาสตราจารย์ยุวดี พงษ์สาระนันทกุล</a>
                             <div class="staff-position">รองคณบดีฝ่ายการคลังและพัสดุ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1215, 1858</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1215, 1858</span><br>
                                 ✉️ <a href="mailto:yuwadee.pon@mahidol.ac.th">yuwadee.pon@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
                                 <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li > Health Promotion in early Childhood </li>
-                          <li >Pediatric Surgical  Nursing</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Child Growth and Development</li>
-                        </ul>
+                                    <ul>
+                                        <li> Health Promotion in early Childhood </li>
+                                        <li>Pediatric Surgical Nursing</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Child Growth and Development</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -376,26 +432,28 @@
                             <img src="img/staff/2024/tassanee.jpg" alt="รองศาสตราจารย์ ดร.ทัศนี ประสบกิตติคุณ">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630082" target="_blank" class="staff-name">รองศาสตราจารย์ ดร.ทัศนี ประสบกิตติคุณ</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630082"
+                                target="_blank" class="staff-name">รองศาสตราจารย์ ดร.ทัศนี ประสบกิตติคุณ</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1863</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1863</span><br>
                                 ✉️ <a href="mailto:tassanee.pra@mahidol.ac.th">tassanee.pra@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
                                 <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Neonatal Nursing</li>
-                          <li >Developmental Screening</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Parenting &amp; Child  Development </li>
-                          <li >Self-Efficacy </li>
-                          <li >Tool Development </li>
-                      </ul>
+                                    <ul>
+                                        <li>Neonatal Nursing</li>
+                                        <li>Developmental Screening</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Parenting &amp; Child Development </li>
+                                        <li>Self-Efficacy </li>
+                                        <li>Tool Development </li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -405,29 +463,31 @@
                             <img src="img/staff/2024/apawan.jpg" alt="รองศาสตราจารย์ ดร.อาภาวรรณ หนูคง">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630309" target="_blank" class="staff-name">รองศาสตราจารย์ ดร.อาภาวรรณ หนูคง</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630309"
+                                target="_blank" class="staff-name">รองศาสตราจารย์ ดร.อาภาวรรณ หนูคง</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1858</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1858</span><br>
                                 ✉️ <a href="mailto:apawan.noo@mahidol.ac.th">apawan.noo@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
                                 <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Respiratory care for children and families </li>
-                          <li >Obesity and Metabolic syndrome in children </li>
-                          <li >Health promotion, executive function in early childhood </li>
-                          <li > at-risk children and families </li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li > Respiratory care for  children and families </li>
-                          <li >Obesity and Metabolic  syndrome in children</li>
-                          <li >Health promotion,  executive function in early childhood </li>
-                          <li >at-risk  children and families </li>
-                        </ul>
+                                    <ul>
+                                        <li>Respiratory care for children and families </li>
+                                        <li>Obesity and Metabolic syndrome in children </li>
+                                        <li>Health promotion, executive function in early childhood </li>
+                                        <li> at-risk children and families </li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li> Respiratory care for children and families </li>
+                                        <li>Obesity and Metabolic syndrome in children</li>
+                                        <li>Health promotion, executive function in early childhood </li>
+                                        <li>at-risk children and families </li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -437,29 +497,31 @@
                             <img src="img/staff/2024/sudaporn.jpg" alt="รองศาสตราจารย์ ดร.สุดาภรณ์ พยัคฆเรือง">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630264" target="_blank" class="staff-name">รองศาสตราจารย์ ดร.สุดาภรณ์ พยัคฆเรือง</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630264"
+                                target="_blank" class="staff-name">รองศาสตราจารย์ ดร.สุดาภรณ์ พยัคฆเรือง</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1858</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1858</span><br>
                                 ✉️ <a href="mailto:sudaporn.pay@mahidol.ac.th">sudaporn.pay@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
                                 <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Neonatal nursing </li>
-                          <li >Pediatric surgical  nursing </li>
-                          <li >Pediatric critical care  nursing </li>
-                          <li >Breastfeeding </li>
-                          <li >Clinical Judgment</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Pain Management in Children </li>
-                          <li >Health promotion in early childhood                          </li>
-                          <li >Breastfeeding</li>
-                      </ul>
+                                    <ul>
+                                        <li>Neonatal nursing </li>
+                                        <li>Pediatric surgical nursing </li>
+                                        <li>Pediatric critical care nursing </li>
+                                        <li>Breastfeeding </li>
+                                        <li>Clinical Judgment</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Pain Management in Children </li>
+                                        <li>Health promotion in early childhood </li>
+                                        <li>Breastfeeding</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -469,10 +531,12 @@
                             <img src="img/staff/2026/pannarat.png" alt="ผู้ช่วยศาสตราจารย์ ดร.พรรณรัตน์ แสงเพิ่ม">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630401" target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.พรรณรัตน์ แสงเพิ่ม</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630401"
+                                target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.พรรณรัตน์ แสงเพิ่ม</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ -</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ -</span><br>
                                 ✉️ <a href="mailto:parnnarat.san@mahidol.ac.th">parnnarat.san@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
@@ -480,15 +544,15 @@
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
                                     <ul>
-                                      <li>Breastfeeding</li>
-                                      <li>Nutrition promoting in children</li>
-                                      <li>Infection diseases and control</li>
+                                        <li>Breastfeeding</li>
+                                        <li>Nutrition promoting in children</li>
+                                        <li>Infection diseases and control</li>
                                     </ul>
                                     <p class="expertise-title">Research area:</p>
                                     <ul>
-                                      <li>Breastfeeding</li>
-                                      <li>Nutrition promoting in children</li>
-                                      <li>Infection diseases and control</li>
+                                        <li>Breastfeeding</li>
+                                        <li>Nutrition promoting in children</li>
+                                        <li>Infection diseases and control</li>
                                     </ul>
                                 </div>
                             </details>
@@ -499,29 +563,33 @@
                             <img src="img/staff/2024/chayapa.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.ชญาภา เล่นวารี">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630050" target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.ชญาภา เล่นวารี</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630050"
+                                target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.ชญาภา เล่นวารี</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1864, 1865</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1864, 1865</span><br>
                                 ✉️ <a href="mailto:chayapa.cha@mahidol.ac.th">chayapa.cha@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Breastfeeding </li>
-                          <li >Social support </li>
-                          <li >Health promotion in children </li>
-                          <li >Critical thinking </li>
-                          <li >Nursing education</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Breastfeeding </li>
-                          <li >Health promotion in children </li>
-                          <li >Nursing education</li>
-                        </ul>
+                                    <ul>
+                                        <li>Breastfeeding </li>
+                                        <li>Social support </li>
+                                        <li>Health promotion in children </li>
+                                        <li>Critical thinking </li>
+                                        <li>Nursing education</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Breastfeeding </li>
+                                        <li>Health promotion in children </li>
+                                        <li>Nursing education</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -531,28 +599,32 @@
                             <img src="img/staff/kanjana.jpg" alt="อ.กาญจนา ครองธรรมชาติ">
                         </div>
                         <div class="staff-info">
-                            <a href="http://www.lib.ns.mahidol.ac.th/ns-expert/detail.nsp?view=MUEXPERT&db=MUEXPERT&query0=N00041&field0=EXPERTID&ranked=1&numresults=1" target="_blank" class="staff-name">อ.กาญจนา ครองธรรมชาติ</a>
+                            <a href="http://www.lib.ns.mahidol.ac.th/ns-expert/detail.nsp?view=MUEXPERT&db=MUEXPERT&query0=N00041&field0=EXPERTID&ranked=1&numresults=1"
+                                target="_blank" class="staff-name">อ.กาญจนา ครองธรรมชาติ</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1850, 1858</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1850, 1858</span><br>
                                 ✉️ <a href="mailto:kanjana.kro@mahidol.ac.th">kanjana.kro@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Chronic illness: Hematology and Malignancies </li>
-                          <li >Health promotion: yoka </li>
-                          <li >Psychosocial care </li>
-                          <li >Palliative care</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Chronic illness: Hematology  and Malignancies </li>
-                          <li >Psychosocial care </li>
-                          <li >Nursing education</li>
-                        </ul>
+                                    <ul>
+                                        <li>Chronic illness: Hematology and Malignancies </li>
+                                        <li>Health promotion: yoka </li>
+                                        <li>Psychosocial care </li>
+                                        <li>Palliative care</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Chronic illness: Hematology and Malignancies </li>
+                                        <li>Psychosocial care </li>
+                                        <li>Nursing education</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -562,26 +634,32 @@
                             <img src="img/staff/2024/sathima.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.สาธิมา สุระธรรม">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630253" target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.สาธิมา สุระธรรม</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630253"
+                                target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.สาธิมา สุระธรรม</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1861</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1861</span><br>
                                 ✉️ <a href="mailto:sathima.son@mahidol.ac.th">sathima.son@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Nursing care of chronic illness in children and  families: type 1 diabetes mellitus  and congenital heart disease (CHD)</li>
-                          <li >Diabetes Self-Management  Education and Support: DSMES</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Health promotion in  children with congenital heart disease (CHD) and families</li>
-                          <li >Health promotion in  children with type 1 diabetes mellitus and families</li>
-                          <li >Diabetes Self-Management  Education and Support: DSMES</li>
-                      </ul>
+                                    <ul>
+                                        <li>Nursing care of chronic illness in children and families: type 1 diabetes
+                                            mellitus and congenital heart disease (CHD)</li>
+                                        <li>Diabetes Self-Management Education and Support: DSMES</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Health promotion in children with congenital heart disease (CHD) and
+                                            families</li>
+                                        <li>Health promotion in children with type 1 diabetes mellitus and families</li>
+                                        <li>Diabetes Self-Management Education and Support: DSMES</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -591,40 +669,64 @@
                             <img src="img/staff/2024/benjamat.jpg" alt="ผู้ช่วยศาสตราจารย์เบ็ญจมาศ โอฬารรัตน์มณี">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630116" target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์เบ็ญจมาศ โอฬารรัตน์มณี</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630116"
+                                target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์เบ็ญจมาศ โอฬารรัตน์มณี</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1857, 1859</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1857, 1859</span><br>
                                 ✉️ <a href="mailto:benjamat.han@mahidol.ac.th">benjamat.han@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Health promotion </li>
-                          <li >Infectious disease</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Sexuality education in child and adolescent</li>
-                          <li >Health promotion in child and adolescent</li>
-                      </ul>
+                                    <ul>
+                                        <li>Health promotion </li>
+                                        <li>Infectious disease</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Sexuality education in child and adolescent</li>
+                                        <li>Health promotion in child and adolescent</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
                     </div>
                     <div class="staff-card">
                         <div class="staff-img-wrapper">
-                            <img src="img/staff/2026/piyarat.jpg" alt="ผู้ช่วยศาสตราจารย์ พ.ต.ต.หญิง ดร. ปิยะรัตน์ สมันตรัตน์">
+                            <img src="img/staff/2026/piyarat.jpg"
+                                alt="ผู้ช่วยศาสตราจารย์ พ.ต.ต.หญิง ดร. ปิยรัตน์ สมันตรัฐ">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630464" target="_blank" class="staff-name" style="white-space: normal;">ผู้ช่วยศาสตราจารย์ พ.ต.ต.หญิง ดร. ปิยะรัตน์ สมันตรัตน์</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630464"
+                                target="_blank" class="staff-name" style="white-space: normal;">ผู้ช่วยศาสตราจารย์
+                                พ.ต.ต.หญิง ดร. ปิยรัตน์ สมันตรัฐ</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ</span><br>
-                                ✉️ <a href="mailto:thatchkorn.kla@mahidol.ac.th">thatchkorn.kla@mahidol.ac.th</a>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1850</span><br>
+                                ✉️ <a href="mailto:piyarat.sam@mahidol.ac.th">piyarat.sam@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                                    <ul>
+                                        <li>High risk newborn</li>
+                                        <li>Children with chronic illnesses</li>
+                                        <li>Neonatal Surgical Disorders</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>symptom experience and psychosocial care in adolescents with cancer</li>
+                                        <li>Adolescent health</li>
+                                    </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -632,25 +734,29 @@
                             <img src="img/staff/2024/jintana.jpg" alt="อาจารย์ ดร.จินต์ณาภัส แสงงาม">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630041" target="_blank" class="staff-name">อาจารย์ ดร.จินต์ณาภัส แสงงาม</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630041"
+                                target="_blank" class="staff-name">อาจารย์ ดร.จินต์ณาภัส แสงงาม</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1864, 1865</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1864, 1865</span><br>
                                 ✉️ <a href="mailto:jintana.sag@mahidol.ac.th">jintana.sag@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Nursing Care of The Pediatric Surgical Patient </li>
-                          <li >Nursing Care of The Child with Respiratory Disorder</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Asthma Self-and Family  Management </li>
-                          <li >Pediatric Surgical Nursing</li>
-                      </ul>
+                                    <ul>
+                                        <li>Nursing Care of The Pediatric Surgical Patient </li>
+                                        <li>Nursing Care of The Child with Respiratory Disorder</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Asthma Self-and Family Management </li>
+                                        <li>Pediatric Surgical Nursing</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -660,23 +766,27 @@
                             <img src="img/staff/2024/thatchkorn.jpg" alt="อาจารย์ธัชกร คล้ายสุบรรณ">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630391" target="_blank" class="staff-name">อาจารย์ธัชกร คล้ายสุบรรณ</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630391"
+                                target="_blank" class="staff-name">อาจารย์ธัชกร คล้ายสุบรรณ</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1864, 1865</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1864, 1865</span><br>
                                 ✉️ <a href="mailto:thatchkorn.kla@mahidol.ac.th">thatchkorn.kla@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Oncology Nursing</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Oncology Nursing</li>
-                        </ul>
+                                    <ul>
+                                        <li>Oncology Nursing</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Oncology Nursing</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -686,23 +796,27 @@
                             <img src="img/staff/2024/katteya.jpg" alt="อาจารย์แคทธียา เป็นเอก">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630429" target="_blank" class="staff-name">อาจารย์แคทธียา เป็นเอก</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630429"
+                                target="_blank" class="staff-name">อาจารย์แคทธียา เป็นเอก</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1857, 1859</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1857, 1859</span><br>
                                 ✉️ <a href="mailto:katteya.pen@mahidol.ac.th">katteya.pen@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Critical care in newborn </li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Nursing care in preterm infant</li>
-                        </ul>
+                                    <ul>
+                                        <li>Critical care in newborn </li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Nursing care in preterm infant</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -712,23 +826,27 @@
                             <img src="img/staff/2024/wanida.jpg" alt="อาจารย์วนิดา ใจแปง">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630416" target="_blank" class="staff-name">อาจารย์วนิดา ใจแปง</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630416"
+                                target="_blank" class="staff-name">อาจารย์วนิดา ใจแปง</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1858</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1858</span><br>
                                 ✉️ <a href="mailto:wanida.jai@mahidol.ac.th">wanida.jai@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Nephrology nursing</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Healthcare transition in adolescents</li>
-                        </ul>
+                                    <ul>
+                                        <li>Nephrology nursing</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Healthcare transition in adolescents</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -738,23 +856,27 @@
                             <img src="img/staff/2024/manutsawin.jpg" alt="อาจารย์มนัสวิน คันธมาส">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630415" target="_blank" class="staff-name">อาจารย์มนัสวิน คันธมาส</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630415"
+                                target="_blank" class="staff-name">อาจารย์มนัสวิน คันธมาส</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1858</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1858</span><br>
                                 ✉️ <a href="mailto:manutsawin.kun@mahidol.ac.th">manutsawin.kun@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
-                        <ul>
-                          <li >Self-management in adolescents with type 1 diabetes</li>
-                        </ul>
-                        <p class="expertise-title">Research area:</p>
-                        <ul>
-                          <li >Self-management in adolescents with type 1 diabetes</li>
-                        </ul>
+                                    <ul>
+                                        <li>Self-management in adolescents with type 1 diabetes</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Self-management in adolescents with type 1 diabetes</li>
+                                    </ul>
                                 </div>
                             </details>
                         </div>
@@ -764,22 +886,26 @@
                             <img src="img/staff/2024/phonphimon.jpg" alt="อาจารย์พรพิมล ประกอบจรรยา">
                         </div>
                         <div class="staff-info">
-                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630458" target="_blank" class="staff-name">อาจารย์พรพิมล ประกอบจรรยา</a>
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630458"
+                                target="_blank" class="staff-name">อาจารย์พรพิมล ประกอบจรรยา</a>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1857- 1859</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1857- 1859</span><br>
                                 ✉️ <a href="mailto:phonphimon.pra@mahidol.ac.th">phonphimon.pra@mahidol.ac.th</a>
                             </div>
                             <details class="staff-expertise">
-                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <summary>
+                                    &#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597;
+                                    / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
                                 <div class="expertise-content">
                                     <span class="expertise-title">Expertise area: </span>
                                     <ul>
-                                      <li>Critical care in newborn</li>
+                                        <li>Critical care in newborn</li>
                                     </ul>
                                     <p class="expertise-title">Research area:</p>
                                     <ul>
-                                      <li>Health promotion in early childhood</li>
+                                        <li>Health promotion in early childhood</li>
                                     </ul>
                                 </div>
                             </details>
@@ -793,9 +919,24 @@
                             <div class="staff-name">อาจารย์กุศลินณภัส ผลงาม</div>
                             <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ</span><br>
-                                
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1864, 1865</span><br>
+                                ✉️ <a href="mailto:kusalinnaphat.pho@mahidol.ac.th">kusalinnaphat.pho@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>ความเชี่ยวชาญ / งานวิจัย</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                                    <ul>
+                                        <li>Neonatal Critical Care</li>
+                                        <li>Child Development</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                        <li>Participation and Quality of Life in Children with Special Needs</li>
+                                    </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -806,7 +947,8 @@
                             <div class="staff-name">นางสาวแสงเดือน พรหมจันทร์</div>
                             <div class="staff-position">เจ้าหน้าที่บริหารงานทั่วไป</div>
                             <div class="staff-contact">
-                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1850-1851</span><br>
+                                <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร:
+                                    02-419-7466-80 ต่อ 1850-1851</span><br>
                                 ✉️ <a href="mailto:sangduan.pro@mahidol.ac.th">sangduan.pro@mahidol.ac.th</a>
                             </div>
                         </div>
@@ -832,14 +974,37 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                                                            <div style="display:flex;gap:12px;align-items:center;">
-                        <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
-                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
-                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
-                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
-                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682"
+                            target="_blank" title="Facebook"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook"
+                                style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png"
+                                alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram"
+                                style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line"
+                                style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank"
+                            title="Youtube"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png"
+                                alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                     </div>
-                    <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+                    <a href="../PN_EN/index.html"
+                        style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
                         English
                     </a>
@@ -894,12 +1059,5 @@
         }, { passive: true });
     </script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-

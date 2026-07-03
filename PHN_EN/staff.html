@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Faculty &amp; Staff | Department of Public Health Nursing, Faculty of Nursing, Mahidol University</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="components/layout.js"></script>
+<style>
+    .staff-intro {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--secondary);
+      padding-left: 1rem;
+    }
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    @media (max-width: 1024px) {
+      .staff-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .staff-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .staff-grid { grid-template-columns: 1fr; }
+      .faculty-card { max-width: 260px; margin: 0 auto; width: 100%; }
+    }
+    .faculty-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .faculty-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 125%; /* 4:5 aspect ratio */
+      overflow: hidden;
+      background: #ffffff;
+      border-bottom: 1px solid var(--surface-border);
+    }
+    .faculty-img {
+      border-radius: var(--radius-md, 8px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      max-width: 200px;
+      max-height: 250px;
+      object-fit: contain;
+      transition: transform var(--transition);
+    }
+    .faculty-card:hover .faculty-img {
+      border-radius: var(--radius-md, 8px);
+      transform: translate(-50%, -50%) scale(1.03);
+    }
+    .faculty-info {
+      padding: 1.25rem 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .faculty-name {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+    }
+    .faculty-name a:hover {
+      color: var(--secondary);
+    }
+    .faculty-role {
+      font-size: 0.75rem;
+      color: var(--text-inverse);
+      background: var(--primary);
+      padding: 0.3rem 0.6rem;
+      border-radius: var(--radius-sm);
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .faculty-role.head-role {
+      background: var(--secondary);
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .contact-details {
+      margin-top: auto;
+      font-size: 0.75rem;
+      border-top: 1px solid var(--surface-border);
+      padding-top: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      color: var(--text-muted);
+      word-break: break-word;
+    }
+    .contact-details span strong {
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body data-dept-en="Department of Public Health Nursing" data-dept-th="Department of Public Health Nursing">
+<main class="site-main container">
+<div id="page-content">
+<h1>Faculty &amp; Staff</h1>
+<p class="staff-intro">Faculty members of the Department of Public Health Nursing, Faculty of Nursing, Mahidol University</p>
+<div class="staff-grid">
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Associate Professor Dr.Weha Kasemsuk" class="faculty-img" src="img/staff/เวหา เกษมสุข.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630224" target="_blank">Associate Professor Dr.Weha Kasemsuk</a>
+</h3>
+<span class="faculty-role head-role">Head of Department</span>
+<div class="contact-details">
+<span><strong>Email:</strong> weha.kas@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2661</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Assistant Professor Dr.Juntima Rerkluenrit" class="faculty-img" src="img/staff/จันทิมา ฤกษ์เลื่อนฤทธิ์.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630036" target="_blank">Assistant Professor Dr.Juntima Rerkluenrit</a>
+</h3>
+<span class="faculty-role head-role">Associate Dean for Education</span>
+<div class="contact-details">
+<span><strong>Email:</strong> juntima.rer@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2667</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Associate Professor Dr.Saovaros Meekusol" class="faculty-img" src="img/staff/เสาวรส มีกุศล.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630286" target="_blank">Associate Professor Dr.Saovaros Meekusol</a>
+</h3>
+<span class="faculty-role head-role">Deputy Head of Department</span>
+<div class="contact-details">
+<span><strong>Email:</strong> saovaros.mee@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2668</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Assistant Professor Dr.Penchan Sittipreechachan" class="faculty-img" src="img/staff/เพ็ญจันทร์ สิทธิปรีชาชาญ.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630159" target="_blank">Assistant Professor Dr.Penchan Sittipreechachan</a>
+</h3>
+<span class="faculty-role head-role">Assistant Dean for Student Development</span>
+<div class="contact-details">
+<span><strong>Email:</strong> penchan.sit@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2664</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Associate Professor Dr.Yupa Jewpattanakul" class="faculty-img" src="img/staff/ยุพา จิ๋วพัฒนกุล.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630176" target="_blank">Associate Professor Dr.Yupa Jewpattanakul</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> yupa.jew@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2667</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Associate Professor Dr.Rukchanok Koshakri" class="faculty-img" src="img/staff/รักชนก คชไกร.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630179" target="_blank">Associate Professor Dr.Rukchanok Koshakri</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> rukchanok.kos@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2668</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Associate Professor Dr.Piyatida Nakagasien" class="faculty-img" src="img/staff/ปิยะธิดา นาคะเกษียร.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630130" target="_blank">Associate Professor Dr.Piyatida Nakagasien</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> piyatida.nak@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2665</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Associate Professor Nongnuch Petchroung" class="faculty-img" src="img/staff/นงนุช เพ็ชรร่วง.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630090" target="_blank">Associate Professor Nongnuch Petchroung</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> nongnuch.pet@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2667</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Assistant Professor Dr.Thanistha Samai" class="faculty-img" src="img/staff/ธนิษฐา สมัย.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630085" target="_blank">Assistant Professor Dr.Thanistha Samai</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> thanistha.sam@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2662</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Lecturer Dr.Wanwilai Outtarawichian" class="faculty-img" src="img/staff/วรรณวิไล อุตรวิเชียร.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630200" target="_blank">Lecturer Dr.<br>Wanwilai Outtarawichian</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> wanwilai.out@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2666</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Lecturer Surussavadee Waiwong" class="faculty-img" src="img/staff/สุรัสวดี ไวว่อง.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630279" target="_blank">Lecturer<br>Surussavadee Waiwong</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> surussavadee.wai@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2667</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Lecturer Change Preeprem" class="faculty-img" src="img/staff/เชนจ์ ปรีเปรม.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630412" target="_blank">Lecturer<br>Change Preeprem</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> change.pre@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2662</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Lecturer Preechaya Jangtawee" class="faculty-img" src="img/staff/ปรีชยา แจ้งทวี.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630413" target="_blank">Lecturer<br>Preechaya Jangtawee</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> preechaya.jan@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2667</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Lecturer Pokkrong Pongpattanapisit" class="faculty-img" src="img/staff/ปกครอง พงษ์พัฒนพิสิฐ.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630417" target="_blank">Lecturer<br>Pokkrong Pongpattanapisit</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> pokkrong.pon@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2666</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Lecturer Napaswan Namboonsri" class="faculty-img" src="img/staff/นภัสวรรณ  นามบุญศรี.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630446" target="_blank">Lecturer<br>Napaswan Namboonsri</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> napaswan.nam@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. -</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Lecturer Wisutthiphat Singklang" class="faculty-img" src="img/staff/วิสุทธิพัฒน์ สิงห์กลาง.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="#" target="_blank">Lecturer<br>Wisutthiphat Singklang</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> wisutthiphat.sig@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. -</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Lecturer Dolpornprom Vichientiab" class="faculty-img" src="img/staff/ดลพรพรหม วิเชียรเทียบ.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630454" target="_blank">Lecturer<br>Dolpornprom Vichientiab</a>
+</h3>
+<span class="faculty-role">Department Lecturer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> dolpornpron.vic@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. -</span>
+</div>
+</div>
+</div>
+<div class="faculty-card">
+<div class="image-wrapper">
+<img alt="Pitchapa Channim" class="faculty-img" src="img/staff/พิชชาภา จันทร์นิ่ม.jpg"/>
+</div>
+<div class="faculty-info">
+<h3 class="faculty-name">
+<a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile/#/staff_detail/630152" target="_blank">Pitchapa Channim</a>
+</h3>
+<span class="faculty-role">General Administration Officer</span>
+<div class="contact-details">
+<span><strong>Email:</strong> pitchapa.soi@mahidol.ac.th</span>
+<span><strong>Tel:</strong> 0-2441-5333 ext. 2662</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body>
+</html>

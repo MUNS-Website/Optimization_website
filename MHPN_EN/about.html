@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="about.page_title">About Us | Department of Mental Health and Psychiatric Nursing, Faculty of Nursing, Mahidol University</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .about-intro {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .heads-list {
+      list-style: none;
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .head-item {
+      display: flex;
+      flex-direction: column;
+      background: var(--background);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--secondary);
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .head-years {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .head-name {
+      font-weight: 500;
+      color: var(--text-main);
+    }
+    .building-img-container {
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Mental Health and Psychiatric Nursing" data-dept-en="Department of Mental Health and Psychiatric Nursing">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="about.title">About Us</h1>
+      
+      <section class="about-intro">
+        <div>
+          <img src="img/other/pic_about.jpg" alt="เกี่ยวกับภาควิชา" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+        </div>
+        <div>
+          <h2 data-i18n="about.history">History of the Department</h2>
+          <p data-i18n="about.p1">Welcome to the Department of Mental Health and Psychiatric Nursing</p>
+          <p data-i18n="about.p2">Mental health and psychiatric nursing is both an art and a science dedicated to promoting, preventing, treating, and rehabilitating the mental health of patients to achieve balance and well-being in their lives.</p>
+          <p data-i18n="about.p3">Originally established as the Psychiatric Nursing Unit under the Department of Medical and Psychiatric Nursing, it was later approved as an independent department within the Faculty of Nursing. Officially announced in the Royal Gazette on February 6, 1986, it became the 7th department of the Faculty of Nursing.</p>
+        </div>
+      </section>
+      
+      <section class="department-heads">
+        <h2 data-i18n="about.heads_title">List of Department Heads</h2>
+        <div class="heads-list">
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_1_years">1986 – 1987</span>
+            <span class="head-name" data-i18n="about.head_1_name">Miss Tassana Boontong</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_2_years">1988 – 1991</span>
+            <span class="head-name" data-i18n="about.head_2_name">Mrs. Somsorn Chuehiran</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_3_years">1992 – 1995</span>
+            <span class="head-name" data-i18n="about.head_3_name">Mrs. Poungpen Jiampanyarach</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_4_years">1996 – 1999</span>
+            <span class="head-name" data-i18n="about.head_4_name">Miss Wasana Chlaemkhetra</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_5_years">1999 – 2003</span>
+            <span class="head-name" data-i18n="about.head_5_name">Mrs. Jaruwan T. Sakul</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_6_years">2003 – 2007</span>
+            <span class="head-name" data-i18n="about.head_6_name">Miss Wasana Chlaemkhetra</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_7_years">2007 – 2016</span>
+            <span class="head-name" data-i18n="about.head_7_name">Mrs. Atirat Wattanapailin</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_8_years">2016 – 2023</span>
+            <span class="head-name" data-i18n="about.head_8_name">Associate Professor Dr. Phuangphet Kaesornsamut</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years" data-i18n="about.head_9_years">2023 – Present</span>
+            <span class="head-name" data-i18n="about.head_9_name">Associate Professor Dr. Nopporn Vongsirimas</span>
+          </div>
+        </div>
+      </section>
+      
+      <div class="building-img-container">
+        <img src="img/other/ns_building.png" alt="อาคารเรียน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล" style="max-width: 100%; border: 1px solid var(--surface-border); padding: 6px; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แสดงความยินดี | ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .congrat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .congrat-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .congrat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .congrat-img {
+      width: 100px;
+      flex-shrink: 0;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .congrat-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .congrat-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    .congrat-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+      .fallback-icon {
+      background-color: var(--primary-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .fallback-icon::after {
+      content: '🏆';
+      font-size: 3rem;
+      position: absolute;
+    }
+  </style>
+</head>
+<body data-dept-th="ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>ข่าวแสดงความยินดี</h1>
+      
+      <div class="congrat-grid">
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/Narirat_นารีรัตน์.gif" alt="อ.นารีรัตน์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3>ขอแสดงความยินดีกับ ผู้ช่วยศาสตราจารย์ ดร.นารีรัตน์ จิตรมนตรี</h3>
+            <p>ได้รับทุนอุดหนุนการวิจัยจาก มหาวิทยาลัยมหิดล โครงการจัดตั้งศูนย์เรียนรู้และพัฒนาสุขภาวะผู้สูงอายุแบบครบวงจรและบริบาลผู้ป่วยระยะสุดท้าย จากชุดโครงการวิจัยบูรณาการเพื่อพัฒนารูปแบบ การป้องกันการหกล้มของผู้สูงอายุในชุมชน จำนวน 351,000 บาท</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/natsurang2.png" alt="ผศ.ณัฐสุรางค์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3>ขอแสดงความยินดีกับ ผู้ช่วยศาสตราจารย์ณัฐสุรางค์ บุญจันทร์</h3>
+            <p>ได้รับทุนสนับสนุนการวิจัยจาก มหาวิทยาลัยมหิดล โครงการจัดตั้งศูนย์เรียนรู้และพัฒนาสุขภาวะผู้สูงอายุแบบครบวงจรและบริบาลผู้ป่วยระยะสุดท้าย :ศึกษากรณีตำบลหนองพลับ อำเภอหัวหิน จังหวัดประจวบคีรีขันธ์ จำนวน 808,000 บาท</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/natsurang2.png" alt="ผศ.ณัฐสุรางค์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3>ขอแสดงความยินดีกับ ผู้ช่วยศาสตราจารย์ณัฐสุรางค์ บุญจันทร์</h3>
+            <p>ได้รับทุนสนับสนุนการวิจัยจาก CMB เรื่อง ปัจจัยทำนายความเชื่อด้านสุขภาพต่อพฤติกรรมการป้องกันการเกิดโรคหลอดเลือดส่วนปลายอุดตัน ในผู้สูงอายุกลุ่มเสี่ยง จำนวน 80,000 บาท</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/Virapun_วิราพรรณ.gif" alt="ผศ.ดร.วิราพรรณ" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3>ขอแสดงความยินดีกับ ผู้ช่วยศาสตราจารย์ ดร.วิราพรรณ วิโรจน์รัตน์</h3>
+            <p>ได้รับทุนสนับสนุนการวิจัยจากสำนักงานวิจัยแห่งชาติ(วช) การวิเคราะห์ต้นทุนต่อประสิทธิผล ของโปรแกรมการควบคุมตนเองโดยใช้รูปแบบพยาบาลเป็นผู้นำ ในการดูแลสุขภาพของผู้สูงอายุโรคเบาหวานชนิดที่ 2 ในชุมชน จำนวน 809,466 บาท</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/old/Vilaivan_วิไลวรรณ1.gif" alt="รศ.ดร.วิไลวรรณ" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3>ขอแสดงความยินดีกับ รองศาสตราจารย์ ดร.วิไลวรรณ ทองเจริญ</h3>
+            <p>ได้รับทุนอุดหนุนการวิจัยจาก มหาวิทยาลัยมหิดล โครงการจัดตั้งศูนย์เรียนรู้และพัฒนาสุขภาวะผู้สูงอายุแบบครบวงจรและบริบาลผู้ป่วยระยะสุดท้าย เรื่อง รูปแบบการดูแลผู้ป่วยสูงอายุแบบประคับประคองจนถึงระยะสุดท้ายของชีวิต จำนวน 582,000 บาท</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/old/Venus_วีนัส.gif" alt="รศ.ดร.วีนัส" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3>ขอแสดงความยินดีกับ รองศาสตราจารย์ ดร.วีนัส ลีฬหกุล</h3>
+            <p>ได้รับทุนอุดหนุนการวิจัยจาก สำนักงานกองทุนสนับสนุนการสร้างเสริมสุขภาพ(สสส) เรื่อง ส่งเสริมโภชนาการเพื่อควบคุมโรคเรื้อรังในผู้สูงอายุ จำนวน 150,000 บาท</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/old/Prangtip_ปรางค์ทิพย์.gif" alt="รศ.ปรางค์ทิพย์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3>ขอแสดงความยินดีกับ รองศาสตราจารย์ปรางค์ทิพย์ อุจะรัตน</h3>
+            <p>ได้รับทุนอุดหนุนการวิจัยจาก CMB เรื่อง ผลสัมฤทธิ์ทางการเรียนของนักศึกษาพยาบาลระหว่างการเรียนแบบบรรยายและเป็นทีม จำนวน 35,200 บาท</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/old/Saovaluck_เสาวลักษณ์.gif" alt="ผศ.ดร.เสาวลักษณ์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3>ขอแสดงความยินดีกับ ผู้ช่วยศาสตราจารย์ ดร.เสาวลักษณ์ จิรธรรมคุณ</h3>
+            <p>ได้รับทุนอุดหนุนการวิจัยจาก กระทรวงสาธารณสุข และองค์การอนามัยโลก(WHO) เรื่อง The emerging roles of private nursing schools in Thailand จำนวน 500,000 บาท</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

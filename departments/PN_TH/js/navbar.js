@@ -65,7 +65,7 @@ const headerRaw = `
             <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="{prefix}img/template/youtube.png" alt="Youtube" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
         </div>
         <div class="topbar-lang">
-            <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" title="English version">
+            <a href="{prefix}../PN_EN/index.html" target="_parent" title="English version">
                 <img src="{prefix}img/template/en.png" alt="EN"> EN
             </a>
         </div>
@@ -231,4 +231,10 @@ document.addEventListener("DOMContentLoaded", function() {
             if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
         }
     }, { passive: true });
+
+    // Dynamic Footer Language Switcher
+    const footerLangSwitchers = document.querySelectorAll('a[href="https://ns.mahidol.ac.th/department/pn_dept_en/"]');
+    footerLangSwitchers.forEach(el => {
+        el.href = prefix + "../PN_EN/index.html";
+    });
 });

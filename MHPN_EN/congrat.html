@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="congrat.title">Congratulations | Department of Mental Health and Psychiatric Nursing, Faculty of Nursing, Mahidol University</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .congrat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .congrat-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .congrat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .congrat-img {
+      width: 100px;
+      flex-shrink: 0;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .congrat-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .congrat-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    .congrat-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+      .fallback-icon {
+      background-color: var(--primary-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .fallback-icon::after {
+      content: '🏆';
+      font-size: 3rem;
+      position: absolute;
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Mental Health and Psychiatric Nursing" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="congrat.header">Congratulations News</h1>
+      
+      <div class="congrat-grid">
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/Narirat_นารีรัตน์.gif" alt="อ.นารีรัตน์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3 data-i18n="congrat.c1_title">Congratulations to Assistant Professor Dr. Nareerat Jitramontree</h3>
+            <p data-i18n="congrat.c1_desc">Received a research grant from Mahidol University for the project "Establishment of an Integrated Elderly Well-being and Palliative Care Learning Center" under the integrated research program for preventing elderly falls in the community, amounting to 351,000 THB.</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/natsurang2.png" alt="ผศ.ณัฐสุรางค์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3 data-i18n="congrat.c2_title">Congratulations to Assistant Professor Natsurang Boonchan</h3>
+            <p data-i18n="congrat.c2_desc">Received a research grant from Mahidol University for the project "Establishment of an Integrated Elderly Well-being and Palliative Care Learning Center: A case study of Nong Phlab Subdistrict, Hua Hin District, Prachuap Khiri Khan Province," amounting to 808,000 THB.</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/natsurang2.png" alt="ผศ.ณัฐสุรางค์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3 data-i18n="congrat.c3_title">Congratulations to Assistant Professor Natsurang Boonchan</h3>
+            <p data-i18n="congrat.c3_desc">Received a research grant from CMB for the project "Predictors of health beliefs on preventive behaviors for peripheral arterial occlusive disease in high-risk elderly populations," amounting to 80,000 THB.</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/Virapun_วิราพรรณ.gif" alt="ผศ.ดร.วิราพรรณ" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3 data-i18n="congrat.c4_title">Congratulations to Assistant Professor Dr. Wiraporn Wirojratana</h3>
+            <p data-i18n="congrat.c4_desc">Received a research grant from National Research Council of Thailand (NRCT) for the project "Cost-effectiveness analysis of a nurse-led self-control program in care of elderly with Type 2 Diabetes in communities," amounting to 809,466 THB.</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/old/Vilaivan_วิไลวรรณ1.gif" alt="รศ.ดร.วิไลวรรณ" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3 data-i18n="congrat.c5_title">Congratulations to Associate Professor Dr. Wilaiwan Thongcharoen</h3>
+            <p data-i18n="congrat.c5_desc">Received a research grant from Mahidol University for the project "Establishment of an Integrated Elderly Well-being and Palliative Care Learning Center: A palliative care model for elderly at the end of life," amounting to 582,000 THB.</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/old/Venus_วีนัส.gif" alt="รศ.ดร.วีนัส" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3 data-i18n="congrat.c6_title">Congratulations to Associate Professor Venus Leelahakul</h3>
+            <p data-i18n="congrat.c6_desc">Received a research grant from Thai Health Promotion Foundation (ThaiHealth) for the project "Nutritional promotion for chronic disease control in elderly populations," amounting to 150,000 THB.</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/old/Prangtip_ปรางค์ทิพย์.gif" alt="รศ.ปรางค์ทิพย์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3 data-i18n="congrat.c7_title">Congratulations to Associate Professor Prangtip Ujarattan</h3>
+            <p data-i18n="congrat.c7_desc">Received a research grant from CMB for the project "Learning outcomes of nursing students in lecture-based versus team-based learning," amounting to 35,200 THB.</p>
+          </div>
+        </div>
+
+        <div class="congrat-card">
+          <div class="congrat-img"><img src="img/staff/old/Saovaluck_เสาวลักษณ์.gif" alt="ผศ.ดร.เสาวลักษณ์" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-icon');"></div>
+          <div class="congrat-info">
+            <h3 data-i18n="congrat.c8_title">Congratulations to Assistant Professor Dr. Saowalak Jirathamkhun</h3>
+            <p data-i18n="congrat.c8_desc">Received a research grant from Ministry of Public Health and WHO for the project "The emerging roles of private nursing schools in Thailand," amounting to 500,000 THB.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="textbook.title">Books & Textbooks | Department of Mental Health and Psychiatric Nursing, Faculty of Nursing, Mahidol University</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="components/layout.js" defer></script>
+  
+  <style>
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .book-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 1.5rem;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .book-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .book-cover {
+      width: 100px;
+      flex-shrink: 0;
+    }
+    .book-cover img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .book-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .book-year {
+      font-size: 0.8rem;
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .book-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .book-author {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body data-dept-th="Department of Mental Health and Psychiatric Nursing" data-dept-en="MHPN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1 data-i18n="textbook.header">Department Books & Textbooks</h1>
+      <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2rem;" data-i18n="textbook.intro">Academic publications, books, and textbooks written by faculty members of the Department of Mental Health and Psychiatric Nursing</p>
+      
+      <div class="books-grid">
+        <div class="book-card">
+          <div class="book-cover"><img src="img/book/fn2559.png" alt="Book" onerror="this.src='../components/img/logo/logo.png'"></div>
+          <div class="book-info">
+            <span class="book-title" data-i18n="textbook.b1_title">Fundamental Nursing Skills I</span>
+            <span class="book-author" data-i18n="textbook.b1_author">By Asst. Prof. Natsurang Boonchan, Asst. Prof. Arunrat Thepna</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover"><img src="img/book/Pathophysiology.jpg" alt="Book" onerror="this.src='../components/img/logo/logo.png'"></div>
+          <div class="book-info">
+            <span class="book-title" data-i18n="textbook.b2_title">Pathophysiology in Nursing</span>
+            <span class="book-author" data-i18n="textbook.b2_author">By Assoc. Prof. Passamon Kumtaweeporn et al.</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover"><img src="img/book/gerontological1.jpg" alt="Book" onerror="this.src='../components/img/logo/logo.png'"></div>
+          <div class="book-info">
+            <span class="book-title" data-i18n="textbook.b3_title">Gerontological Nursing I</span>
+            <span class="book-author" data-i18n="textbook.b3_author">By Ms. Teepapha Jaemkrajang, Assoc. Prof. Passamon Kumtaweeporn</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover"><img src="img/book/4g.jpg" alt="Book" onerror="this.src='../components/img/logo/logo.png'"></div>
+          <div class="book-info">
+            <span class="book-title" data-i18n="textbook.b4_title">Nursing Administration in the 4G Plus Era</span>
+            <span class="book-author" data-i18n="textbook.b4_author">By Asst. Prof. Dr. Saowalak Jirathamkhun et al.</span>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover"><img src="img/book/fn57.jpg" alt="Book" onerror="this.src='../components/img/logo/logo.png'"></div>
+          <div class="book-info">
+            <span class="book-year" data-i18n="textbook.b5_year">(Year 2014)</span>
+            <span class="book-title" data-i18n="textbook.b5_title">Integrated Care for the Elderly</span>
+            <span class="book-author" data-i18n="textbook.b5_author">By Assoc. Prof. Jantana Ronarithivichai, Asst. Prof. Natsurang Boonchan</span>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 3rem; text-align: center;">
+        <img src="img/other/book.jpg" alt="Books" style="max-width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </main>
+</body>
+</html>
