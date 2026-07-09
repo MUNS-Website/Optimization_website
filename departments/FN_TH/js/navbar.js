@@ -58,7 +58,7 @@ const headerHTML = `
             <a href="facebook.html" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/other/facebook.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
         </div>
         <div class="topbar-lang">
-            <a href="https://ns.mahidol.ac.th/Department/FN_dept_en/index.html" target="_parent" title="English version">
+            <a href="../FN_EN/index.html" target="_parent" title="English version">
                 <img src="img/template/en.png" alt="EN"> EN
             </a>
         </div>
