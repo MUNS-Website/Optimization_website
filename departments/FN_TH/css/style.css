@@ -119,6 +119,7 @@ ul { list-style: none; }
 .navbar { background: var(--mu-blue); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(25, 68, 136, 0.3); }
 .navbar-inner { display: flex; align-items: center; justify-content: space-between; height: var(--navbar-height); padding: 0 var(--space-4); }
 .navbar-brand { color: var(--white); font-size: 16px; font-weight: 400; line-height: 1.2; margin-right: 20px; }
+#header-container { display: contents; }
 .nav-menu { display: flex; align-items: center; height: 100%; }
 .nav-item { position: relative; height: 100%; display: flex; align-items: center; }
 .nav-link { display: flex; align-items: center; gap: 5px; padding: 0 11px; height: 100%; color: var(--white); font-size: 15px; font-weight: 600; white-space: nowrap; transition: all var(--transition-fast); cursor: pointer; border: none; background: none; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
