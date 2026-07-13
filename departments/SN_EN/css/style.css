@@ -1151,12 +1151,67 @@ tr.bg_blue th {
   }
 
   body:not(.head-page) .staff-position {
-    align-self: center;
+    align-self: flex-start;
   }
 
   body:not(.head-page) .staff-contact {
     padding: 0 20px;
   }
+}
+
+/* Mobile Staff Card Layout Adjustments similar to MN_TH */
+@media (max-width: 768px) {
+    body:not(.head-page) .staff-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    body:not(.head-page) .staff-card {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "img name"
+            "img position"
+            "img contact";
+        gap: 4px 16px;
+        padding: 12px;
+        align-items: start;
+    }
+    body:not(.head-page) .staff-img {
+        grid-area: img;
+        width: 100px;
+        height: 125px;
+        margin-bottom: 0;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--gray-100);
+    }
+    body:not(.head-page) .staff-name {
+        grid-area: name;
+        font-size: 14.5px;
+        margin-bottom: 0;
+    }
+    body:not(.head-page) .staff-position {
+        grid-area: position;
+        font-size: 11px;
+        padding: 2px 6px;
+        margin: 0;
+        width: auto;
+        max-width: none;
+        align-self: start;
+        justify-self: start;
+    }
+    body:not(.head-page) .staff-contact {
+        grid-area: contact;
+        font-size: 11.5px;
+        margin-top: 0;
+        line-height: 1.4;
+        word-break: break-all;
+    }
+    body:not(.head-page) .staff-contact p {
+        margin-bottom: 2px;
+    }
 }
 
 /* =========================================
