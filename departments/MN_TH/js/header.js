@@ -274,6 +274,32 @@ document.addEventListener('DOMContentLoaded', () => {
       obs.observe(el);
     });
   }
+
+  // 9. Ensure Footer Language Switcher is present (especially for mobile)
+  const footerInner = document.querySelector('.site-footer .footer-inner');
+  if (footerInner) {
+    const hasLangSwitcher = footerInner.querySelector('a[href*="MN_EN"]') || 
+                            footerInner.querySelector('img[src*="en.png"]');
+    if (!hasLangSwitcher) {
+      let rightContainer = footerInner.querySelector(':scope > div:not(.footer-info)');
+      if (!rightContainer) {
+        rightContainer = document.createElement('div');
+        rightContainer.style.display = 'flex';
+        rightContainer.style.flexDirection = 'column';
+        rightContainer.style.alignItems = 'flex-end';
+        rightContainer.style.gap = '12px';
+        footerInner.appendChild(rightContainer);
+      }
+      
+      const langButtonHTML = `
+        <a href="${prefix}../MN_EN/index.html" target="_parent"
+           style="display:flex;align-items:center;gap:6px;color: var(--white);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid var(--white);border-radius:999px;transition:all 0.2s;">
+          <img src="${prefix}img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;"> English
+        </a>
+      `;
+      rightContainer.insertAdjacentHTML('beforeend', langButtonHTML);
+    }
+  }
 });
 
 // Global functions
