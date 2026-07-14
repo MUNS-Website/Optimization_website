@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <base href="../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -214,110 +215,99 @@
         <script src="js/navbar.js"></script>
 
         <main class="content-area">
-            <div class="page-header-left">
-                <h1>ประมวลภาพข่าว</h1>
-            </div>
+            <style>
+                .academic-wrapper {
+                    max-width: 1000px;
+                    margin: 50px auto 80px;
+                    padding: 0 20px;
+                    font-family: 'Sarabun', sans-serif;
+                }
+                .article-header {
+                    text-align: center;
+                    margin-bottom: 40px;
+                    padding-bottom: 30px;
+                    border-bottom: 1px solid rgba(0, 36, 84, 0.1);
+                }
+                .category-name {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #c49a45;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    margin-bottom: 15px;
+                    padding: 4px 15px;
+                    background: rgba(196, 154, 69, 0.08);
+                    border-radius: 20px;
+                }
+                .news-title-elegant {
+                    font-size: 18px;
+                    color: #002454;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin: 0 auto;
+                    max-width: 1000px;
+                }
+                .intro-text-elegant {
+                    font-size: 16px;
+                    color: #374151;
+                    line-height: 1.85;
+                    margin-bottom: 40px;
+                    text-align: justify;
+                }
+                .intro-text-elegant p {
+                    text-indent: 2.5em;
+                    margin-bottom: 15px;
+                }
+                .elegant-gallery {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 15px;
+                    margin-top: 40px;
+                    margin-bottom: 50px;
+                }
+                .elegant-gallery img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 4 / 3;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 12px rgba(0, 36, 84, 0.08);
+                    transition: transform 0.4s ease, box-shadow 0.4s ease;
+                    cursor: pointer;
+                }
+                .elegant-gallery img:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 12px 25px rgba(0, 36, 84, 0.15);
+                }
+                @media (max-width: 768px) {
+                    .elegant-gallery {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 10px;
+                    }
+                    .news-title-elegant {
+                        font-size: 15px;
+                        text-align: center;
+                    }
+                }
+            </style>
             
-            <div class="activity-list">
-                <a href="activities/2569/activity_69_6.html" class="activity-list-item">
-                    <div class="activity-thumbnail" style="display: flex; align-items: center; justify-content: center; background: #f0f4f8;">
-                        <img src="img/activities/2569/activities69_6/activities69_6_1.jpg" onerror="this.src='img/KM/2568/logo_nsmu.jpg'" alt="image" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="activity-info">
-                        <div class="activity-meta">
-                            <span class="activity-date-badge">กิจกรรม 2569</span>
-                        </div>
-                        <h3 class="activity-title">ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ ม.มหิดล จัดสัมมนาประจำปี 2569 เปิดมุมมองการใช้ AI<br>พลิกโฉมห้องเรียน ยกระดับการเรียนการสอน</h3>
-                        <div class="activity-readmore">
-                            อ่านรายละเอียด
-                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                        </div>
-                    </div>
-                </a>
-                <a href="activities/2569/activity_69_5.html" class="activity-list-item">
-                    <div class="activity-thumbnail" style="display: flex; align-items: center; justify-content: center; background: #f0f4f8;">
-                        <img src="img/activities/2569/activities69_5/activities69_5_1.jpg" onerror="this.src='img/KM/2568/logo_nsmu.jpg'" alt="image" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="activity-info">
-                        <div class="activity-meta">
-                            <span class="activity-date-badge">กิจกรรม 2569</span>
-                        </div>
-                        <h3 class="activity-title">ภาควิชาการพยาบาลกุมารเวชศาสตร์ จัดประชุมฟื้นฟูวิชาการพยาบาลผู้ช่วยสอน เสริมศักยภาพการสอนในคลินิก ยกระดับคุณภาพการเรียนการสอนภาคปฏิบัติ</h3>
-                        <div class="activity-readmore">
-                            อ่านรายละเอียด
-                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                        </div>
-                    </div>
-                </a>
-                <a href="activities/2569/activity_69_4.html" class="activity-list-item">
-                    <div class="activity-thumbnail" style="display: flex; align-items: center; justify-content: center; background: #f0f4f8;">
-                        <img src="img/activities/2569/activities69_4/1.jpg" onerror="this.src='img/KM/2568/logo_nsmu.jpg'" alt="image" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="activity-info">
-                        <div class="activity-meta">
-                            <span class="activity-date-badge">กิจกรรม 2569</span>
-                        </div>
-                        <h3 class="activity-title">ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดโครงการฝึกอบรมพยาบาลเพื่อพัฒนาศักยภาพด้านการสอนก่อนการเป็นพยาบาลพี่เลี้ยงสำหรับนักศึกษาหลักสูตรพยาบาลศาสตรบัณฑิต (Pre-Preceptor)</h3>
-                        <div class="activity-readmore">
-                            อ่านรายละเอียด
-                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                        </div>
-                    </div>
-                </a>
+            <div class="academic-wrapper">
+                <div class="article-header">
+                    <div class="category-name">ภาพข่าวกิจกรรมปี 2569</div>
+                    <h1 class="news-title-elegant">ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ ม.มหิดล จัดสัมมนาประจำปี 2569 เปิดมุมมองการใช้ AI<br>พลิกโฉมห้องเรียน ยกระดับการเรียนการสอน</h1>
+                </div>
+                
+                <div class="intro-text-elegant">
+                    <p>วันที่ 14 กรกฎาคม 2569 ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดการสัมมนาภาควิชา ประจำปี 2569 ในหัวข้อ “AI changes the classroom not the teacher” ณ ห้องประชุม 1103/1-2 ชั้น 11 อาคารพระศรีพัชรินทร คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล บางกอกน้อย โดยได้รับเกียรติจาก รองศาสตราจารย์ ดร.สมสิริ รุ่งอมรรัตน์ รองคณบดีฝ่ายพัฒนาคุณภาพ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล เป็นวิทยากรบรรยาย</p>
+                    <p>การสัมมนาครั้งนี้มุ่งส่งเสริมให้อาจารย์เข้าใจบทบาทของปัญญาประดิษฐ์ (AI) ในการพัฒนาการจัดการเรียนการสอน พร้อมแลกเปลี่ยนแนวคิดและแนวทางการประยุกต์ใช้ AI เพื่อสนับสนุนการเรียนรู้ของผู้เรียนอย่างมีประสิทธิภาพ โดยเน้นย้ำว่า AI เป็นเครื่องมือที่ช่วยเสริมศักยภาพของผู้สอน ไม่ใช่สิ่งที่เข้ามาทดแทนบทบาทของครูหรืออาจารย์ นอกจากนี้ ผู้เข้าร่วมยังได้ร่วมแลกเปลี่ยนประสบการณ์และมุมมองเกี่ยวกับการนำเทคโนโลยี AI มาประยุกต์ใช้ในการออกแบบกิจกรรมการเรียนรู้ การพัฒนาสื่อการสอน และการประเมินผล เพื่อเตรียมความพร้อมสู่การจัดการศึกษาที่สอดคล้องกับบริบทการเรียนรู้ในยุคดิจิทัล และยกระดับคุณภาพการศึกษาทางการพยาบาลให้ก้าวทันการเปลี่ยนแปลงของโลกในอนาคต</p>
+                </div>
 
-                <a href="activities/2569/activity_69_3.html" class="activity-list-item">
-                    <div class="activity-thumbnail" style="display: flex; align-items: center; justify-content: center; background: #f0f4f8;">
-                        <img src="img/activities/2569/activities69_3/01_0.jpg" onerror="this.src='img/KM/2568/logo_nsmu.jpg'" alt="image" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="activity-info">
-                        <div class="activity-meta">
-                            <span class="activity-date-badge">กิจกรรม 2569</span>
-                        </div>
-                        <h3 class="activity-title">การประชุมร่วมระหว่างภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล งานการพยาบาลศัลยศาสตร์และศัลยศาสตร์ออร์โธปิดิกส์ และงานการพยาบาลกุมารเวชศาสตร์ ฝ่ายการพยาบาล โรงพยาบาลศิริราช</h3>
-                        <div class="activity-readmore">
-                            อ่านรายละเอียด
-                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="activities/2569/activity_69_2.html" class="activity-list-item">
-                    <div class="activity-thumbnail" style="display: flex; align-items: center; justify-content: center; background: #f0f4f8;">
-                        <img src="img/activities/2569/activities69_2/S__68640787_0.jpg" onerror="this.src='img/KM/2568/logo_nsmu.jpg'" alt="image" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="activity-info">
-                        <div class="activity-meta">
-                            <span class="activity-date-badge">กิจกรรม 2569</span>
-                        </div>
-                        <h3 class="activity-title">คณาจารย์ในภาควิชาการพยาบาลกุมารเวชศาสตร์ ร่วมแสดงความยินดีกับนักศึกษาที่ได้รับทุนเรียนดี เนื่องจากได้คะแนนสูงสุดในวิชาทฤษฎีและปฏิบัติการพยาบาลเด็กและวัยรุ่น ปีการศึกษา 2567 ในพิธีประกาศการสำเร็จการศึกษา ในวันศุกร์ที่ 29 พฤษภาคม 2569</h3>
-                        <div class="activity-readmore">
-                            อ่านรายละเอียด
-                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="activities/2569/activity_69_1.html" class="activity-list-item">
-                    <div class="activity-thumbnail" style="display: flex; align-items: center; justify-content: center; background: #f0f4f8;">
-                        <img src="img/activities/2569/activities69_1/1_0_0.png" onerror="this.src='../img/KM/2568/logo_nsmu.jpg'" alt="image" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="activity-info">
-                        <div class="activity-meta">
-                            <span class="activity-date-badge">กิจกรรม 2569</span>
-                        </div>
-                        <h3 class="activity-title">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดอบรม “การประเมินและทบทวนการตรวจร่างกายฯ” ยกระดับมาตรฐานการเรียนการสอนด้านกุมารเวชศาสตร์</h3>
-                        <div class="activity-readmore">
-                            อ่านรายละเอียด
-                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div style="text-align: right; margin: 30px auto 40px; max-width: 1000px; padding: 0 20px;">
-                <a href="Activities_all.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 30px; background: var(--mu-blue); color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 15px; box-shadow: 0 4px 15px rgba(229, 129, 168, 0.3); transition: all 0.3s ease;" onmouseover="this.style.background='var(--mu-blue-dark)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--mu-blue)'; this.style.transform='translateY(0)';">
-                    ดูภาพกิจกรรมทั้งหมด
-                    <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <div class="elegant-gallery">
+                    <img src="img/activities/2569/activities69_6/activities69_6_1.jpg" alt="Gallery Image">
+                    <img src="img/activities/2569/activities69_6/activities69_6_2.jpg" alt="Gallery Image">
+                    <img src="img/activities/2569/activities69_6/activities69_6_3.jpg" alt="Gallery Image">
+                    <img src="img/activities/2569/activities69_6/activities69_6_4.jpg" alt="Gallery Image">
+                </div>
             </div>
         </main>
 
