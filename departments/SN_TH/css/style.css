@@ -490,7 +490,7 @@ tr.bg_blue td, tr.bg_blue th { padding: 14px 16px; font-weight: 600; }
 }
 
 /* Mobile Staff Card Layout Adjustments similar to MN_TH */
-@media (max-width: 768px) {
+@media (max-width: 570px) {
     body:not(.head-page) .staff-grid {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -716,7 +716,7 @@ tr.bg_blue td, tr.bg_blue th { padding: 14px 16px; font-weight: 600; }
   margin-bottom: 32px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 570px) {
   .vision-cards-grid {
     grid-template-columns: 3fr 2fr;
   }
