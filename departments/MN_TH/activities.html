@@ -48,13 +48,33 @@
 
     <!-- PAGE BODY CONTENT -->
     <div class="content-body animate-in" style="animation-delay:0.15s">
-      <div class="news-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
-        <article class="news-card" style="padding: 24px; position: relative; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(25,68,136,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(25,68,136,0.08)'">
-          <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2569/01/MN.html" target="_blank" style="position: absolute; inset: 0; z-index: 1;"></a>
-          <div class="news-card-img" style="width: 180px; height: 120px;">
-            <img src="img/activities/2569/01/29/index.jpg" alt="ข่าวสารการประชุม">
+      <div class="news-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; display: grid; gap: 24px; padding-top: 20px;">
+        <article class="news-card" style="padding: 24px; position: relative; transition: transform 0.2s ease, box-shadow 0.2s ease; background: white; border: 1px solid #e8eaed; border-radius: 16px; display: flex; gap: 24px; flex-wrap: wrap;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(25,68,136,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(25,68,136,0.08)'">
+          <a href="https://www.facebook.com/share/p/18wLmqYhQE/?mibextid=wwXIfr" target="_blank" style="position: absolute; inset: 0; z-index: 1;"></a>
+          <div class="news-card-img" style="width: 180px; height: 120px; flex-shrink: 0;">
+            <img src="img/activities/2569/1.jpg" alt="ข่าวสารการประชุม" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
           </div>
-          <div class="news-card-body" style="padding-left: 8px; display: flex; flex-direction: column;">
+          <div class="news-card-body" style="padding-left: 8px; display: flex; flex-direction: column; flex: 1; min-width: 250px;">
+            <h3 class="news-card-title" style="font-size: 16px; font-weight: 600; line-height: 1.6; margin-bottom: 8px;">
+              ภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดการประชุมพัฒนาประสิทธิภาพการจัดการเรียนการสอนภาคปฏิบัติ ประจำปีการศึกษา 2569
+            </h3>
+            <div style="font-size:13px;color:var(--gray-400);display:flex;align-items:center;gap:6px;margin-bottom: auto;">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span> 13 กรกฎาคม 2569</span>
+            </div>
+            <div style="margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #194488; margin-top: auto;">
+              คลิกเพื่อดูรายละเอียด
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card" style="padding: 24px; position: relative; transition: transform 0.2s ease, box-shadow 0.2s ease; background: white; border: 1px solid #e8eaed; border-radius: 16px; display: flex; gap: 24px; flex-wrap: wrap;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(25,68,136,0.12)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(25,68,136,0.08)'">
+          <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2569/01/MN.html" target="_blank" style="position: absolute; inset: 0; z-index: 1;"></a>
+          <div class="news-card-img" style="width: 180px; height: 120px; flex-shrink: 0;">
+            <img src="img/activities/2569/01/29/index.jpg" alt="ข่าวสารการประชุม" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+          </div>
+          <div class="news-card-body" style="padding-left: 8px; display: flex; flex-direction: column; flex: 1; min-width: 250px;">
             <h3 class="news-card-title" style="font-size: 16px; font-weight: 600; line-height: 1.6; margin-bottom: 8px;">
               ภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดประชุมร่วมกับผู้บริหารงานการพยาบาล โรงพยาบาลศิริราช
             </h3>
@@ -62,7 +82,7 @@
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
               <span>29 มกราคม 2569</span>
             </div>
-            <div style="margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #194488;">
+            <div style="margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #194488; margin-top: auto;">
               คลิกเพื่อดูรายละเอียด
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
