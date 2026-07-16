@@ -33,9 +33,99 @@
   <!-- Cookie Consent -->
   <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
   <link rel="icon" type="image/png" href="img/logo/favicon.png">
+
+  <!-- 🌟 PREMIUM LIGHTING & COLOR PLAY STYLING 🌟 -->
+  <style>
+    /* Drifting Ambient Background Glows */
+    .ambient-glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(120px);
+      opacity: 0.08;
+      transition: all 1s ease;
+    }
+    .glow-1 {
+      background: radial-gradient(circle, var(--mu-blue, #003b72) 0%, rgba(0, 59, 114, 0) 70%);
+      top: -10%;
+      right: -10%;
+      animation: floatGlow1 22s infinite alternate ease-in-out;
+    }
+    .glow-2 {
+      background: radial-gradient(circle, var(--mu-gold, #f1a80a) 0%, rgba(241, 168, 10, 0) 70%);
+      bottom: -10%;
+      left: -10%;
+      animation: floatGlow2 28s infinite alternate ease-in-out;
+    }
+    @keyframes floatGlow1 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-100px, 80px) scale(1.15); }
+      100% { transform: translate(60px, -60px) scale(0.9); }
+    }
+    @keyframes floatGlow2 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(120px, -90px) scale(0.9); }
+      100% { transform: translate(-60px, 60px) scale(1.1); }
+    }
+
+    /* Section Icon Sweeping Light Sheen */
+    .section-icon {
+      position: relative;
+      overflow: hidden;
+    }
+    .section-icon::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transform: rotate(45deg);
+      animation: iconGlowSweep 4s infinite linear;
+    }
+    @keyframes iconGlowSweep {
+      0% { transform: translate(-100%, -100%) rotate(45deg); }
+      100% { transform: translate(100%, 100%) rotate(45deg); }
+    }
+
+    /* News Card Spotlight & Diagonal Sweep Glow */
+    .news-card {
+      position: relative;
+      border: 1px solid rgba(226, 232, 240, 0.8) !important;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+      overflow: hidden;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(241, 168, 10, 0.3) !important;
+      box-shadow: 0 15px 30px rgba(0, 59, 114, 0.08), 0 5px 15px rgba(241, 168, 10, 0.04) !important;
+    }
+    .news-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.15) 45%, rgba(241, 168, 10, 0.12) 50%, rgba(255, 255, 255, 0.15) 55%, transparent);
+      transform: translateX(-110%);
+      pointer-events: none;
+      transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .news-card:hover::after {
+      transform: translateX(110%);
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Ambient Floating Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNBKGNVR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
