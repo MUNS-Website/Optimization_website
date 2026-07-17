@@ -163,6 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
       </ul>
       <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
         <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>

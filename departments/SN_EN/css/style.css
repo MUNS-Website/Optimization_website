@@ -395,36 +395,42 @@ ul {
 }
 
 /* Hamburger Menu & Mobile Dropdown */
+/* Hamburger Menu & Mobile Dropdown (Bento Style) */
 .hamburger {
   display: none;
-  flex-direction: column;
-  gap: 5px;
+  grid-template-columns: repeat(3, 5px);
+  grid-template-rows: repeat(3, 5px);
+  gap: 3px;
   cursor: pointer;
-  padding: 8px;
   border: none;
-  background: none;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger span {
   display: block;
-  width: 24px;
-  height: 2px;
-  background: white;
-  border-radius: var(--radius-full);
-  transition: all var(--transition-base);
+  width: 5px;
+  height: 5px;
+  background: var(--mu-blue, #002d72);
+  border-radius: 50%;
 }
 
-.hamburger.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.hamburger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
-}
-
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.hamburger.open {
+  transform: rotate(45deg);
 }
 
 .mobile-menu {
@@ -691,7 +697,7 @@ ul {
   }
 
   .hamburger {
-    display: flex;
+    display: grid;
   }
 
   .navbar-brand {
