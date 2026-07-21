@@ -11,14 +11,162 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="js/header.js" defer></script>
   <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
   <link rel="icon" type="image/png" href="img/logo/favicon.png">
   <style>
+    .academic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    @media (max-width: 640px) {
+      .academic-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      text-decoration: none !important;
+      color: inherit;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      cursor: pointer;
+    }
+
     .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(217, 119, 6, 0.1) !important;
-      border-color: var(--mu-blue) !important;
+      transform: translateY(-4px);
+      border-color: var(--mu-blue-light);
+      box-shadow: 0 12px 28px rgba(29, 78, 216, 0.12);
+      background: #ffffff;
+    }
+
+    .project-icon-box {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
+    }
+
+    .project-card:hover .project-icon-box {
+      transform: scale(1.3) rotate(-7deg);
+    }
+
+    /* Icon theme variants */
+    .icon-blue {
+      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+      color: #1d4ed8;
+    }
+
+    .icon-facebook {
+      background: linear-gradient(135deg, #e0e7ff 0%, #eef2ff 100%);
+      color: #1877f2;
+    }
+
+    .icon-teal {
+      background: linear-gradient(135deg, #ccfbf1 0%, #f0fdfa 100%);
+      color: #0d9488;
+    }
+
+    .icon-sky {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+      color: #0284c7;
+    }
+
+    .icon-amber {
+      background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+      color: #d97706;
+    }
+
+    .icon-rose {
+      background: linear-gradient(135deg, #ffe4e6 0%, #fff1f2 100%);
+      color: #e11d48;
+    }
+
+    .icon-emerald {
+      background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
+      color: #16a34a;
+    }
+
+    .icon-slate {
+      background: linear-gradient(135deg, #f1f5f9 0%, #f8fafc 100%);
+      color: #475569;
+    }
+
+    .project-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .project-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--gray-800);
+      line-height: 1.45;
+      margin-bottom: 6px;
+      font-family: 'Sarabun', sans-serif;
+      transition: color 0.2s ease;
+      text-indent: 0 !important;
+    }
+
+    .project-card:hover .project-title {
+      color: var(--mu-blue);
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--gray-500);
+      margin: 0;
+      line-height: 1.5;
+      font-family: 'Sarabun', sans-serif;
+      text-indent: 0 !important;
+    }
+
+    .project-action {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 6px;
+    }
+
+    .action-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gray-50);
+      color: var(--mu-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.25s ease;
+    }
+
+    .project-card:hover .action-icon {
+      background: var(--mu-blue);
+      color: #ffffff;
+      border-color: var(--mu-blue);
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgb(190, 188, 187);
     }
   </style>
 </head>
@@ -28,13 +176,8 @@
 <script defer src="cookie/cookieconsent.js"></script>
 <script defer src="cookie/consent-init.js"></script>
 
-
-<!-- Mobile Menu -->
-
-
 <div class="mn-wrapper">
   
-
   <main class="main-content">
     <!-- BREADCRUMB -->
     <nav class="breadcrumb">
@@ -85,119 +228,140 @@
 
       <h2 class="content-heading">โครงการบริการวิชาการแก่สังคม</h2>
 
-      <div class="academic-grid" style="display:grid; grid-template-columns:1fr; gap:20px; margin-bottom:32px;">
+      <div class="academic-grid">
         <!-- Card 1 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon%20-%20specialized.jpg" alt="หลักสูตรการพยาบาลเฉพาะทาง" style="width:100%; height:100%; object-fit:cover;">
+        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-specialized.html" target="_blank" class="project-card">
+          <div class="project-icon-box icon-blue">
+            <i class="fas fa-user-graduate"></i>
           </div>
-          <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-specialized.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
-                หลักสูตรการพยาบาลเฉพาะทาง
-              </a>
-            </h3>
-            <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0;">การศึกษาอบรมเฉพาะทางเพื่อพัฒนาศักยภาพผู้ปฏิบัติงานพยาบาล</p>
+          <div class="project-body">
+            <h3 class="project-title">หลักสูตรการพยาบาลเฉพาะทาง</h3>
+            <p class="project-desc">การศึกษาอบรมเฉพาะทางเพื่อพัฒนาศักยภาพผู้ปฏิบัติงานพยาบาล</p>
           </div>
-        </div>
+          <div class="project-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
 
         <!-- Card 2 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/facebook%20-%20icon.png" alt="โครงการให้ความรู้ผ่าน Facebook" style="width:100%; height:100%; object-fit:cover;">
+        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-facebook.html" target="_blank" class="project-card">
+          <div class="project-icon-box icon-facebook">
+            <i class="fab fa-facebook"></i>
           </div>
-          <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-facebook.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
-                โครงการให้ความรู้ด้านสุขภาพแก่ผู้ป่วยโรคเรื้อรังและประชาชนทั่วไป ผ่านสื่อออนไลน์ Facebook
-              </a>
-            </h3>
-            <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0;">ส่งต่อความรู้ด้านสุขภาพผ่านสื่อออนไลน์เพื่อการเข้าถึงอย่างทั่วถึง</p>
+          <div class="project-body">
+            <h3 class="project-title">โครงการให้ความรู้ด้านสุขภาพแก่ผู้ป่วยโรคเรื้อรังและประชาชนทั่วไป ผ่านสื่อออนไลน์ Facebook</h3>
+            <p class="project-desc">ส่งต่อความรู้ด้านสุขภาพผ่านสื่อออนไลน์เพื่อการเข้าถึงอย่างทั่วถึง</p>
           </div>
-        </div>
+          <div class="project-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
 
         <!-- Card 3 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/temple%20-%20icon.jpg" alt="วัดไผ่ดำ" style="width:100%; height:100%; object-fit:cover;">
+        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-watpaidam.html" target="_blank" class="project-card">
+          <div class="project-icon-box icon-teal">
+            <i class="fas fa-video"></i>
           </div>
-          <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-watpaidam.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
-                จัดทำวิดิโอให้ความรู้ เรื่องการป้องกันการติดเชื้อระบบทางเดินหายใจ การใช้หน้ากากอนามัย และเฟสชิว แก่สามเณรวัดไผ่ดำ
-              </a>
-            </h3>
-            <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0;">การส่งเสริมสุขอนามัยและการป้องกันโรคในศาสนสถาน</p>
+          <div class="project-body">
+            <h3 class="project-title">จัดทำวิดิโอให้ความรู้ เรื่องการป้องกันการติดเชื้อระบบทางเดินหายใจ การใช้หน้ากากอนามัย และเฟสชิว แก่สามเณรวัดไผ่ดำ</h3>
+            <p class="project-desc">การส่งเสริมสุขอนามัยและการป้องกันโรคในศาสนสถาน</p>
           </div>
-        </div>
+          <div class="project-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
 
         <!-- Card 4 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon_police.gif" alt="ตำรวจไทยใส่ใจสุขภาพ" style="width:100%; height:100%; object-fit:cover;">
+        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-police.html" target="_blank" class="project-card">
+          <div class="project-icon-box icon-sky">
+            <i class="fas fa-user-shield"></i>
           </div>
-          <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-police.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
-                โครงการตำรวจไทยใส่ใจสุขภาพ
-              </a>
-            </h3>
-            <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0;">บริการดูแลสุขภาพและตรวจคัดกรองความเสี่ยงแก่ข้าราชการตำรวจ</p>
+          <div class="project-body">
+            <h3 class="project-title">โครงการตำรวจไทยใส่ใจสุขภาพ</h3>
+            <p class="project-desc">บริการดูแลสุขภาพและตรวจคัดกรองความเสี่ยงแก่ข้าราชการตำรวจ</p>
           </div>
-        </div>
+          <div class="project-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
 
         <!-- Card 5 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon_lotus.gif" alt="พัฒนาจิตวิญญาณด้วยพุทธธรรม" style="width:100%; height:100%; object-fit:cover;">
+        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-buddha.html" target="_blank" class="project-card">
+          <div class="project-icon-box icon-amber">
+            <i class="fas fa-dharmachakra"></i>
           </div>
-          <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-buddha.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
-                โครงการพัฒนาจิตวิญญาณด้วยพุทธธรรม
-              </a>
-            </h3>
-            <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0;">กิจกรรมบูรณาการจริยธรรมและพุทธธรรมเพื่อการดูแลสุขภาพแบบองค์รวม</p>
+          <div class="project-body">
+            <h3 class="project-title">โครงการพัฒนาจิตวิญญาณด้วยพุทธธรรม</h3>
+            <p class="project-desc">กิจกรรมบูรณาการจริยธรรมและพุทธธรรมเพื่อการดูแลสุขภาพแบบองค์รวม</p>
           </div>
-        </div>
+          <div class="project-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
 
         <!-- Card 6 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon_ecg.png" alt="ECG Interpretation" style="width:100%; height:100%; object-fit:cover;">
+        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-ecg.html" target="_blank" class="project-card">
+          <div class="project-icon-box icon-rose">
+            <i class="fas fa-heart-pulse"></i>
           </div>
-          <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-ecg.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
-                โครงการอบรมพยาบาลวิชาชีพ เรื่อง ECG Interpretation and Nursing Care
-              </a>
-            </h3>
-            <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0;">หลักสูตรอบรมพยาบาลเพิ่มพูนความเชี่ยวชาญการแปลผลคลื่นไฟฟ้าหัวใจ</p>
+          <div class="project-body">
+            <h3 class="project-title">โครงการอบรมพยาบาลวิชาชีพ เรื่อง ECG Interpretation and Nursing Care</h3>
+            <p class="project-desc">หลักสูตรอบรมพยาบาลเพิ่มพูนความเชี่ยวชาญการแปลผลคลื่นไฟฟ้าหัวใจ</p>
           </div>
-        </div>
+          <div class="project-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
 
         <!-- Card 7 -->
-        <div class="project-card" style="display:flex; gap:20px; background:white; border:1px solid #e8eaed; border-radius:12px; padding:20px; align-items:center; transition:all 0.25s; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-          <div style="flex-shrink:0; width:100px; height:80px; border-radius:8px; overflow:hidden; border:1px solid #e8eaed; background:#f8f9fc;">
-            <img src="img/academic/icon_project.png" alt="โครงการอื่นๆ" style="width:100%; height:100%; object-fit:cover;">
+        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-other.html" target="_blank" class="project-card">
+          <div class="project-icon-box icon-slate">
+            <i class="fas fa-folder-open"></i>
           </div>
-          <div style="flex:1;">
-            <h3 style="font-size:16px; font-weight:600; margin-bottom:4px; font-family:'Sarabun',sans-serif; text-indent:0;">
-              <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/service/services-other.html" target="_blank" style="color:var(--mu-blue); text-decoration:none;">
-                โครงการอื่นๆ
-              </a>
-            </h3>
-            <p style="font-size:14px; color:#6b7280; margin:0; text-indent:0;">รวบรวมโครงการบริการวิชาการอื่นๆ แก่สังคมและสถาบันเครือข่าย</p>
+          <div class="project-body">
+            <h3 class="project-title">โครงการอื่นๆ</h3>
+            <p class="project-desc">รวบรวมโครงการบริการวิชาการอื่นๆ แก่สังคมและสถาบันเครือข่าย</p>
           </div>
-        </div>
-      </div>
-
-      <!-- Download Banner link -->
-      <div style="text-align:center; margin-top:32px;">
-        <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/med-download.html" target="_blank" style="display:inline-block; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-md); border:1px solid var(--mu-gold-light); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-          <img src="img/other/download.gif" alt="ดาวน์โหลดแบบฟอร์ม" style="max-width:100%; display:block; height:auto;">
+          <div class="project-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
         </a>
       </div>
+
+      <!-- Download Section Block -->
+      <h2 class="content-heading" style="margin-top:40px;">เอกสารและแบบฟอร์มดาวน์โหลด</h2>
+
+      <a href="https://ns.mahidol.ac.th/english/th/departments/MN/th/med-download.html" target="_blank" class="project-card" style="border-left: 4px solid #16a34a;">
+        <div class="project-icon-box icon-emerald">
+          <i class="fas fa-file-arrow-down"></i>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title" style="font-size:16px; font-weight:700;">ดาวน์โหลดแบบฟอร์มบริการวิชาการ</h3>
+          <p class="project-desc">ขั้นตอนการดำเนินการเสนอและสรุปโครงการ Faculty Practice และ Faculty Training
+            <br>แบบเสนอโครงการ Faculty Practice และ Faculty Training
+            <br>แบบสรุปโครงการ Faculty Practice และ Faculty Training 
+          </p>
+        </div>
+        <div class="project-action">
+          <span class="action-icon" style="background:#f0fdf4; color:#16a34a; border-color:#bbf7d0;">
+            <i class="fas fa-download"></i>
+          </span>
+        </div>
+      </a>
     </div>
 
   </main>

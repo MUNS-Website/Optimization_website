@@ -27,15 +27,137 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel ="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="js/header.js" defer></script>
 
   <!-- Cookie Consent -->
   <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
   <link rel="icon" type="image/png" href="img/logo/favicon.png">
 
-  <!-- 🌟 PREMIUM LIGHTING & COLOR PLAY STYLING 🌟 -->
   <style>
+    /* Redesigned VDO Card Block (YouTube Red Palette) */
+    .vdo-card-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: 18px;
+      padding: 22px 26px;
+      text-decoration: none !important;
+      color: inherit;
+      box-shadow: 0 4px 16px rgba(220, 38, 38, 0.06);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .vdo-card-block:hover {
+      transform: translateY(-5px);
+      border-color: var(--mu-blue, #ea580c);
+      box-shadow: 0 16px 36px rgba(234, 88, 12, 0.15);
+      background: #ffffff;
+    }
+
+    .vdo-icon-box {
+      flex-shrink: 0;
+      width: 72px;
+      height: 50px;
+      border-radius: 14px;
+      background: #FF0000;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 4px 14px rgba(255, 0, 0, 0.3);
+    }
+
+    .vdo-card-block:hover .vdo-icon-box {
+      transform: scale(1.2) rotate(-6deg);
+      background: #cc0000;
+      box-shadow: 0 8px 22px rgba(255, 0, 0, 0.45);
+    }
+
+    .vdo-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .vdo-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #cc0000;
+      background: #ffe5e5;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      border: 1px solid #ffb3b3;
+    }
+
+    .vdo-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+      font-family: 'Sarabun', sans-serif;
+      transition: color 0.2s ease;
+    }
+
+    .vdo-card-block:hover .vdo-card-title {
+      color: #cc0000;
+    }
+
+    .vdo-card-desc {
+      font-size: 14px;
+      color: var(--gray-500);
+      margin: 0;
+      line-height: 1.5;
+      font-family: 'Sarabun', sans-serif;
+    }
+
+    .vdo-action-btn {
+      flex-shrink: 0;
+    }
+
+    .vdo-action-btn span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #ff0000, #cc0000);
+      color: #ffffff;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 4px 14px rgba(255, 0, 0, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    .vdo-card-block:hover .vdo-action-btn span {
+      transform: translateX(4px);
+      box-shadow: 0 6px 18px rgba(255, 0, 0, 0.35);
+      background: linear-gradient(135deg, #e60000, #990000);
+    }
+
+    @media (max-width: 640px) {
+      .vdo-card-block {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .vdo-action-btn {
+        width: 100%;
+        margin-top: 8px;
+      }
+      .vdo-action-btn span {
+        width: 100%;
+        justify-content: center;
+      }
+    }
     /* Drifting Ambient Background Glows */
     .ambient-glow {
       position: fixed;
@@ -184,15 +306,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <h2 class="section-title">VDO <span>ภาควิชา</span>ฯ</h2>
       </div>
-      <div class="video-list">
-        <div class="video-item">
-          <div class="video-icon">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <a href="https://mahidolnursing-my.sharepoint.com/:v:/g/personal/nsmu_it_nursingmu_org/EfPPTfJNk5lNrCL3iPYwxbABahc5PSrm8fSgc4TrP6gCag?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=6NKkcF"
-             target="_blank" class="video-title">NS MAHIDOL ชวนกันมาล้างมือ</a>
+
+      <a href="https://mahidolnursing-my.sharepoint.com/personal/nsmu_it_nursingmu_org/_layouts/15/stream.aspx?id=%2Fpersonal%2Fnsmu%5Fit%5Fnursingmu%5Forg%2FDocuments%2FVIDEO%2FWebsite%2FMN%2DTH%2FNS%20MAHIDOL%20%E0%B8%8A%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B8%AD%2Emov&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ed02c05ff%2De6a7%2D4618%2D9758%2D259beda7a30f"
+         target="_blank" class="vdo-card-block">
+        <div class="vdo-icon-box">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
         </div>
-      </div>
+        <div class="vdo-content">
+          <div class="vdo-tag"><i class="fas fa-circle-play"></i> วิดีโอแนะนำ</div>
+          <h3 class="vdo-card-title">NS MAHIDOL ชวนกันมาล้างมือ</h3>
+          <p class="vdo-card-desc">คลิปวิดีโอรณรงค์ขั้นตอนการล้างมืออย่างถูกต้อง เพื่อสุขอนามัยที่ดี คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</p>
+        </div>
+        <div class="vdo-action-btn">
+          <span>รับชมวิดีโอ <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
     </section>
 
     <!-- ข่าวสารภาควิชา -->
