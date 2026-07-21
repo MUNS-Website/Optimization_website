@@ -4,70 +4,271 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>การจัดการความรู้: ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <title>กิจกรรมแลกเปลี่ยนเรียนรู้ย้อนหลัง : ภาควิชาการพยาบาลศัลยศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <meta name="description" content="การจัดการความรู้และกิจกรรมแลกเปลี่ยนเรียนรู้ย้อนหลัง ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล">
 
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="js/header.js" defer></script>
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-    .bg_grey { background-color: #f1f5f9; padding: 12px; border-radius: 8px; font-weight: 600; color: var(--mu-blue-dark); text-align: center; }
-    .bg_blue { background: var(--mu-blue); color: white; }
-    .txt_white { color: white; }
-    .hover-row { transition: all 0.2s ease; cursor: pointer; }
-    .hover-row:hover { background-color: #e2e8f0 !important; transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+    /* Futuristic Year Card Grid Styling (SN Royal Blue Theme) */
+    .year-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .year-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 18px 22px;
+      text-decoration: none !important;
+      color: inherit;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .year-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--mu-blue);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .year-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--mu-blue-light);
+      box-shadow: 0 14px 30px rgba(29, 78, 216, 0.15);
+      background: #ffffff;
+    }
+
+    .year-card:hover::before {
+      opacity: 1;
+    }
+
+    .year-icon-box {
+      flex-shrink: 0;
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+      color: var(--mu-blue, #1d4ed8);
+      border: 1px solid #93c5fd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.08);
+    }
+
+    .year-card:hover .year-icon-box {
+      transform: scale(1.25) rotate(-8deg);
+      background: linear-gradient(135deg, var(--mu-blue, #1d4ed8) 0%, #1e40af 100%);
+      color: #ffffff;
+      border-color: #1d4ed8;
+      box-shadow: 0 6px 18px rgba(29, 78, 216, 0.3);
+    }
+
+    .year-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .year-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gray-800);
+      line-height: 1.3;
+      margin-bottom: 3px;
+      font-family: 'Sarabun', sans-serif;
+      transition: color 0.2s ease;
+      text-indent: 0 !important;
+    }
+
+    .year-card:hover .year-title {
+      color: var(--mu-blue);
+    }
+
+    .year-desc {
+      font-size: 13px;
+      color: var(--gray-500);
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      text-indent: 0 !important;
+    }
+
+    .year-action {
+      flex-shrink: 0;
+    }
+
+    .year-action .action-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gray-50);
+      color: var(--mu-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.25s ease;
+    }
+
+    .year-card:hover .year-action .action-icon {
+      background: var(--mu-blue);
+      color: #ffffff;
+      border-color: var(--mu-blue);
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+    }
   </style>
 </head>
 <body>
 
-
-
 <div class="mn-wrapper">
 
-  
-
   <main class="main-content">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">การจัดการความรู้</td>
-              </tr>
-              <tr>
-                <td height="363" align="left" valign="top"><p class="bg_grey"><strong>กิจกรรมแลกเปลี่ยนเรียนรู้ ย้อนหลัง</strong></p>
-                  <table width="100%" border="0" align="center" cellpadding="10" cellspacing="0" style="border: 1px solid var(--gray-100); border-radius: 8px; overflow: hidden; margin-top: 15px;">
-                    <tr class="bg_blue">
-                      <td colspan="2" align="center" valign="middle" class="txt_white">ประจำปี</td>
-                    </tr>
-                    <tr class="line_body hover-row" style="background-color: var(--gray-50);" onclick="window.location.href='km.html'">
-                      <td width="5%" align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
-                      <td width="95%" valign="top" class="line_body"><a href="km.html" target="_parent" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2564</a></td>
-                    </tr>
-                    <tr class="line_body hover-row" onclick="window.location.href='km2563.html'">
-                      <td align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
-                      <td valign="top" class="line_body"><a href="km2563.html" target="_parent" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2563</a></td>
-                    </tr>
-                    <tr class="line_body hover-row" style="background-color: var(--gray-50);" onclick="window.location.href='km2562.html'">
-                      <td align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
-                      <td valign="top" class="line_body"><a href="km2562.html" target="_parent" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2562</a></td>
-                    </tr>
-                    <tr class="line_body hover-row" onclick="window.location.href='km2561.html'">
-                      <td align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
-                      <td valign="top" class="line_body"><a href="km2561.html" target="_parent" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2561</a></td>
-                    </tr>
-                    <tr class="line_body hover-row" style="background-color: var(--gray-50);" onclick="window.location.href='km2560.html'">
-                      <td align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
-                      <td valign="top" class="line_body"><a href="km2560.html" target="_parent" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2560</a></td>
-                    </tr>
-                    <tr class="line_body hover-row" onclick="window.location.href='km2559.html'">
-                      <td align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
-                      <td valign="top" class="line_body"><a href="km2559.html" target="_parent" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2559</a></td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+      <a href="index.html">หน้าหลัก</a>
+      <span class="sep">›</span>
+      <a href="km.html">การจัดการความรู้</a>
+      <span class="sep">›</span>
+      <span class="current">กิจกรรมแลกเปลี่ยนเรียนรู้ ย้อนหลัง</span>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title-banner animate-in">
+      <div class="page-title-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h1 class="page-title-text">กิจกรรมแลกเปลี่ยนเรียนรู้ ย้อนหลัง</h1>
+    </div>
+
+    <!-- PAGE BODY CONTENT -->
+    <div class="content-body animate-in" style="animation-delay:0.15s">
+      <p style="text-indent:0; margin-bottom:var(--space-6); color:var(--gray-600); font-size:15px; font-family:'Sarabun',sans-serif;">
+        เลือกปีที่ต้องการดูผลงานกิจกรรมแลกเปลี่ยนเรียนรู้และการจัดการความรู้ย้อนหลังของภาควิชาการพยาบาลศัลยศาสตร์
+      </p>
+
+      <div class="year-grid">
+        <!-- 2564 -->
+        <a href="km.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2564</h3>
+            <p class="year-desc">กิจกรรมแลกเปลี่ยนเรียนรู้ KM</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- 2563 -->
+        <a href="km2563.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2563</h3>
+            <p class="year-desc">กิจกรรมแลกเปลี่ยนเรียนรู้ KM</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- 2562 -->
+        <a href="km2562.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2562</h3>
+            <p class="year-desc">กิจกรรมแลกเปลี่ยนเรียนรู้ KM</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- 2561 -->
+        <a href="km2561.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2561</h3>
+            <p class="year-desc">กิจกรรมแลกเปลี่ยนเรียนรู้ KM</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- 2560 -->
+        <a href="km2560.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2560</h3>
+            <p class="year-desc">กิจกรรมแลกเปลี่ยนเรียนรู้ KM</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- 2559 -->
+        <a href="km2559.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2559</h3>
+            <p class="year-desc">กิจกรรมแลกเปลี่ยนเรียนรู้ KM</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </main>
 
   <footer class="site-footer">

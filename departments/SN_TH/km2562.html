@@ -19,6 +19,7 @@
     .txt_white { color: white; }
     .hover-row { transition: all 0.2s ease; cursor: pointer; }
     .hover-row:hover { background-color: #e2e8f0 !important; transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+    tr.line_body td:last-child { font-size: 14px !important; text-align: center; color: var(--gray-700); }
   </style>
 </head>
 <body>
@@ -30,6 +31,15 @@
   
 
   <main class="main-content">
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb animate-in">
+      <a href="index.html">หน้าหลัก</a>
+      <span class="sep">›</span>
+      <a href="km_all.html">การจัดการความรู้</a>
+      <span class="sep">›</span>
+      <span class="current">ประจำปี 2562</span>
+    </nav>
+
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
                 <td height="33" valign="top" class="txt_head">การจัดการความรู้</td>

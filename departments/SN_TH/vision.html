@@ -10,20 +10,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="js/header.js" defer></script>
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
 </head>
 <body>
 
-
-
 <div class="mn-wrapper">
-
-  
 
   <main class="main-content">
     <!-- BREADCRUMB -->
-    <nav class="breadcrumb">
+    <nav class="breadcrumb animate-in">
       <a href="index.html">หน้าหลัก</a>
       <span class="sep">›</span>
       <a href="about.html">เกี่ยวกับภาควิชา</a>
@@ -34,76 +31,50 @@
     <!-- PAGE TITLE -->
     <div class="page-title-banner animate-in">
       <div class="page-title-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-        </svg>
+        <i class="fa-solid fa-compass"></i>
       </div>
-      <h1 class="page-title-text">ปณิธาน/วิสัยทัศน์/พันธกิจ</h1>
+      <h1 class="page-title-text">ปณิธาน / วิสัยทัศน์ / พันธกิจ</h1>
     </div>
 
     <!-- PAGE BODY CONTENT -->
     <div class="content-body animate-in" style="animation-delay:0.15s">
-      <h2 class="content-heading">ปรัชญา</h2>
+      <h2 class="content-heading" id="philosophy">ปรัชญา</h2>
       <p>ภาควิชาการพยาบาลศัลยศาสตร์มีความเชื่อว่า การพยาบาลศัลยศาสตร์เป็นสาขาวิชาหนึ่งที่มีความสำคัญ แก่สังคมในการให้บริการด้านสุขภาพแก่ประชาชน ทั้งด้านการส่งเสริมสุขภาพ การป้องกันโรค การบำบัดรักษา และการฟื้นฟูสภาพโดยเฉพาะผู้ป่วยที่ต้องรับการรักษาด้วยวิธีการทางศัลยกรรม พยาบาลจึงต้องมีความรู้ ทักษะ และประสบการณ์ในการพยาบาลเพื่อแก้ไขปัญหาผู้ป่วยได้อย่างมีประสิทธิภาพ ดังนั้นการจัดการศึกษาการพยาบาลศัลยศาสตร์ทุกระดับ จึงต้องประกอบด้วยองค์ความรู้ ศาสตร์ที่เกี่ยวข้องกับมนุษย์ สิ่งแวดล้อม และศาสตร์ทางการพยาบาล ที่จะส่งเสริมให้บัณฑิตมีความรู้ควบคู่คุณธรรม มีความคิดริเริ่มสร้างสรรค์ มีการตัดสินใจอย่างมีเหตุผล ค้นคว้าด้วยตนเอง สามารถพัฒนาเป็นพยาบาลวิชาชีพที่มีคุณภาพ</p>
 
-      <h2 class="content-heading">วิสัยทัศน์</h2>
+      <h2 class="content-heading" id="vision">วิสัยทัศน์</h2>
       <p>ภาควิชาการพยาบาลศัลยศาสตร์ มีความเป็นเลิศทางการพยาบาลศัลยศาสตร์ ทั้งด้านการจัดการศึกษา วิจัย บริการวิชาการ</p>
 
-      <h2 class="content-heading">พันธกิจ</h2>
+      <h2 class="content-heading" id="mission">พันธกิจ</h2>
       <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;">
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid #1d4ed8;">
+          <span style="flex-shrink:0;width:24px;height:24px;background:#1d4ed8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
             <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
           </span>
           <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">จัดการเรียนการสอนสาขาการพยาบาลศัลยศาสตร์ ในทุกหลักสูตร ให้มีคุณภาพมาตรฐาน</span>
         </li>
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid #1d4ed8;">
+          <span style="flex-shrink:0;width:24px;height:24px;background:#1d4ed8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
             <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
           </span>
           <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">ส่งเสริมและดำเนินการวิจัยและงานวิชาการ ด้านการพยาบาลศัลยศาสตร์</span>
         </li>
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid #1d4ed8;">
+          <span style="flex-shrink:0;width:24px;height:24px;background:#1d4ed8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
             <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
           </span>
           <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">จัดทำโครงการและดำเนินการบริการวิชาการ ด้านการพยาบาลศัลยศาสตร์ แก่บุคลากรทางการพยาบาลและประชาชนทั่วไป</span>
         </li>
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid #1d4ed8;">
+          <span style="flex-shrink:0;width:24px;height:24px;background:#1d4ed8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
             <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
           </span>
           <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">ส่งเสริมและดำเนินการให้คำปรึกษาแก่นักศึกษา และช่วยเหลือนักศึกษาที่มีปัญหา</span>
         </li>
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
+        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid #1d4ed8;">
+          <span style="flex-shrink:0;width:24px;height:24px;background:#1d4ed8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
             <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
           </span>
           <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">ส่งเสริมและดำเนินการทำนุบำรุงศิลปวัฒนธรรม ศาสนา ส่งเสริมและสนับสนุนการกีฬา</span>
-        </li>
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
-            <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
-          </span>
-          <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">พัฒนาระบบบริหารจัดการให้มีความคล่องตัว รวดเร็ว และเป็นพลวัตร</span>
-        </li>
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
-            <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
-          </span>
-          <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">พัฒนาทรัพยากรบุคคลทั้งคณาจารย์ และบุคลากรสายสนับสนุน</span>
-        </li>
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
-            <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
-          </span>
-          <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">สร้างและพัฒนาเครือข่ายความร่วมมือ และประสานงานทั้งด้านการวิจัย บริการวิชาการ การจัดทำหลักสูตรเฉพาะทางการพยาบาลศัลยศาสตร์</span>
-        </li>
-        <li style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#f8f9fc;border-radius:10px;border-left:4px solid var(--mu-blue, #0a428d);">
-          <span style="flex-shrink:0;width:24px;height:24px;background:var(--mu-blue, #0a428d);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;">
-            <svg viewBox='0 0 24 24' width='12' height='12' fill='white'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>
-          </span>
-          <span style="font-size:15px;color:#374151;font-family:'Sarabun',sans-serif;line-height:1.7;">พัฒนาระบบประกันคุณภาพศึกษา</span>
         </li>
       </ul>
     </div>
@@ -133,12 +104,9 @@
         </a>
       </div>
     </div>
-</div>
+  </footer>
 
-<script>
-const animEls=document.querySelectorAll('.animate-in');
-if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.animationPlayState='running';obs.unobserve(e.target);}});},{threshold:0.1});animEls.forEach(el=>{el.style.animationPlayState='paused';obs.observe(el);});}
-</script>
+</div>
 
 </body>
 </html>

@@ -1260,13 +1260,20 @@ tr.bg_blue th {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid rgba(200, 168, 75, 0.4);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  color: #ffffff;
 }
 
 .page-title-icon svg {
-  width: 20px;
-  height: 20px;
-  stroke: white;
+  width: 22px;
+  height: 22px;
+  stroke: #ffffff;
+  fill: none;
+}
+
+.page-title-icon i {
+  font-size: 20px;
+  color: #ffffff;
 }
 
 /* =========================================

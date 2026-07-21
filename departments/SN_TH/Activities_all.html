@@ -4,67 +4,221 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ประมวลภาพกิจกรรม: ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <title>ประมวลภาพกิจกรรมย้อนหลัง : ภาควิชาการพยาบาลศัลยศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <meta name="description" content="ข่าวสารและกิจกรรมย้อนหลังของภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล">
 
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="js/header.js" defer></script>
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
+
+  <style>
+    /* Futuristic Year Card Grid Styling (SN Royal Blue Theme) */
+    .year-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .year-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 18px 22px;
+      text-decoration: none !important;
+      color: inherit;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .year-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--mu-blue);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .year-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--mu-blue-light);
+      box-shadow: 0 14px 30px rgba(29, 78, 216, 0.15);
+      background: #ffffff;
+    }
+
+    .year-card:hover::before {
+      opacity: 1;
+    }
+
+    .year-icon-box {
+      flex-shrink: 0;
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+      color: var(--mu-blue, #1d4ed8);
+      border: 1px solid #93c5fd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.08);
+    }
+
+    .year-card:hover .year-icon-box {
+      transform: scale(1.25) rotate(-8deg);
+      background: linear-gradient(135deg, var(--mu-blue, #1d4ed8) 0%, #1e40af 100%);
+      color: #ffffff;
+      border-color: #1d4ed8;
+      box-shadow: 0 6px 18px rgba(29, 78, 216, 0.3);
+    }
+
+    .year-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .year-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gray-800);
+      line-height: 1.3;
+      margin-bottom: 3px;
+      font-family: 'Sarabun', sans-serif;
+      transition: color 0.2s ease;
+      text-indent: 0 !important;
+    }
+
+    .year-card:hover .year-title {
+      color: var(--mu-blue);
+    }
+
+    .year-desc {
+      font-size: 13px;
+      color: var(--gray-500);
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      text-indent: 0 !important;
+    }
+
+    .year-action {
+      flex-shrink: 0;
+    }
+
+    .year-action .action-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gray-50);
+      color: var(--mu-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.25s ease;
+    }
+
+    .year-card:hover .year-action .action-icon {
+      background: var(--mu-blue);
+      color: #ffffff;
+      border-color: var(--mu-blue);
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+    }
+  </style>
 </head>
 <body>
 
-
-
 <div class="mn-wrapper">
 
-  
-
   <main class="main-content">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="73%" height="33" valign="top" class="txt_head">ประมวลภาพกิจกรรมย้อนหลัง</td>
-                <td width="27%" align="right" valign="middle" class="txt_remark">&nbsp;</td>
-              </tr>
-              <tr>
-                <td colspan="2" valign="top" class="txt_font">
-                  <p class="txt_font">&nbsp;</p>
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td height="36" align="center" valign="top" class="txt_font">
-                        <table width="50%" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td height="28" align="center" style="background:#066de2; border-radius:30px;"><span class="txt_white"><a href="Activities.html" target="_parent" class="hyperlink_menu" style="color:white; text-decoration:none; padding:8px 20px; display:inline-block;">ประจำปี 2569</a></span></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                    <tr><td height="10"></td></tr>
-                    <tr>
-                      <td height="36" align="center" valign="top" class="txt_font">
-                        <table width="50%" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td height="28" align="center" style="background:#066de2;; border-radius:30px;"><span class="txt_white"><a href="Activities68.html" target="_parent" class="hyperlink_menu" style="color:white; text-decoration:none; padding:8px 20px; display:inline-block;">ประจำปี 2568</a></span></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                    <tr><td height="10"></td></tr>
-                    <tr>
-                      <td height="36" align="center" valign="top" class="txt_font">
-                        <table width="50%" border="0" cellspacing="0" cellpadding="0">
-                          <tr>
-                            <td height="28" align="center" style="background:#066de2;; border-radius:30px;"><span class="txt_white"><a href="Activities67.html" target="_parent" class="hyperlink_menu" style="color:white; text-decoration:none; padding:8px 20px; display:inline-block;">ประจำปี 2567</a></span></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <p class="txt_blue">&nbsp;</p>
-                </td>
-              </tr>
-            </table>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+      <a href="index.html">หน้าหลัก</a>
+      <span class="sep">›</span>
+      <span class="current">ประมวลภาพกิจกรรมย้อนหลัง</span>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title-banner animate-in">
+      <div class="page-title-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      </div>
+      <h1 class="page-title-text">ประมวลภาพกิจกรรมย้อนหลัง</h1>
+    </div>
+
+    <!-- PAGE BODY CONTENT -->
+    <div class="content-body animate-in" style="animation-delay:0.15s">
+      <p style="text-indent:0; margin-bottom:var(--space-6); color:var(--gray-600); font-size:15px; font-family:'Sarabun',sans-serif;">
+        เลือกปีที่ต้องการดูประมวลภาพกิจกรรมของภาควิชาการพยาบาลศัลยศาสตร์
+      </p>
+
+      <div class="year-grid">
+        <!-- 2569 -->
+        <a href="Activities.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2569</h3>
+            <p class="year-desc">ประมวลภาพกิจกรรมล่าสุด</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- 2568 -->
+        <a href="Activities68.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2568</h3>
+            <p class="year-desc">ประมวลภาพกิจกรรมย้อนหลัง</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- 2567 -->
+        <a href="Activities67.html" class="year-card">
+          <div class="year-icon-box">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <div class="year-body">
+            <h3 class="year-title">ประจำปี 2567</h3>
+            <p class="year-desc">ประมวลภาพกิจกรรมย้อนหลัง</p>
+          </div>
+          <div class="year-action">
+            <span class="action-icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </main>
 
   <footer class="site-footer">

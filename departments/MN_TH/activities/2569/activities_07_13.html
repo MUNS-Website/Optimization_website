@@ -4,16 +4,148 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดการประชุมพัฒนาประสิทธิภาพการจัดการเรียนการสอนภาคปฏิบัติ ประจำปีการศึกษา 2569</title>
+  <title>ข่าวสารภาควิชาฯ ประจำปี 2569 : ภาควิชาการพยาบาลอายุรศาสตร์ มหาวิทยาลัยมหิดล</title>
   <meta name="description" content="โครงการประชุมพัฒนาประสิทธิภาพการจัดการเรียนการสอนภาคปฏิบัติ ประจำปีการศึกษา 2569 ณ ห้องประชุมเพชรรัตน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล บางกอกน้อย">
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KNBKGNVR');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="../../js/header.js" defer></script>
   <link rel="stylesheet" type="text/css" href="../../cookie/cookieconsent.css">
   <link rel="icon" type="image/png" href="../../img/logo/favicon.png">
+
+  <style>
+    /* Orange Theme Activity Detail Layout Styling */
+    .activity-detail-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(234, 88, 12, 0.08);
+      margin-bottom: 36px;
+      transition: all 0.3s ease;
+    }
+
+    .activity-header-banner {
+      background: linear-gradient(135deg, #f97316 0%, #c2410c 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .activity-header-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background: radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .activity-date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .activity-title {
+      font-size: 21px;
+      font-weight: 700;
+      color: #ffffff;
+      font-family: 'Sarabun', sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      text-indent: 0 !important;
+    }
+
+    .activity-body-content {
+      padding: 36px;
+    }
+
+    .activity-text {
+      font-size: 16px;
+      color: var(--gray-700);
+      font-family: 'Sarabun', sans-serif;
+      line-height: 1.85;
+      text-indent: 32px;
+      margin-bottom: 32px;
+    }
+
+    /* Balanced Gallery Grid Layout */
+    .activity-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .activity-photo-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      background: #f8fafc;
+    }
+
+    .activity-photo-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(234, 88, 12, 0.15);
+      border-color: #f97316;
+    }
+
+    .activity-photo-item img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .activity-photo-item:hover img {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 640px) {
+      .activity-header-banner {
+        padding: 20px 18px;
+      }
+      .activity-title {
+        font-size: 18px;
+      }
+      .activity-body-content {
+        padding: 18px 14px;
+      }
+      .activity-photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+      .activity-photo-item {
+        border: none;
+        box-shadow: none;
+        border-radius: 8px;
+        background: transparent;
+      }
+      .activity-photo-item img {
+        height: 140px;
+        border-radius: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNBKGNVR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -21,13 +153,7 @@
 <script defer src="../../cookie/cookieconsent.js"></script>
 <script defer src="../../cookie/consent-init.js"></script>
 
-
-<!-- Mobile Menu -->
-
-
 <div class="mn-wrapper">
-  
-
   <main class="main-content">
     <!-- BREADCRUMB -->
     <nav class="breadcrumb">
@@ -35,7 +161,7 @@
       <span class="sep">›</span>
       <a href="../../Activities_all.html">ข่าวสารภาควิชา</a>
       <span class="sep">›</span>
-      <span class="current">ข่าวสารประจำปี 2569</span>
+      <a href="../../activities.html">ข่าวสารประจำปี 2569</a>
     </nav>
 
     <!-- PAGE TITLE -->
@@ -49,32 +175,47 @@
     <!-- PAGE BODY CONTENT HERE -->
     <div class="content-body animate-in" style="animation-delay:0.15s">
       
-      <div style="background:white;border:1px solid #e8eaed;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(25,68,136,0.06);margin-bottom:32px;">
-        <div style="background:#ffb300;padding:24px;">
-          <h2 style="font-size:22px;font-weight:700;color:white;font-family:'Sarabun',sans-serif;line-height:1.4;margin:0;">
+      <div class="activity-detail-card">
+        <div class="activity-header-banner">
+          <div class="activity-date-badge">
+            <i class="far fa-calendar-alt"></i> 13 กรกฎาคม 2569
+          </div>
+          <h2 class="activity-title">
             ภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดการประชุมพัฒนาประสิทธิภาพการจัดการเรียนการสอนภาคปฏิบัติ ประจำปีการศึกษา 2569
           </h2>
         </div>
         
-        <div style="padding:32px;">
-          <p style="font-size:16px;color:#4b5563;font-family:'Sarabun',sans-serif;line-height:1.8;text-indent:32px;margin-bottom:32px;">
+        <div class="activity-body-content">
+          <p class="activity-text">
             เมื่อวันที่ 13 กรกฎาคม 2569 เวลา 13.00 – 15.30 น. ภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดโครงการประชุมพัฒนาประสิทธิภาพการจัดการเรียนการสอนภาคปฏิบัติ ประจำปีการศึกษา 2569 ณ ห้องประชุมเพชรรัตน ชั้น 3 คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล บางกอกน้อย ซึ่งเป็นการประชุมร่วมระหว่างคณาจารย์ภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล และหัวหน้างาน ผู้ตรวจการ หัวหน้าหอผู้ป่วย และผู้แทน งานการพยาบาลอายุรศาสตร์และจิตเวชศาสตร์ โรงพยาบาลศิริราช โดยมี ผู้ช่วยศาสตราจารย์ ดร.รัตนาภรณ์ คงคา หัวหน้าภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล เป็นประธานในการเปิดการประชุม โดยการประชุมในครั้งนี้มีวัตถุประสงค์เพื่อแลกเปลี่ยนความคิดเห็นและประสานความร่วมมือในการจัดการเรียนการสอน ด้านการวิจัยและการบริการวิชาการ และพันธกิจต่างๆ ร่วมกัน
           </p>
 
-          <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:20px;">
-            <img src="../../img/activities/2569/13/7/1.jpg" alt="Gallery Image" style="width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.3s;cursor:pointer;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-            <img src="../../img/activities/2569/13/7/2.jpg" alt="Gallery Image" style="width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.3s;cursor:pointer;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-            <img src="../../img/activities/2569/13/7/3.jpg" alt="Gallery Image" style="width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.3s;cursor:pointer;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-            <img src="../../img/activities/2569/13/7/4.jpg" alt="Gallery Image" style="width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.3s;cursor:pointer;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-            <img src="../../img/activities/2569/13/7/5.jpg" alt="Gallery Image" style="width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.3s;cursor:pointer;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-            <img src="../../img/activities/2569/13/7/6.jpg" alt="Gallery Image" style="width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:transform 0.3s;cursor:pointer;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          <div class="activity-photo-grid">
+            <div class="activity-photo-item">
+              <img src="../../img/activities/2569/13/7/1.jpg" alt="ภาพกิจกรรม">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/activities/2569/13/7/2.jpg" alt="ภาพกิจกรรม">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/activities/2569/13/7/3.jpg" alt="ภาพกิจกรรม">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/activities/2569/13/7/4.jpg" alt="ภาพกิจกรรม">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/activities/2569/13/7/5.jpg" alt="ภาพกิจกรรม">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/activities/2569/13/7/6.jpg" alt="ภาพกิจกรรม">
+            </div>
           </div>
         </div>
       </div>
 
       <div class="section-footer mt-6" style="justify-content: center;">
-        <a href="../../Activities_all.html" class="btn-more">
-          กลับสู่หน้า ข่าวสารภาควิชา
+        <a href="../../activities.html" class="btn-more">
+          กลับสู่หน้า ข่าวสารประจำปี 2569
           <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
         </a>
       </div>
