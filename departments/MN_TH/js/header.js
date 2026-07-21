@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="mobile-nav-item">
           <div class="mobile-nav-link ${isElearningActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">E-Learning <span>▾</span></div>
           <div class="mobile-dropdown ${isElearningActive ? 'open' : ''}">
-            <a href="http://www.elearning.ns.mahidol.ac.th/" target="_blank">E-Learning คณะพยาบาลศาสตร์</a>
+            <a href="https://elearning.ns.mahidol.ac.th/" target="_blank">E-Learning คณะพยาบาลศาสตร์</a>
             <a href="https://mux.mahidol.ac.th/" target="_blank">E-Learning มหาวิทยาลัยมหิดล</a>
           </div>
         </div>
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li class="nav-item">
           <span class="nav-link ${isElearningActive ? 'active' : ''}">E-Learning <span class="nav-arrow">▾</span></span>
           <ul class="dropdown">
-            <li><a href="http://www.elearning.ns.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning คณะพยาบาลศาสตร์</a></li>
+            <li><a href="https://elearning.ns.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning คณะพยาบาลศาสตร์</a></li>
             <li><a href="https://mux.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning มหาวิทยาลัยมหิดล</a></li>
           </ul>
         </li>
