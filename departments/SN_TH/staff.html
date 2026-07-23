@@ -4,49 +4,306 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>รายนามบุคลากร: ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <title>รายนามบุคลากร : ภาควิชาการพยาบาลศัลยศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <meta name="description" content="คณาจารย์ประจำภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KNBKGNVR');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/logo/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="img/logo/favicon.png">
+
+  <style>
+    .staff-section-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 10px 0 40px;
+    }
+
+    /* 4-Column Grid on Desktop matching MN_TH */
+    .staff-grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .modern-staff-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .modern-staff-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px rgba(25, 68, 136, 0.14);
+      border-color: #1d4ed8;
+    }
+
+    /* Edge-to-Edge Full Photo Frame */
+    .staff-photo-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      margin: 0;
+      padding: 0;
+    }
+
+    .staff-photo-frame img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border: none;
+      margin: 0;
+      padding: 0;
+      transform: scale(1.05);
+      transform-origin: center top;
+      transition: transform 0.4s ease;
+    }
+
+    .modern-staff-card:hover .staff-photo-frame img {
+      transform: scale(1.12);
+    }
+
+    .staff-card-body {
+      padding: 18px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+    }
+
+    .staff-fullname-link {
+      font-family: 'Sarabun', sans-serif;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.45;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .staff-fullname-link:hover {
+      color: #194488;
+    }
+
+    .staff-role-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-family: 'Sarabun', sans-serif;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      background: #e8f0fb;
+      color: #194488;
+      border: 1px solid #bfdbfe;
+    }
+
+    .staff-contact-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+      color: #475569;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 10px;
+      margin-top: auto;
+    }
+
+    .contact-item-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .contact-item-row svg {
+      flex-shrink: 0;
+      color: #194488;
+    }
+
+    .contact-item-row a {
+      color: #334155;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-item-row a:hover {
+      color: #194488;
+      text-decoration: underline;
+    }
+
+    .profile-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 6px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #194488 0%, #1d4ed8 100%);
+      border: 1px solid #194488;
+      color: #ffffff;
+      font-family: 'Sarabun', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      margin-top: 12px;
+      box-shadow: 0 2px 8px rgba(25, 68, 136, 0.2);
+    }
+
+    .profile-link-btn:hover {
+      background: #e8f0fb;
+      color: #194488;
+      border-color: #1d4ed8;
+      box-shadow: 0 4px 14px rgba(25, 68, 136, 0.25);
+    }
+
+    /* Responsive Grid Breakpoints matching MN_TH */
+    @media (max-width: 1100px) {
+      .staff-grid-4col {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .staff-grid-4col {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .modern-staff-card {
+        flex-direction: row;
+        padding: 12px;
+        gap: 14px;
+        align-items: stretch;
+        border-radius: 14px;
+      }
+
+      .staff-photo-frame {
+        width: 110px;
+        min-width: 110px;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        border-radius: 10px;
+        flex-shrink: 0;
+      }
+
+      .staff-photo-frame img {
+        border-radius: 10px;
+      }
+
+      .staff-card-body {
+        padding: 0;
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .staff-fullname-link {
+        font-size: 14.5px;
+        line-height: 1.35;
+        margin-bottom: 4px;
+      }
+
+      .staff-role-badge {
+        font-size: 11px;
+        padding: 3px 8px;
+        margin-bottom: 6px;
+        line-height: 1.3;
+      }
+
+      .staff-contact-block {
+        font-size: 11.5px;
+        gap: 3px;
+        padding-top: 6px;
+        margin-top: auto;
+      }
+
+      .contact-item-row {
+        gap: 6px;
+      }
+
+      .contact-item-row a,
+      .contact-item-row span {
+        font-size: 11.5px;
+        word-break: break-all;
+      }
+
+      .profile-link-btn {
+        padding: 6px 0;
+        font-size: 12px;
+        border-radius: 8px;
+        margin-top: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
 
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNBKGNVR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- MOBILE SLIDE-OUT MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav-panel">
-    <div class="mobile-nav-header">
-      <span class="mobile-nav-title">เมนูหลัก</span>
-      <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-title">เมนูหลัก</div>
+      <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">&times;</button>
     </div>
-    <nav class="mobile-nav-list">
-      <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link active">หน้าหลัก</a></div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span></div>
-        <div class="mobile-dropdown">
-            <a href="about.html">ความเป็นมา</a>
-            <a href="head.html">ทำเนียบหัวหน้าภาควิชา</a>
-            <a href="vision.html">ปณิธาน/วิสัยทัศน์/พันธกิจ</a>
-            <a href="plan.html">ยุทธศาสตร์ภาควิชา</a>
-            <a href="staff.html">รายนามบุคลากร</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">การศึกษา</a></div>
-      <div class="mobile-nav-item"><a href="https://sites.google.com/view/nsresearchpaper" target="_blank" class="mobile-nav-link">การวิจัย</a></div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">บริการวิชาการ <span>▾</span></div>
-        <div class="mobile-dropdown">
-            <a href="academic.html">บริการวิชาการ</a>
-            <a href="treatise.html">หนังสือภาควิชา</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item"><a href="Activities_all.html" class="mobile-nav-link">ภาพกิจกรรม</a></div>
-      <div class="mobile-nav-item"><a href="km.html" class="mobile-nav-link">การจัดการความรู้</a></div>
-      <div class="mobile-nav-item"><a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank" class="mobile-nav-link">ศูนย์จัดการการฟื้นตัว</a></div>
-      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">ติดต่อเรา</a></div>
-    </nav>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">หน้าหลัก</a></li>
+      <li class="mobile-has-dropdown">
+        <span class="mobile-nav-item-title active" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span class="m-arrow">▾</span></span>
+        <ul class="mobile-dropdown">
+          <li><a href="about.html">ความเป็นมา</a></li>
+          <li><a href="head.html">ทำเนียบหัวหน้าภาควิชา</a></li>
+          <li><a href="vision.html">ปณิธาน/วิสัยทัศน์/พันธกิจ</a></li>
+          <li><a href="plan.html">ยุทธศาสตร์ภาควิชา</a></li>
+          <li><a href="staff.html" class="active">รายนามบุคลากร</a></li>
+        </ul>
+      </li>
+      <li><a href="teaching.html">การศึกษา</a></li>
+      <li><a href="https://sites.google.com/view/nsresearchpaper" target="_blank">การวิจัย</a></li>
+      <li class="mobile-has-dropdown">
+        <span class="mobile-nav-item-title" onclick="toggleMobileDropdown(this)">บริการวิชาการ <span class="m-arrow">▾</span></span>
+        <ul class="mobile-dropdown">
+          <li><a href="academic.html">บริการวิชาการ</a></li>
+          <li><a href="treatise.html">หนังสือภาควิชา</a></li>
+        </ul>
+      </li>
+      <li><a href="Activities_all.html">ภาพกิจกรรม</a></li>
+      <li><a href="km.html">การจัดการความรู้</a></li>
+      <li><a href="https://ns.mahidol.ac.th/english/TH/departments/SN/crm2/index.html" target="_blank">ศูนย์จัดการการฟื้นตัว</a></li>
+      <li><a href="contact.html">ติดต่อเรา</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="../SN_EN/index.html" target="_parent">English Version</a>
+    </div>
   </div>
 </div>
 
@@ -76,8 +333,6 @@
     </div>
     <div class="header-text">
       <div class="header-dept-name">ภาควิชาการพยาบาลศัลยศาสตร์</div>
-
-
     </div>
   </header>
 
@@ -132,242 +387,615 @@
       <h1 class="page-title-text">รายนามบุคลากร</h1>
     </div>
 
-    <p class="txt_font">คณาจารย์ประจำภาควิชาการพยาบาลศัลยศาสตร์</p>
-
-    <div class="staff-container">
-      <div class="staff-grid">
+    <!-- PAGE BODY CONTENT -->
+    <div class="content-body animate-in" style="animation-delay:0.15s">
+      <p style="text-indent:0; margin-bottom:var(--space-6); color:var(--gray-600); font-size:16px;">คณาจารย์ประจำภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</p>
+      
+      <div class="staff-section-container">
         
-        <div class="staff-card">
-          <img src="img/staff/65/rattima.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.รัตติมา ศิริโหราชัย" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630184" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.รัตติมา ศิริโหราชัย</a></div>
-          <div class="staff-position">หัวหน้าภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1752</p>
-            <p><strong>E-mail:</strong> <a href="mailto:headnssu@mahidol.ac.th">headnssu@mahidol.ac.th</a><br><a href="mailto:rattima.sir@mahidol.ac.th">rattima.sir@mahidol.ac.th</a></p>
+        <div class="staff-grid-4col">
+          
+          <!-- CARD 1: หัวหน้าภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/65/rattima.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.รัตติมา ศิริโหราชัย">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630184" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์ ดร.รัตติมา ศิริโหราชัย</a>
+                <div class="staff-role-badge">หัวหน้าภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:headnssu@mahidol.ac.th">headnssu@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1752</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630184" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/pichet.png" alt="ผู้ช่วยศาสตราจารย์พิเชต วงรอต" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630154" target="_blank">ผู้ช่วยศาสตราจารย์พิเชต วงรอต</a></div>
-          <div class="staff-position">รองคณบดีฝ่ายบริการวิชาการ<br>และขับเคลื่อนนโยบายชี้นำสังคม</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> บางกอกน้อย 02-419-7466 ต่อ 1763<br>ศาลายา 02-441-5333 ต่อ 2416</p>
-            <p><strong>E-mail:</strong> <a href="mailto:phichet.won@mahidol.ac.th">phichet.won@mahidol.ac.th</a></p>
+          <!-- CARD 2: รองหัวหน้าภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/natma.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.ณัฐมา ทองธีรธรรม">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630070" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์ ดร.ณัฐมา ทองธีรธรรม</a>
+                <div class="staff-role-badge">รองหัวหน้าภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:natma.the@mahidol.ac.th">natma.the@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1761</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630070" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/natma.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.ณัฐมา ทองธีรธรรม" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630070" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.ณัฐมา ทองธีรธรรม</a></div>
-          <div class="staff-position">รองหัวหน้าภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1761</p>
-            <p><strong>E-mail:</strong> <a href="mailto:natma.the@mahidol.ac.th">natma.the@mahidol.ac.th</a></p>
+          <!-- CARD 3: รองคณบดีฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/pichet.png" alt="ผู้ช่วยศาสตราจารย์พิเชต วงรอต">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630154" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์พิเชต วงรอต</a>
+                <div class="staff-role-badge">รองคณบดีฝ่ายบริการวิชาการฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:phichet.won@mahidol.ac.th">phichet.won@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1763</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630154" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/thirawan.png" alt="ผู้ช่วยศาสตราจารย์ธิราวรรณ เชื้อตาเล็ง" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630089" target="_blank">ผู้ช่วยศาสตราจารย์ธิราวรรณ เชื้อตาเล็ง</a></div>
-          <div class="staff-position">รองคณบดีฝ่ายพัฒนานักศึกษา</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> บางกอกน้อย 02-419-7466 ต่อ 1759<br>ศาลายา 02-441-5333 ต่อ 2510</p>
-            <p><strong>E-mail:</strong> <a href="mailto:thirawan.chu@mahidol.ac.th">thirawan.chu@mahidol.ac.th</a></p>
+          <!-- CARD 4: รองคณบดีฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/thirawan.png" alt="ผู้ช่วยศาสตราจารย์ธิราวรรณ เชื้อตาเล็ง">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630089" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์ธิราวรรณ เชื้อตาเล็ง</a>
+                <div class="staff-role-badge">รองคณบดีฝ่ายพัฒนานักศึกษา</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:thirawan.chu@mahidol.ac.th">thirawan.chu@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1759</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630089" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/usawadee.jpg" alt="ศาสตราจารย์ ดร.อุษาวดี อัศดรวิเศษ" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630313" target="_blank">ศาสตราจารย์ ดร.อุษาวดี อัศดรวิเศษ</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1761</p>
-            <p><strong>E-mail:</strong> <a href="mailto:usavadee.asd@mahidol.ac.th">usavadee.asd@mahidol.ac.th</a></p>
+          <!-- CARD 5: รองคณบดีฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/thitipong.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.ฐิติพงษ์ ตันคำปวน">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630063" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์ ดร.ฐิติพงษ์ ตันคำปวน</a>
+                <div class="staff-role-badge">รองคณบดีฝ่ายวิจัย</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:thitipong.tan@mahidol.ac.th">thitipong.tan@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1756</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630063" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/thitipong.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.ฐิติพงษ์ ตันคำปวน" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630063" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.ฐิติพงษ์ ตันคำปวน</a></div>
-          <div class="staff-position">รองคณบดีฝ่ายวิจัย</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> บางกอกน้อย 02-419-7466 ต่อ 1756<br>ศาลายา 02-441-5333 ต่อ 2473</p>
-            <p><strong>E-mail:</strong> <a href="mailto:thitipong.tan@mahidol.ac.th">thitipong.tan@mahidol.ac.th</a></p>
+          <!-- CARD 6: ศาสตราจารย์ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/usawadee.jpg" alt="ศาสตราจารย์ ดร.อุษาวดี อัศดรวิเศษ">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630313" target="_blank" class="staff-fullname-link">ศาสตราจารย์ ดร.อุษาวดี อัศดรวิเศษ</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:usavadee.asd@mahidol.ac.th">usavadee.asd@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1761</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630313" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/prangtip.jpg" alt="รองศาสตราจารย์ ดร.ปรางทิพย์ ฉายพุทธ" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630125" target="_blank">รองศาสตราจารย์ ดร.ปรางทิพย์ ฉายพุทธ</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1757</p>
-            <p><strong>E-mail:</strong> <a href="mailto:prangtip.cha@mahidol.ac.th">prangtip.cha@mahidol.ac.th</a></p>
+          <!-- CARD 7: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/prangtip.jpg" alt="รองศาสตราจารย์ ดร.ปรางทิพย์ ฉายพุทธ">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630125" target="_blank" class="staff-fullname-link">รองศาสตราจารย์ ดร.ปรางทิพย์ ฉายพุทธ</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:prangtip.cha@mahidol.ac.th">prangtip.cha@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1757</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630125" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/ketsarin.jpg" alt="รองศาสตราจารย์ ดร.เกศรินทร์ อุทริยะประสิทธิ์" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630021" target="_blank">รองศาสตราจารย์ ดร.เกศรินทร์ อุทริยะประสิทธิ์</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1759</p>
-            <p><strong>E-mail:</strong> <a href="mailto:ketsarin.utr@mahidol.ac.th">ketsarin.utr@mahidol.ac.th</a></p>
+          <!-- CARD 8: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/ketsarin.jpg" alt="รองศาสตราจารย์ ดร.เกศรินทร์ อุทริยะประสิทธิ์">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630021" target="_blank" class="staff-fullname-link">รองศาสตราจารย์ ดร.เกศรินทร์ อุทริยะประสิทธิ์</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:ketsarin.utr@mahidol.ac.th">ketsarin.utr@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1759</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630021" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/chophaka.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.ช่อผกา สุทธิพงศ์" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630055" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.ช่อผกา สุทธิพงศ์</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1756</p>
-            <p><strong>E-mail:</strong> <a href="mailto:chophaka.sut@mahidol.ac.th">chophaka.sut@mahidol.ac.th</a></p>
+          <!-- CARD 9: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/chophaka.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.ช่อผกา สุทธิพงศ์">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630055" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์ ดร.ช่อผกา สุทธิพงศ์</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:chophaka.sut@mahidol.ac.th">chophaka.sut@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1756</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630055" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/ketsiri.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.เกศศิริ วงษ์คงคำ" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630022" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.เกศศิริ วงษ์คงคำ</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1757</p>
-            <p><strong>E-mail:</strong> <a href="mailto:kessiri.won@mahidol.ac.th">kessiri.won@mahidol.ac.th</a></p>
+          <!-- CARD 10: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/ketsiri.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.เกศศิริ วงษ์คงคำ">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630022" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์ ดร.เกศศิริ วงษ์คงคำ</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:kessiri.won@mahidol.ac.th">kessiri.won@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1757</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630022" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/ornchuma.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.อรชุมา นากรณ์" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630293" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.อรชุมา นากรณ์</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1759</p>
-            <p><strong>E-mail:</strong> <a href="mailto:onchuma.nak@mahidol.ac.th">onchuma.nak@mahidol.ac.th</a></p>
+          <!-- CARD 11: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/ornchuma.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.อรชุมา นากรณ์">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630293" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์ ดร.อรชุมา นากรณ์</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:onchuma.nak@mahidol.ac.th">onchuma.nak@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1759</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630293" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/pornsinee.jpg" alt="ผู้ช่วยศาสตราจารย์พรสินี เต็งพานิชกุล" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630144" target="_blank">ผู้ช่วยศาสตราจารย์พรสินี เต็งพานิชกุล</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1761</p>
-            <p><strong>E-mail:</strong> <a href="mailto:pornsinee.ten@mahidol.ac.th">pornsinee.ten@mahidol.ac.th</a></p>
+          <!-- CARD 12: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/pornsinee.jpg" alt="ผู้ช่วยศาสตราจารย์พรสินี เต็งพานิชกุล">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630144" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์พรสินี เต็งพานิชกุล</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:pornsinee.ten@mahidol.ac.th">pornsinee.ten@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1761</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630144" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/sakunrat.jpg" alt="ผู้ช่วยศาสตราจารย์สกุลรัตน์ เตียววานิช" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630240" target="_blank">ผู้ช่วยศาสตราจารย์สกุลรัตน์ เตียววานิช</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1761</p>
-            <p><strong>E-mail:</strong> <a href="mailto:sakunrat.tie@mahidol.ac.th">sakunrat.tie@mahidol.ac.th</a></p>
+          <!-- CARD 13: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/sakunrat.jpg" alt="ผู้ช่วยศาสตราจารย์สกุลรัตน์ เตียววานิช">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630240" target="_blank" class="staff-fullname-link">ผู้ช่วยศาสตราจารย์สกุลรัตน์ เตียววานิช</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:sakunrat.tie@mahidol.ac.th">sakunrat.tie@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1761</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630240" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/patcharee.jpg" alt="อาจารย์ ดร.พัชรี เสน่ห์เจริญ" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630147" target="_blank">อาจารย์ ดร.พัชรี เสน่ห์เจริญ</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1757</p>
-            <p><strong>E-mail:</strong> <a href="mailto:patcharee.san@mahidol.ac.th">patcharee.san@mahidol.ac.th</a></p>
+          <!-- CARD 14: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/patcharee.jpg" alt="อาจารย์ ดร.พัชรี เสน่ห์เจริญ">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630147" target="_blank" class="staff-fullname-link">อาจารย์ ดร.พัชรี เสน่ห์เจริญ</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:patcharee.san@mahidol.ac.th">patcharee.san@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1757</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630147" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/khuttaleeya.jpg" alt="อาจารย์คัทลียา คงเพ็ชร" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630028" target="_blank">อาจารย์คัทลียา คงเพ็ชร</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1759</p>
-            <p><strong>E-mail:</strong> <a href="mailto:khuttaleeya.kho@mahidol.ac.th">khuttaleeya.kho@mahidol.ac.th</a></p>
+          <!-- CARD 15: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/khuttaleeya.jpg" alt="อาจารย์คัทลียา คงเพ็ชร">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630028" target="_blank" class="staff-fullname-link">อาจารย์คัทลียา คงเพ็ชร</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:khuttaleeya.kho@mahidol.ac.th">khuttaleeya.kho@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1759</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630028" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/pornthip.jpg" alt="อาจารย์ ดร.ภรณ์ทิพย์ สุญาสิทธิ์" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630162" target="_blank">อาจารย์ ดร.ภรณ์ทิพย์ สุญาสิทธิ์</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1763</p>
-            <p><strong>E-mail:</strong> <a href="mailto:pornthip.suy@mahidol.ac.th">pornthip.suy@mahidol.ac.th</a></p>
+          <!-- CARD 16: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/pornthip.jpg" alt="อาจารย์ ดร.ภรณ์ทิพย์ สุญาสิทธิ์">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630162" target="_blank" class="staff-fullname-link">อาจารย์ ดร.ภรณ์ทิพย์ สุญาสิทธิ์</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:pornthip.suy@mahidol.ac.th">pornthip.suy@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1763</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630162" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/suratsawadee.jpg" alt="อาจารย์ ดร.สุรัสวดี เครือหงษ์" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630278" target="_blank">อาจารย์ ดร.สุรัสวดี เครือหงษ์</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1761</p>
-            <p><strong>E-mail:</strong> <a href="mailto:suratsawadee.kru@mahidol.ac.th">suratsawadee.kru@mahidol.ac.th</a></p>
+          <!-- CARD 17: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/suratsawadee.jpg" alt="อาจารย์ ดร.สุรัสวดี เครือหงษ์">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630278" target="_blank" class="staff-fullname-link">อาจารย์ ดร.สุรัสวดี เครือหงษ์</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:suratsawadee.kru@mahidol.ac.th">suratsawadee.kru@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1761</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630278" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/yuttapichai.jpg" alt="อาจารย์ ดร.ยุทธพิชัย โพธิ์ศรี" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630175" target="_blank">อาจารย์ ดร.ยุทธพิชัย โพธิ์ศรี</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1757</p>
-            <p><strong>E-mail:</strong> <a href="mailto:yoottapichai.pho@mahidol.ac.th">yoottapichai.pho@mahidol.ac.th</a></p>
+          <!-- CARD 18: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/yuttapichai.jpg" alt="อาจารย์ ดร.ยุทธพิชัย โพธิ์ศรี">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630175" target="_blank" class="staff-fullname-link">อาจารย์ ดร.ยุทธพิชัย โพธิ์ศรี</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:yoottapichai.pho@mahidol.ac.th">yoottapichai.pho@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1757</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630175" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/pinyapat.jpg" alt="อาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630383" target="_blank">อาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1759</p>
-            <p><strong>E-mail:</strong> <a href="mailto:pinyapat.kit@mahidol.ac.th">pinyapat.kit@mahidol.ac.th</a></p>
+          <!-- CARD 19: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/pinyapat.jpg" alt="อาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630383" target="_blank" class="staff-fullname-link">อาจารย์ภิญญาพัชญ์ กิตติ์ธัญญธีรกุล</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:pinyapat.kit@mahidol.ac.th">pinyapat.kit@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1759</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630383" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/pramkamol.jpg" alt="อาจารย์เปรมกมล ขันทจักร" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630134" target="_blank">อาจารย์เปรมกมล ขันทจักร</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1763</p>
-            <p><strong>E-mail:</strong> <a href="mailto:premgamon.kun@mahidol.ac.th">premgamon.kun@mahidol.ac.th</a></p>
+          <!-- CARD 20: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/pramkamol.jpg" alt="อาจารย์เปรมกมล ขันทจักร">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630134" target="_blank" class="staff-fullname-link">อาจารย์เปรมกมล ขันทจักร</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:premgamon.kun@mahidol.ac.th">premgamon.kun@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1763</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630134" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/nalintip.jpg" alt="อาจารย์นลินทิพย์ นิรันดร์ทวีชัย" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630385" target="_blank">อาจารย์นลินทิพย์ นิรันดร์ทวีชัย</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466 ต่อ 1763</p>
-            <p><strong>E-mail:</strong> <a href="mailto:nalinthip.nir@mahidol.ac.th">nalinthip.nir@mahidol.ac.th</a></p>
+          <!-- CARD 21: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/nalintip.jpg" alt="อาจารย์นลินทิพย์ นิรันดร์ทวีชัย">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630385" target="_blank" class="staff-fullname-link">อาจารย์นลินทิพย์ นิรันดร์ทวีชัย</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:nalinthip.nir@mahidol.ac.th">nalinthip.nir@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466 ต่อ 1763</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630385" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/68/chanut.jpg" alt="อาจารย์ชนุตม์ ธีระโรจนารัตน์" class="staff-img">
-          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630450" target="_blank">อาจารย์ชนุตม์ ธีระโรจนารัตน์</a></div>
-          <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 02-419-7466</p>
-            <p><strong>E-mail:</strong> <a href="mailto:chanut.tee@mahidol.ac.th">chanut.tee@mahidol.ac.th</a></p>
+          <!-- CARD 22: อาจารย์ประจำภาควิชาฯ -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/68/chanut.jpg" alt="อาจารย์ชนุตม์ ธีระโรจนารัตน์">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630450" target="_blank" class="staff-fullname-link">อาจารย์ชนุตม์ ธีระโรจนารัตน์</a>
+                <div class="staff-role-badge">อาจารย์ประจำภาควิชาฯ</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:chanut.tee@mahidol.ac.th">chanut.tee@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>02-419-7466</span>
+                </div>
+              </div>
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630450" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="staff-card">
-          <img src="img/staff/67/kanoktip.jpg" alt="นางสาวกนกทิพย์ บุญเจริญ" class="staff-img">
-          <div class="staff-name"><a href="contact.html" target="_blank">นางสาวกนกทิพย์ บุญเจริญ</a></div>
-          <div class="staff-position">เจ้าหน้าที่บริหารงานทั่วไป</div>
-          <div class="staff-contact">
-            <p><strong>โทรศัพท์:</strong> 0-2419-7466-80 ต่อ 1750-1751</p>
-            <p><strong>E-mail:</strong> <a href="mailto:kanoktip.bun@mahidol.ac.th">kanoktip.bun@mahidol.ac.th</a></p>
+          <!-- CARD 23: เจ้าหน้าที่บริหารงานทั่วไป -->
+          <div class="modern-staff-card">
+            <div class="staff-photo-frame">
+              <img src="img/staff/67/kanoktip.jpg" alt="นางสาวกนกทิพย์ บุญเจริญ">
+            </div>
+            <div class="staff-card-body">
+              <div>
+                <a href="contact.html" target="_blank" class="staff-fullname-link">นางสาวกนกทิพย์ บุญเจริญ</a>
+                <div class="staff-role-badge">เจ้าหน้าที่บริหารงานทั่วไป</div>
+              </div>
+              <div class="staff-contact-block">
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <a href="mailto:kanoktip.bun@mahidol.ac.th">kanoktip.bun@mahidol.ac.th</a>
+                </div>
+                <div class="contact-item-row">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.8a19.79 19.79 0 0 1-3.07-8.6A2 2 0 0 1 2.18 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 7.91a16 16 0 0 0 6.72 6.72l1.28-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>0-2419-7466-80 ต่อ 1750-1751</span>
+                </div>
+              </div>
+              <a href="contact.html" target="_blank" class="profile-link-btn">
+                ดูข้อมูลประวัติ / Profile <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
+
     </div>
   </main>
 
@@ -393,6 +1021,8 @@
         <a href="../SN_EN/index.html" target="_parent" class="footer-lang-btn">
           <img src="img/template/en.png" alt="EN"> English
         </a>
+      </div>
+    </div>
   </footer>
 
 </div>
