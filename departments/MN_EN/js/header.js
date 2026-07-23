@@ -1,6 +1,14 @@
 // Centralized Header, Navbar and Mobile Menu for Department of Medical Nursing (MN_EN)
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Dynamically load Font Awesome 6 if not already in head
+  if (!document.querySelector('link[href*="font-awesome"]') && !document.querySelector('link[href*="fontawesome"]')) {
+    const faLink = document.createElement('link');
+    faLink.rel = 'stylesheet';
+    faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+    document.head.appendChild(faLink);
+  }
+
   // 1. Calculate relative path prefix dynamically based on directory depth
   const getPrefix = () => {
     const currentPath = window.location.pathname.replace(/\\/g, '/');
@@ -44,53 +52,77 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-nav-panel">
       <div class="mobile-nav-header">
-        <span class="mobile-nav-title">Main Menu</span>
-        <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+        <span class="mobile-nav-title">Navigation Menu</span>
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
       </div>
       <nav class="mobile-nav-list">
         <div class="mobile-nav-item">
-          <a href="${prefix}index.html" class="mobile-nav-link ${isActive('index.html') ? 'active' : ''}">Home</a>
+          <a href="${prefix}index.html" class="mobile-nav-link ${isActive('index.html') ? 'active' : ''}">
+            <span><i class="fa-solid fa-house nav-icon"></i> Home</span>
+          </a>
         </div>
         <div class="mobile-nav-item">
-          <div class="mobile-nav-link ${isAboutActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">About Us <span>▾</span></div>
+          <div class="mobile-nav-link ${isAboutActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">
+            <span><i class="fa-solid fa-circle-info nav-icon"></i> About Us</span>
+            <span>▾</span>
+          </div>
           <div class="mobile-dropdown ${isAboutActive ? 'open' : ''}">
-            <a href="${prefix}about.html" class="${isActive('about.html') ? 'active' : ''}">History</a>
-            <a href="${prefix}vision.html" class="${isActive('vision.html') ? 'active' : ''}">Vision / Mission</a>
-            <a href="${prefix}staff.html" class="${isActive('staff.html') ? 'active' : ''}">Staff</a>
-            <a href="${prefix}contact.html" class="${isActive('contact.html') ? 'active' : ''}">Contact us</a>
+            <a href="${prefix}about.html" class="${isActive('about.html') ? 'active' : ''}"><span><i class="fa-solid fa-clock-rotate-left nav-icon"></i> History</span></a>
+            <a href="${prefix}vision.html" class="${isActive('vision.html') ? 'active' : ''}"><span><i class="fa-solid fa-bullseye nav-icon"></i> Vision / Mission</span></a>
+            <a href="${prefix}staff.html" class="${isActive('staff.html') ? 'active' : ''}"><span><i class="fa-solid fa-user-nurse nav-icon"></i> Staff</span></a>
+            <a href="${prefix}contact.html" class="${isActive('contact.html') ? 'active' : ''}"><span><i class="fa-solid fa-envelope nav-icon"></i> Contact us</span></a>
           </div>
         </div>
         <div class="mobile-nav-item">
-          <a href="${prefix}teaching.html" class="mobile-nav-link ${isActive('teaching.html') ? 'active' : ''}">Teaching</a>
+          <a href="${prefix}teaching.html" class="mobile-nav-link ${isActive('teaching.html') ? 'active' : ''}">
+            <span><i class="fa-solid fa-book-open nav-icon"></i> Teaching</span>
+          </a>
         </div>
         <div class="mobile-nav-item">
-          <a href="${prefix}research.html" class="mobile-nav-link ${isActive('research.html') ? 'active' : ''}">Research</a>
+          <a href="${prefix}research.html" class="mobile-nav-link ${isActive('research.html') ? 'active' : ''}">
+            <span><i class="fa-solid fa-flask nav-icon"></i> Research</span>
+          </a>
         </div>
         <div class="mobile-nav-item">
-          <div class="mobile-nav-link ${isAcademicActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">Academic <span>▾</span></div>
+          <div class="mobile-nav-link ${isAcademicActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">
+            <span><i class="fa-solid fa-graduation-cap nav-icon"></i> Academic</span>
+            <span>▾</span>
+          </div>
           <div class="mobile-dropdown ${isAcademicActive ? 'open' : ''}">
-            <a href="${prefix}academic.html" class="${isActive('academic.html') ? 'active' : ''}">Academic Services</a>
-            <a href="${prefix}book.html" class="${isActive('book.html') ? 'active' : ''}">Department Book</a>
+            <a href="${prefix}academic.html" class="${isActive('academic.html') ? 'active' : ''}"><span><i class="fa-solid fa-hand-holding-hand nav-icon"></i> Academic Services</span></a>
+            <a href="${prefix}book.html" class="${isActive('book.html') ? 'active' : ''}"><span><i class="fa-solid fa-book nav-icon"></i> Department Book</span></a>
           </div>
         </div>
         <div class="mobile-nav-item">
-          <a href="${prefix}km.html" class="mobile-nav-link ${isActive('km.html') ? 'active' : ''}">Knowledge Management</a>
+          <a href="${prefix}km.html" class="mobile-nav-link ${isActive('km.html') ? 'active' : ''}">
+            <span><i class="fa-solid fa-lightbulb nav-icon"></i> Knowledge Management</span>
+          </a>
         </div>
         <div class="mobile-nav-item">
-          <a href="${prefix}NoUse/Activities_all.html" class="mobile-nav-link ${isActive('Activities_all.html') ? 'active' : ''}">News</a>
+          <a href="${prefix}NoUse/Activities_all.html" class="mobile-nav-link ${isActive('Activities_all.html') ? 'active' : ''}">
+            <span><i class="fa-solid fa-newspaper nav-icon"></i> News</span>
+          </a>
         </div>
         <div class="mobile-nav-item">
-          <a href="${prefix}excellence.html" class="mobile-nav-link ${isActive('excellence.html') ? 'active' : ''}">Center of Excellence</a>
+          <a href="${prefix}excellence.html" class="mobile-nav-link ${isActive('excellence.html') ? 'active' : ''}">
+            <span><i class="fa-solid fa-award nav-icon"></i> Center of Excellence</span>
+          </a>
         </div>
         <div class="mobile-nav-item">
-          <div class="mobile-nav-link ${isElearningActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">E-Learning <span>▾</span></div>
+          <div class="mobile-nav-link ${isElearningActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">
+            <span><i class="fa-solid fa-laptop-code nav-icon"></i> E-Learning</span>
+            <span>▾</span>
+          </div>
           <div class="mobile-dropdown ${isElearningActive ? 'open' : ''}">
             <a href="https://elearning.ns.mahidol.ac.th/moodle3/" target="_blank">E-Learning Nursing</a>
             <a href="https://mux.mahidol.ac.th/" target="_blank">E-Learning Mahidol</a>
           </div>
         </div>
         <div class="mobile-nav-item">
-          <div class="mobile-nav-link ${isOrgActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">Related Agencies <span>▾</span></div>
+          <div class="mobile-nav-link ${isOrgActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">
+            <span><i class="fa-solid fa-building-columns nav-icon"></i> Related Agencies</span>
+            <span>▾</span>
+          </div>
           <div class="mobile-dropdown ${isOrgActive ? 'open' : ''}">
             <a href="https://www.tnmc.or.th/" target="_blank">Thailand Nursing and Midwifery Council</a>
             <a href="https://www.hsri.or.th/researcher" target="_blank">Health Systems Research Institute (HSRI)</a>
@@ -255,22 +287,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  // 8. Global Animate on Scroll (Intersection Observer)
+  // 8. Global Instant Reveal for Animate-in Elements (Immediate load on page open)
   const animEls = document.querySelectorAll('.animate-in');
-  if ('IntersectionObserver' in window && animEls.length > 0) {
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.animationPlayState = 'running';
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    animEls.forEach(el => {
-      el.style.animationPlayState = 'paused';
-      obs.observe(el);
-    });
-  }
+  animEls.forEach(el => {
+    el.style.animationPlayState = 'running';
+  });
 
   // 9. Ensure Footer Language Switcher is present (especially for mobile)
   const footerInner = document.querySelector('.site-footer .footer-inner');

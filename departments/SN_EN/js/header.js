@@ -1,6 +1,14 @@
 // Centralized Header, Navbar and Mobile Menu for Department of Surgical Nursing (SN_EN)
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Dynamically load Font Awesome 6 if not already in head
+  if (!document.querySelector('link[href*="font-awesome"]') && !document.querySelector('link[href*="fontawesome"]')) {
+    const faLink = document.createElement('link');
+    faLink.rel = 'stylesheet';
+    faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+    document.head.appendChild(faLink);
+  }
+
   // 1. Determine active menu link based on current page filename
   const currentPath = window.location.pathname;
   const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1) || 'index.html';
@@ -16,34 +24,37 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-nav-panel">
       <div class="mobile-nav-header">
-        <span class="mobile-nav-title">Main Menu</span>
-        <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+        <span class="mobile-nav-title">Navigation Menu</span>
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
       </div>
       <nav class="mobile-nav-list">
         <div class="mobile-nav-item">
-          <a href="index.html" class="mobile-nav-link ${isActive('index.html') ? 'active' : ''}">Home</a>
+          <a href="index.html" class="mobile-nav-link ${isActive('index.html') ? 'active' : ''}"><span><i class="fa-solid fa-house nav-icon"></i> Home</span></a>
         </div>
         <div class="mobile-nav-item">
-          <div class="mobile-nav-link ${isAboutActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">About us <span>▾</span></div>
+          <div class="mobile-nav-link ${isAboutActive ? 'active' : ''}" onclick="toggleMobileDropdown(this)">
+            <span><i class="fa-solid fa-circle-info nav-icon"></i> About us</span>
+            <span>▾</span>
+          </div>
           <div class="mobile-dropdown ${isAboutActive ? 'open' : ''}">
-              <a href="about.html" class="${isActive('about.html') ? 'active' : ''}">About us</a>
-              <a href="staff.html" class="${isActive('staff.html') ? 'active' : ''}">Staff</a>
+              <a href="about.html" class="${isActive('about.html') ? 'active' : ''}"><span><i class="fa-solid fa-building-columns nav-icon"></i> About us</span></a>
+              <a href="staff.html" class="${isActive('staff.html') ? 'active' : ''}"><span><i class="fa-solid fa-user-nurse nav-icon"></i> Staff</span></a>
           </div>
         </div>
         <div class="mobile-nav-item">
-          <a href="teaching.html" class="mobile-nav-link ${isActive('teaching.html') ? 'active' : ''}">Teaching</a>
+          <a href="teaching.html" class="mobile-nav-link ${isActive('teaching.html') ? 'active' : ''}"><span><i class="fa-solid fa-book-open nav-icon"></i> Teaching</span></a>
         </div>
         <div class="mobile-nav-item">
-          <a href="research.html" class="mobile-nav-link ${isActive('research.html') ? 'active' : ''}">Research</a>
+          <a href="research.html" class="mobile-nav-link ${isActive('research.html') ? 'active' : ''}"><span><i class="fa-solid fa-flask nav-icon"></i> Research</span></a>
         </div>
         <div class="mobile-nav-item">
-          <a href="academic.html" class="mobile-nav-link ${isActive('academic.html') ? 'active' : ''}">Academic Services</a>
+          <a href="academic.html" class="mobile-nav-link ${isActive('academic.html') ? 'active' : ''}"><span><i class="fa-solid fa-hand-holding-hand nav-icon"></i> Academic Services</span></a>
         </div>
         <div class="mobile-nav-item">
-          <a href="COE.html" class="mobile-nav-link ${isActive('COE.html') ? 'active' : ''}">Center of Excellence</a>
+          <a href="COE.html" class="mobile-nav-link ${isActive('COE.html') ? 'active' : ''}"><span><i class="fa-solid fa-award nav-icon"></i> Center of Excellence</span></a>
         </div>
         <div class="mobile-nav-item">
-          <a href="contact.html" class="mobile-nav-link ${isActive('contact.html') ? 'active' : ''}">Contact</a>
+          <a href="contact.html" class="mobile-nav-link ${isActive('contact.html') ? 'active' : ''}"><span><i class="fa-solid fa-envelope nav-icon"></i> Contact</span></a>
         </div>
       </nav>
     </div>
@@ -59,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
     </div>
     <div class="topbar-social">
-      <a href="#" title="Facebook">
+      <a href="https://www.facebook.com/nsmahidol" target="_blank" title="Facebook">
         <img src="img/template/fb.png" alt="Facebook">
       </a>
     </div>
@@ -85,29 +96,43 @@ document.addEventListener('DOMContentLoaded', () => {
       <span class="navbar-brand" style="display:none" id="navBrand">Department of Surgical Nursing</span>
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="index.html" class="nav-link ${isActive('index.html') ? 'active' : ''}">Home</a>
+          <a href="index.html" class="nav-link ${isActive('index.html') ? 'active' : ''}">
+            <i class="fa-solid fa-house nav-icon"></i> <span>Home</span>
+          </a>
         </li>
         <li class="nav-item">
-          <span class="nav-link ${isAboutActive ? 'active' : ''}">About us <span class="nav-arrow">▾</span></span>
+          <span class="nav-link ${isAboutActive ? 'active' : ''}">
+            <i class="fa-solid fa-circle-info nav-icon"></i> <span>About us</span> <span class="nav-arrow">▾</span>
+          </span>
           <ul class="dropdown">
-            <li><a href="about.html" class="dropdown-item ${isActive('about.html') ? 'active' : ''}">About us</a></li>
-            <li><a href="staff.html" class="dropdown-item ${isActive('staff.html') ? 'active' : ''}">Staff</a></li>
+            <li><a href="about.html" class="dropdown-item ${isActive('about.html') ? 'active' : ''}"><i class="fa-solid fa-building-columns dropdown-icon"></i> About us</a></li>
+            <li><a href="staff.html" class="dropdown-item ${isActive('staff.html') ? 'active' : ''}"><i class="fa-solid fa-user-nurse dropdown-icon"></i> Staff</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a href="teaching.html" class="nav-link ${isActive('teaching.html') ? 'active' : ''}">Teaching</a>
+          <a href="teaching.html" class="nav-link ${isActive('teaching.html') ? 'active' : ''}">
+            <i class="fa-solid fa-book-open nav-icon"></i> <span>Teaching</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="research.html" class="nav-link ${isActive('research.html') ? 'active' : ''}">Research</a>
+          <a href="research.html" class="nav-link ${isActive('research.html') ? 'active' : ''}">
+            <i class="fa-solid fa-flask nav-icon"></i> <span>Research</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="academic.html" class="nav-link ${isActive('academic.html') ? 'active' : ''}">Academic Services</a>
+          <a href="academic.html" class="nav-link ${isActive('academic.html') ? 'active' : ''}">
+            <i class="fa-solid fa-hand-holding-hand nav-icon"></i> <span>Academic Services</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="COE.html" class="nav-link ${isActive('COE.html') ? 'active' : ''}">Center of Excellence</a>
+          <a href="COE.html" class="nav-link ${isActive('COE.html') ? 'active' : ''}">
+            <i class="fa-solid fa-award nav-icon"></i> <span>Center of Excellence</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="contact.html" class="nav-link ${isActive('contact.html') ? 'active' : ''}">Contact</a>
+          <a href="contact.html" class="nav-link ${isActive('contact.html') ? 'active' : ''}">
+            <i class="fa-solid fa-envelope nav-icon"></i> <span>Contact</span>
+          </a>
         </li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Open/Close Menu">

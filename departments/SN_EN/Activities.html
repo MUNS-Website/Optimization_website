@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/header.js" defer></script>
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
@@ -18,8 +19,9 @@
       background: #fff;
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-sm);
-      padding: 30px;
+      padding: 32px;
       margin-bottom: 24px;
+      border: 1px solid var(--gray-100);
     }
     .activity-table {
       width: 100%;
@@ -30,13 +32,14 @@
       display: flex;
       align-items: center;
       gap: 20px;
-      padding: 15px;
+      padding: 16px;
       border-bottom: 1px solid var(--gray-100);
-      transition: background 0.2s ease;
+      transition: all 0.25s ease;
     }
     .activity-row:hover {
-      background: var(--gray-50);
+      background: var(--mu-blue-pale);
       border-radius: var(--radius-md);
+      transform: translateX(4px);
     }
     .activity-img {
       width: 100px;
@@ -46,38 +49,28 @@
       border-radius: var(--radius-sm);
       padding: 3px;
       background: #fff;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease;
+    }
+    .activity-row:hover .activity-img {
+      transform: scale(1.05);
     }
     .activity-text {
       flex: 1;
-      font-size: 16px;
+      font-size: 15.5px;
       font-weight: 500;
     }
     .activity-link {
-      color: var(--mu-blue);
+      color: var(--gray-800);
       text-decoration: none;
       transition: color 0.2s;
     }
     .activity-link:hover {
-      color: var(--mu-gold-dark);
-      text-decoration: underline;
+      color: var(--mu-blue);
     }
     .more-btn-container {
       text-align: center;
       margin-top: 30px;
-    }
-    .more-btn {
-      display: inline-block;
-      background: var(--mu-gold);
-      color: #fff;
-      padding: 10px 24px;
-      border-radius: var(--radius-md);
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .more-btn:hover {
-      background: var(--mu-gold-dark);
-      transform: translateY(-2px);
     }
   </style>
 
@@ -184,10 +177,13 @@
 <div class="mn-wrapper">
 
   <main class="main-content">
-    <h1 class="txt_head">Gallery of Activities</h1>
+    <div class="page-title-banner">
+      <div class="page-title-icon"><i class="fa-solid fa-images"></i></div>
+      <div class="page-title-text">Gallery of Activities</div>
+    </div>
     
-    <div class="activity-section">
-      <h2 class="txt_blue" style="font-size: 18px; margin-bottom: 20px; border-bottom: 2px solid var(--mu-blue-pale); padding-bottom: 8px;">Activities in 2021</h2>
+    <div class="activity-section animate-in">
+      <div class="section-icon-badge" style="margin-bottom: 20px;"><i class="fa-solid fa-calendar-days"></i> Activities Highlights</div>
       
       <div class="activity-table">
         <div class="activity-row">
@@ -201,7 +197,7 @@
       </div>
 
       <div class="more-btn-container">
-        <a href="Activities_all.html" class="more-btn">More Activities</a>
+        <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities.html" target="_blank" class="btn-modern">View All Activities <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </main>

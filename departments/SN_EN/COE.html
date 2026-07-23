@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/header.js" defer></script>
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
@@ -18,57 +19,67 @@
       background: #fff;
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-sm);
-      padding: 30px;
+      padding: 32px;
       margin-bottom: 24px;
+      border: 1px solid var(--gray-100);
     }
     .coe-title-badge {
-      display: inline-block;
-      background: var(--mu-blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--mu-blue), var(--mu-blue-dark));
       color: #fff;
-      padding: 8px 16px;
-      font-weight: 600;
-      font-size: 18px;
+      padding: 10px 22px;
+      font-weight: 700;
+      font-size: 19px;
       border-radius: var(--radius-md);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
     }
     .coe-subtitle-badge {
-      display: inline-block;
-      background: var(--gray-100);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--mu-blue-pale);
       color: var(--mu-blue-dark);
       border-left: 4px solid var(--mu-gold);
-      padding: 8px 16px;
-      font-weight: 600;
-      font-size: 16px;
-      margin-top: 30px;
-      margin-bottom: 15px;
-      width: 100%;
-      box-sizing: border-box;
+      padding: 12px 20px;
+      font-weight: 700;
+      font-size: 17px;
+      margin-top: 32px;
+      margin-bottom: 18px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .coe-subtitle-badge i {
+      color: var(--mu-blue);
     }
     .coe-list {
       list-style-type: none;
-      padding-left: 10px;
-      margin-bottom: 20px;
+      padding-left: 0;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     .coe-list li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 8px;
-      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      line-height: 1.65;
       font-size: 15px;
       color: var(--gray-700);
     }
-    .coe-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
+    .coe-list li i {
       color: var(--mu-gold);
-      font-size: 20px;
-      line-height: 1;
-      top: -2px;
+      font-size: 15px;
+      margin-top: 4px;
+      flex-shrink: 0;
     }
     .coe-img-card {
       text-align: center;
-      margin: 25px 0;
+      margin: 30px 0;
     }
     .coe-img-card img {
       max-width: 100%;
@@ -80,11 +91,11 @@
       box-shadow: var(--shadow-sm);
     }
     .coe-caption {
-      font-weight: 500;
+      font-weight: 600;
       color: var(--mu-blue);
-      margin-top: 10px;
-      margin-bottom: 5px;
-      font-size: 15px;
+      margin-top: 12px;
+      margin-bottom: 8px;
+      font-size: 15.5px;
     }
   </style>
 
@@ -191,32 +202,35 @@
 <div class="mn-wrapper">
 
   <main class="main-content">
-    <h1 class="txt_head">Center of Excellence</h1>
+    <div class="page-title-banner">
+      <div class="page-title-icon"><i class="fa-solid fa-award"></i></div>
+      <div class="page-title-text">Center of Excellence</div>
+    </div>
     
-    <div class="coe-section">
-      <div class="coe-title-badge">Center of Recovery Management</div>
+    <div class="coe-section animate-in">
+      <div class="coe-title-badge"><i class="fa-solid fa-shield-heart"></i> Center of Recovery Management (CRM)</div>
       
       <p class="txt_font" style="text-indent: 2.5em; margin-bottom: 15px;">This center includes recovery management in 5 major areas and population:</p>
       <ul class="coe-list">
-        <li>Patients and their families during surgery.</li>
-        <li>Patients and their families before surgery.</li>
-        <li>Patients and their families after surgery.</li>
-        <li>High risk people.</li>
-        <li>Professional nurses.</li>
+        <li><i class="fa-solid fa-circle-check"></i> <span>Patients and their families during surgery.</span></li>
+        <li><i class="fa-solid fa-circle-check"></i> <span>Patients and their families before surgery.</span></li>
+        <li><i class="fa-solid fa-circle-check"></i> <span>Patients and their families after surgery.</span></li>
+        <li><i class="fa-solid fa-circle-check"></i> <span>High risk people.</span></li>
+        <li><i class="fa-solid fa-circle-check"></i> <span>Professional nurses.</span></li>
       </ul>
       
       <p class="txt_font" style="text-indent: 2.5em; margin-bottom: 20px;">The CRM center plan includes the development of databases, books and articles which related to recovery management, research studies involving the recovery management, new interventions used in practice and education.</p>
 
-      <div class="coe-subtitle-badge">Our aims of the center are to:</div>
+      <div class="coe-subtitle-badge"><i class="fa-solid fa-bullseye"></i> Our Aims of the Center</div>
       <ul class="coe-list">
-        <li>Communicate and exchange advancing knowledge and experiences of the educators and health care professionals in recovery management.</li>
-        <li>Develop the resources of recovery management such as databases for research studies, practice and experts in recovery management.</li>
-        <li>Promote widespread research studies including basic science, and applied science to develop the recovery management knowledge to adopt this research-based model of care in each settings.</li>
-        <li>Increase faculties’ expertise in recovery management including researchers and educators.</li>
-        <li>Be the source of consulting including research, practice and education related to recovery management.</li>
+        <li><i class="fa-solid fa-star"></i> <span>Communicate and exchange advancing knowledge and experiences of the educators and health care professionals in recovery management.</span></li>
+        <li><i class="fa-solid fa-star"></i> <span>Develop the resources of recovery management such as databases for research studies, practice and experts in recovery management.</span></li>
+        <li><i class="fa-solid fa-star"></i> <span>Promote widespread research studies including basic science, and applied science to develop the recovery management knowledge to adopt this research-based model of care in each settings.</span></li>
+        <li><i class="fa-solid fa-star"></i> <span>Increase faculties’ expertise in recovery management including researchers and educators.</span></li>
+        <li><i class="fa-solid fa-star"></i> <span>Be the source of consulting including research, practice and education related to recovery management.</span></li>
       </ul>
 
-      <div class="coe-subtitle-badge">Research experiences</div>
+      <div class="coe-subtitle-badge"><i class="fa-solid fa-microscope"></i> Research Experiences</div>
       <p class="txt_font" style="text-indent: 2.5em; margin-bottom: 20px;">The central theme of research studies is recovery management including symptom management, health promotion, continuing care and health care model.</p>
       
       <div class="coe-img-card">

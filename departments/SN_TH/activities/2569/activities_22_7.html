@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภาควิชาการพยาบาลศัลยศาสตร์ ร่วมแสดงความยินดีแด่ความสำเร็จของอาจารย์ในภาควิชา : ภาควิชาการพยาบาลศัลยศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <meta name="description" content="ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ร่วมแสดงความยินดีแด่ความสำเร็จของอาจารย์ในภาควิชา">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="../../js/header.js" defer></script>
+  <link rel="icon" href="../../img/logo/favicon.png" type="image/png">
+
+  <style>
+    /* Royal Blue Theme Activity Detail Layout Styling (SN_TH) */
+    .activity-detail-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(29, 78, 216, 0.08);
+      margin-bottom: 28px;
+    }
+
+    .activity-header-banner {
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+      padding: 28px 32px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .activity-header-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background: radial-gradient(circle at 100% 0%, rgba(56, 189, 248, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .activity-date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(8px);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .activity-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      font-family: 'Sarabun', sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      text-indent: 0 !important;
+    }
+
+    .activity-body-content {
+      padding: 32px;
+    }
+
+    .activity-text {
+      font-size: 15px;
+      color: var(--gray-700);
+      font-family: 'Sarabun', sans-serif;
+      line-height: 1.8;
+      text-indent: 32px;
+      margin-bottom: 16px;
+    }
+
+    /* Balanced 2-Column Photo Grid */
+    .activity-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .activity-photo-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      background: #f8fafc;
+    }
+
+    .activity-photo-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(29, 78, 216, 0.15);
+      border-color: #1d4ed8;
+    }
+
+    .activity-photo-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .activity-photo-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Standalone Back Button Styling */
+    .back-btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      margin-bottom: 40px;
+    }
+
+    .custom-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+      color: #ffffff !important;
+      font-family: 'Sarabun', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none !important;
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .custom-back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(29, 78, 216, 0.35);
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    }
+
+    @media (max-width: 640px) {
+      .activity-header-banner {
+        padding: 20px 18px;
+      }
+      .activity-title {
+        font-size: 17px;
+      }
+      .activity-body-content {
+        padding: 18px 14px;
+      }
+      .activity-photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+      .activity-photo-item {
+        border: none;
+        box-shadow: none;
+        border-radius: 8px;
+        background: transparent;
+      }
+      .activity-photo-item img {
+        height: 145px;
+        border-radius: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="mn-wrapper">
+
+  <main class="main-content">
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb">
+      <a href="../../index.html">หน้าหลัก</a>
+      <span class="sep">›</span>
+      <a href="../../Activities_all.html">ข่าวสารภาควิชา</a>
+      <span class="sep">›</span>
+      <a href="../../Activities.html">ข่าวสารประจำปี 2569</a>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title-banner animate-in">
+      <div class="page-title-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      </div>
+      <h1 class="page-title-text">ประมวลภาพกิจกรรม</h1>
+    </div>
+
+    <!-- PAGE BODY CONTENT -->
+    <div class="content-body animate-in" style="animation-delay:0.15s">
+      
+      <div class="activity-detail-card">
+        <div class="activity-header-banner">
+          <div class="activity-date-badge">
+            <i class="far fa-calendar-alt"></i> 22 กรกฎาคม 2569
+          </div>
+          <h2 class="activity-title">
+            ภาควิชาการพยาบาลศัลยศาสตร์ ม.มหิดล จัดประชุมร่วมกับผู้แทนจากงานการพยาบาลศัลยศาสตร์และศัลยศาสตร์ออร์โธปิดิกส์
+          </h2>
+        </div>
+        
+        <div class="activity-body-content">
+          <p class="activity-text">
+            การผลิตพยาบาลคุณภาพ...เริ่มต้นจาก "ความร่วมมือ"
+            เมื่อห้องเรียนเชื่อมโยงกับการปฏิบัติจริง การเรียนรู้ของนักศึกษาย่อมก้าวไกลกว่าเดิม
+            ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดประชุมร่วมกับผู้แทนจากงานการพยาบาลศัลยศาสตร์และศัลยศาสตร์ออร์โธปิดิกส์ งานการพยาบาลผ่าตัด งานการพยาบาลวิกฤต โสต นาสิก และลาริงซ์วิทยา งานการพยาบาลรังสีวิทยา และงานการพยาบาลตรวจรักษาผู้ป่วยนอก เมื่อวันที่ 22 กรกฎาคม 2569 เพื่อร่วมแลกเปลี่ยนมุมมอง พัฒนาการจัดการเรียนการสอนภาคปฏิบัติ และออกแบบประสบการณ์การเรียนรู้ที่ตอบโจทย์การพยาบาลในอนาคต
+          </p>
+          <p class="activity-text">
+            ในการประชุมครั้งนี้ ผู้ช่วยศาสตราจารย์ ดร.รัตติมา ศิริโหราชัย หัวหน้าภาควิชาการพยาบาลศัลยศาสตร์ และอาจารย์ในภาควิชา ได้นำเสนอทิศทางการจัดการศึกษาภาคปฏิบัติของหลักสูตรพยาบาลศาสตรบัณฑิต หลักสูตรการพยาบาลเฉพาะทาง และหลักสูตรระดับบัณฑิตศึกษา พร้อมเปิดเวทีรับฟังข้อเสนอแนะจากแหล่งฝึก เพื่อร่วมกันยกระดับคุณภาพการศึกษาพยาบาลให้ก้าวทันการเปลี่ยนแปลงของระบบสุขภาพ
+          </p>
+
+          <div class="activity-photo-grid">
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/1.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/2.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/3.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/4.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/5.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/6.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/7.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/8.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/9.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/10.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+            <div class="activity-photo-item">
+              <img src="../../img/news/2569/cooperation/11.jpg" alt="ภาพกิจกรรมแสดงความยินดี">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-btn-container">
+        <a href="../../Activities.html" class="custom-back-btn">
+          <i class="fas fa-arrow-left"></i>
+          <span>กลับสู่หน้า ข่าวสารประจำปี 2569</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3>ภาควิชาการพยาบาลศัลยศาสตร์</h3>
+        <p>
+          <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+          <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+        </p>
+        <p class="footer-copy">
+          Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+          Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+        </p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="../../facebook.html" title="Facebook">
+            <img src="../../img/template/fb.png" alt="Facebook">
+          </a>
+        </div>
+        <a href="../../../SN_EN/index.html" target="_parent" class="footer-lang-btn">
+          <img src="../../img/template/en.png" alt="EN"> English
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

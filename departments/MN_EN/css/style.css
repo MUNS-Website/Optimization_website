@@ -369,12 +369,12 @@ ul { list-style: none; }
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 0 8px;
+  gap: 4px;
+  padding: 0 7px;
   height: 100%;
   color: var(--white);
   font-family: var(--font-base);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
   white-space: nowrap;
   transition: all var(--transition-fast);
@@ -597,13 +597,17 @@ ul { list-style: none; }
 .mobile-nav-link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
   padding: var(--space-4) var(--space-5);
   color: rgba(255, 255, 255, 0.85);
-  font-size: 14px;
+  font-size: 14.5px;
   font-family: var(--font-base);
   cursor: pointer;
   transition: all var(--transition-fast);
+}
+
+.mobile-nav-link span:last-child:not(:first-child) {
+  margin-left: auto;
 }
 
 .mobile-nav-link:hover,
@@ -1721,4 +1725,232 @@ ul { list-style: none; }
   opacity: 0.8;
   display: flex;
   align-items: center;
+}
+
+/* =========================================
+   NEW FONTAWESOME ICON & INTERACTIVE STYLES
+   ========================================= */
+
+/* 1. Subtle Icon Tilt for Navbar Links */
+.nav-icon,
+.dropdown-icon {
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.nav-link:hover .nav-icon,
+.mobile-nav-link:hover .nav-icon {
+  transform: rotate(12deg) scale(1.15);
+  color: var(--mu-gold-light);
+}
+
+.dropdown-item:hover .dropdown-icon {
+  transform: rotate(12deg) scale(1.15);
+  color: var(--mu-blue);
+}
+
+/* 2. Page Title Banner Component */
+.page-title-banner {
+  background: linear-gradient(135deg, #c2410c 0%, #f97316 100%);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 4px solid var(--mu-gold);
+  margin-bottom: 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.page-title-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.page-title-text {
+  font-size: clamp(18px, 2.2vw, 25px);
+  font-weight: 700;
+  color: white;
+  font-family: var(--font-base);
+}
+
+/* 3. Feature Cards Grid (Home Highlights) */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin: 32px 0 40px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--gray-700);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--mu-blue), var(--mu-gold));
+  transition: width 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--mu-blue-pale);
+}
+
+.feature-card:hover::before {
+  width: 8px;
+}
+
+.feature-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--mu-blue-pale);
+  color: var(--mu-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover .feature-card-icon {
+  transform: rotate(12deg) scale(1.15);
+  background: linear-gradient(135deg, var(--mu-blue), var(--mu-blue-light));
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.feature-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+  font-family: var(--font-base);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.feature-card-title .arrow {
+  font-size: 14px;
+  color: var(--mu-blue-light);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-card-title .arrow {
+  transform: translateX(4px);
+  color: var(--mu-blue);
+}
+
+.feature-card-desc {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.55;
+}
+
+/* 4. Styled Content Box & Cards */
+.content-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 32px;
+  margin-bottom: 28px;
+  border: 1px solid var(--gray-100);
+  transition: box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* 5. Custom Icon Bullet Lists */
+.icon-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icon-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.icon-bullet-list li i {
+  color: var(--mu-gold);
+  font-size: 16px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* 6. Buttons with Tilting Icons */
+.btn-modern {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #1d4ed8, #0c2340);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.btn-modern i {
+  transition: transform 0.3s ease;
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.35);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.btn-modern:hover i {
+  transform: translateX(4px);
 }

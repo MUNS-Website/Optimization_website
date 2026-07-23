@@ -9,10 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/header.js" defer></script>
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     .edu-section {
@@ -21,6 +21,7 @@
       box-shadow: var(--shadow-sm);
       padding: 30px;
       margin-bottom: 24px;
+      border: 1px solid var(--gray-100);
     }
     .edu-intro {
       font-size: 16px;
@@ -35,25 +36,27 @@
     .edu-group-title {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       background: var(--mu-blue-pale);
-      padding: 12px 20px;
+      padding: 14px 22px;
       border-radius: var(--radius-md);
       color: var(--mu-blue-dark);
       font-weight: 600;
       font-size: 18px;
       margin-bottom: 16px;
+      border-left: 4px solid var(--mu-blue);
     }
     .edu-group-title .icon {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
-      background: var(--mu-blue);
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--mu-blue), var(--mu-blue-dark));
       color: white;
       border-radius: 50%;
-      font-size: 14px;
+      font-size: 15px;
+      box-shadow: 0 3px 8px rgba(29, 78, 216, 0.25);
     }
     .edu-list {
       list-style: none;
@@ -63,35 +66,35 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      padding: 12px 16px;
+      padding: 14px 18px;
       border-bottom: 1px solid var(--gray-100);
-      transition: all 0.2s ease;
     }
     .edu-item:last-child {
       border-bottom: none;
     }
-    .edu-item:hover {
-      background: var(--gray-50);
-      border-radius: var(--radius-md);
-      transform: translateX(4px);
-    }
     .edu-bullet {
       color: var(--mu-gold);
-      font-size: 20px;
+      font-size: 18px;
       line-height: 1;
-      margin-top: 2px;
+      margin-top: 3px;
     }
     .edu-link {
       color: var(--mu-blue);
-      font-weight: 500;
+      font-weight: 600;
       text-decoration: none;
       font-size: 16px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
     .edu-link:hover {
-      color: var(--mu-gold-dark);
+      color: var(--mu-blue-dark);
+    }
+    .edu-link i {
+      transition: transform 0.3s ease;
+    }
+    .edu-link:hover i {
+      transform: translateX(3px) translateY(-3px);
     }
     .edu-desc {
       display: block;
@@ -205,9 +208,12 @@
 <div class="mn-wrapper">
 
   <main class="main-content">
-    <h1 class="txt_head">Teaching</h1>
+    <div class="page-title-banner">
+      <div class="page-title-icon"><i class="fa-solid fa-book-open"></i></div>
+      <div class="page-title-text">Teaching &amp; Academic Programs</div>
+    </div>
     
-    <div class="edu-section">
+    <div class="edu-section animate-in">
       <p class="edu-intro">
         The instructors in the surgical department are mainly responsible for lecturing and clinical teaching related to nursing care for orthopedic, trauma, gastrointestinal, cardio-thoracic, neurological, and urological patients.
       </p>
@@ -215,8 +221,8 @@
       <!-- Bachelor degree -->
       <div class="edu-group">
         <div class="edu-group-title">
-          <span class="icon">1</span>
-          Bachelor degree
+          <span class="icon"><i class="fa-solid fa-user-graduate"></i></span>
+          Bachelor Degree
         </div>
         <ul class="edu-list">
           <li class="edu-item">
